@@ -8,13 +8,6 @@
 </div>
 
 <p align="center">
-<a href="https://reactjs.org/">
-    <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB">
-</a>
-<a href="https://styled-components.com/">
- <img src="https://img.shields.io/badge/styled--components-DB7093?style=flat-square&logo=styled-components&logoColor=white">
-</a>
-    
 <a href="https://prettier.io/">
     <img src="https://img.shields.io/badge/prettier-1A2C34?style=flat-square&logo=prettier&logoColor=F7BA3E">
 </a>
@@ -32,19 +25,9 @@
 </a>  
 </p>
 
-<p align="center">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg">
-<img src="https://forthebadge.com/images/badges/open-source.svg"><br><br>
-</p>
-
-# 👀 Preview
-
-Click this link to view <a href="https://rocketmeme.com">Spekni</a>
-
 <a href="https://rocketmeme.com">
 <img src="https://user-images.githubusercontent.com/62628408/177388275-1317f881-9982-4584-a62f-2325024f4169.png" alt="Rocketmeme Preview">
 </a>
-
 
 <div align="left">
   <h1>How to run locally ✨</h1>
@@ -52,7 +35,6 @@ Click this link to view <a href="https://rocketmeme.com">Spekni</a>
 </div>
 
 ## 🧩 Prerequisites
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -92,21 +74,4 @@ Are you contributing to this project, please ensure all pull requests and contri
 
 ## 🔐 License
 This project is protected by <a href="https://github.com/Evavic44/spekni/blob/main/LICENSE">MIT License</a>.
-
 If you like this project, kindly star ⭐ and share this project. It means the world to us.
-
-## Contributors ✨
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
