@@ -4,12 +4,15 @@
 
 /* Variables */
 :root {
-  --bgDark: #000000ff;
-  --bgDark2: #333333ff;
-  --primaryColor: #3a52eeff;
-  --darkGrey: #bfbfbfff;
-  --lightGrey: #f4f4f4ff;
-  --bgLight: #ffffffff;
+  --bgDark: #000000;
+  --textColor: #222222;
+  --textColor2: #333333;
+  --primaryColor: #3a52ee;
+  --darkGrey: #bfbfbf;
+  --lightGrey: #f4f4f4;
+  --bgLight: #ffffff;
+  --fontPrimary: "Space Grotesk", Monospace, sans-serif;
+  --fontSecondary: "Inter", sans-serif;
 }
 
 * {
@@ -20,11 +23,37 @@
 
 body {
   line-height: 1.5;
-  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  font-family: var(--fontPrimary), sans-serif;
   background: var(--bgLight);
+  color: var(--textColor);
+}
+
+p,
+small,
+b {
+  font-family: var(--fontSecondary), sans-serif;
+  color: var(--textColor2);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.btn {
+  outline: none;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  color: var(--bgLight);
+  background: var(--primaryColor);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: white;
+}
+
+.highlight {
+  color: var(--primaryColor);
 }

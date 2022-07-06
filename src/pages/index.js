@@ -1,11 +1,12 @@
 import Head from "next/head";
 // import Heading from "./styles/Index.styled.js";
-import styles from "../styles/Utilities.module.css";
-// import Logo from "../public/logo.svg";
+// import styles from "../styles/Utilities.module.css";
+import Image from "next/image";
+import Logo from "../public/logo.svg";
+import Navbar from "../components/Navbar";
 /* // Todo
 ? Fix styled components import issue 
 ? Structure pages styles folders
-? Logo import not working
 */
 import styled from "styled-components";
 
@@ -23,7 +24,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.svg" />
         <link
-          href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic"
+          href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
           rel="stylesheet"
         />
         <link
@@ -34,33 +35,96 @@ export default function Home() {
       {/* Markup */}
       {/* <main className={styles.main}> // ? Module styling (Don't delete) */}
       <Container>
-        <img
-          src="/logo.svg"
-          alt="Picture of the author"
-          width={50}
-          height={50}
-        />
+        <Navbar />
+
         <Heading>
-          Welcome to <a href="/">Spekni!</a>
+          {/* <Image src={Logo} width="40px" height="40px"></Image> */}
+          <h1>
+            Hiring and <span className="icon-one">Freelance</span> organization
+            Recruiters can <span className="icon-two highlight">Trust</span>
+          </h1>
+          <p>
+            Marketplace for top developers, engineers, programmers, coders,
+            architects, and consultants
+          </p>
         </Heading>
       </Container>
     </div>
   );
 }
 
-const Container = styled.main`
-  background: #f4f4f4;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+const Container = styled.main``;
 
-const Heading = styled.h1`
+const Heading = styled.div`
   text-align: center;
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 4rem;
-  letter-spacing: -2px;
+  max-width: 850px;
+  margin: 3.5rem auto 0;
+  padding: 0 1rem 1rem;
+
+  h1 {
+    line-height: 1;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+
+    .icon {
+      &-one {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: -85px;
+          top: 10px;
+          background-image: url(/images/icon-three.svg);
+          background-size: 35px;
+          background-repeat: no-repeat;
+          width: 90px;
+          height: 90px;
+        }
+      }
+
+      &-two {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: -70px;
+          top: -10px;
+          background-image: url(/images/icon-one.svg);
+          background-size: 35px;
+          background-repeat: no-repeat;
+          width: 90px;
+          height: 90px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 900px) {
+    max-width: 700px;
+
+    h1 {
+      line-height: 1.1;
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 700px;
+
+    h1 {
+      line-height: 1.1;
+      /* font-size: 2rem; */
+    }
+  }
 `;

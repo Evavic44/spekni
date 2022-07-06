@@ -12,7 +12,6 @@ import {
   CodeIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-// import Logo from "next/image";
 import Image from "next/image";
 import Logo from "../../public/images/logo.svg";
 import Link from "next/link";
@@ -54,15 +53,6 @@ const resources = [
     href: "#",
     icon: ShieldCheckIcon,
   },
-];
-const recentPosts = [
-  { id: 1, name: "How to transfer files", href: "/docs" },
-  {
-    id: 2,
-    name: "How to protect your files with encryption",
-    href: "#",
-  },
-  { id: 3, name: "Integrate Spekni API in a React Project", href: "/docs" },
 ];
 
 function classNames(...classes) {
