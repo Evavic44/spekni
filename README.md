@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://spekni.netlify.app"><img src="https://user-images.githubusercontent.com/62628408/177386501-481b5273-7eff-43db-be6a-56cc3a472b4d.png" width="60px"></a>
+<a href="https://spekni.netlify.app"><img src="https://user-images.githubusercontent.com/62628408/177589795-7ea1c382-db97-4c70-9108-b9ea3ab059f4.svg" width="80px"></a>
 </div>
 
 <div align="center">
@@ -8,6 +8,10 @@
 </div>
 
 <p align="center">
+<a href="https://prisma.io/">
+    <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white">
+</a>
+
 <a href="https://prettier.io/">
     <img src="https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E">
 </a>
@@ -25,8 +29,8 @@
 </a>  
 </p>
 
-<a href="https://rocketmeme.com">
-<img src="https://user-images.githubusercontent.com/62628408/177388275-1317f881-9982-4584-a62f-2325024f4169.png" alt="Rocketmeme Preview">
+<a href="https://spekni.vercel.app">
+<img src="https://user-images.githubusercontent.com/62628408/177588390-29fc8f28-2088-4209-98b4-677b84c0e700.jpg" alt="Spekni">
 </a>
 
 <div align="left">
@@ -34,7 +38,7 @@
   <p>Follow these steps below to run Spekni locally in your machine.
 </div>
 
-## 🧩 Prerequisites
+## Prerequisites
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -49,29 +53,20 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Build
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+next build
+```
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
 
-Are you contributing to this project, please ensure all pull requests and contributions comply with our <a href="https://github.com/Evavic44/rocketmeme/blob/main/CONTRIBUTING.md">guidelines</a>. Before making any changes, ensure you have raised an issue here, unless it is a minimal change.
+Are you contributing to this project, please ensure all pull requests and contributions comply with our <a href="https://github.com/Evavic44/spekni/blob/main/CONTRIBUTING.md">guidelines</a>. Before making any changes, ensure you have raised an issue here, unless it is a minimal change.
 
-## 🔐 License
-This project is protected by <a href="https://github.com/Evavic44/spekni/blob/main/LICENSE">MIT License</a>.
+## License
+This project is protected under <a href="https://github.com/Evavic44/spekni/blob/main/LICENSE">MIT License</a>.
 If you like this project, kindly star ⭐ and share this project. It means the world to us.
