@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       {/* Meta */}
-      <Head>
+      <Head lang="en">
         <title>
           Spekni - Hiring and Freelance organization Recruiters can Trust
         </title>
@@ -29,13 +29,13 @@ export default function Home() {
       <Container>
         <Navbar />
 
-        <Heading>
+        <Heading className="max-w-4xl px-4 pt-0 pb-4 mt-14 mx-auto mb-auto text-center">
           {/* <Image src={Logo} width="40px" height="40px"></Image> */}
-          <h1>
+          <h1 className="text-7xl font-bold leading mb-5">
             Hiring and <span className="icon-one">Freelance</span> organization
             Recruiters can <span className="icon-two highlight">Trust</span>
           </h1>
-          <p>
+          <p className="my-0 mx-auto max-w-xl">
             Marketplace for top developers, engineers, programmers, coders,
             architects, and consultants
           </p>
@@ -48,11 +48,6 @@ export default function Home() {
 const Container = styled.main``;
 
 const Heading = styled.div`
-  text-align: center;
-  max-width: 850px;
-  margin: 3.5rem auto 0;
-  padding: 0 1rem 1rem;
-
   h1 {
     line-height: 1;
     font-size: 4.5rem;
@@ -116,7 +111,6 @@ const Heading = styled.div`
 
     h1 {
       line-height: 1.1;
-      /* font-size: 2rem; */
     }
   }
 `;
