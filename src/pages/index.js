@@ -23,14 +23,6 @@ export default function Home() {
           content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
         />
         <link rel="icon" href="/favicon.svg" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,regular,500,600,700"
-          rel="stylesheet"
-        />
       </Head>
       {/* Markup */}
       {/* <main className={styles.main}> // ? Module styling (Don't delete) */}
