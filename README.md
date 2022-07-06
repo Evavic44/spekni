@@ -9,19 +9,19 @@
 
 <p align="center">
 <a href="https://prettier.io/">
-    <img src="https://img.shields.io/badge/prettier-1A2C34?style=flat-square&logo=prettier&logoColor=F7BA3E">
+    <img src="https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E">
 </a>
     
 <a href="https://hashnode.com">
-<img alt="code style: prettier" src="https://img.shields.io/badge/Hashnode-2962FF?style=flat-square&logo=hashnode&logoColor=white">
+<img alt="code style: prettier" src="https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white">
 </a> 
     
 <a href="fontawesome.com/">
-<img src="https://img.shields.io/badge/Font_Awesome-339AF0?style=flat-squaree&logo=fontawesome&logoColor=white">
+<img src="https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white">
 </a>
 
-<a href="https://app.netlify.com/sites/rocketmeme/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/6a4fdf68-75a7-458f-87aa-36fbe5f31a7a/deploy-status">
+<a href="https://vercel.com/evavic44/spekni/4g6cAgSJ2JQcGxpwQew77Ny9jDdC">
+    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
 </a>  
 </p>
 
