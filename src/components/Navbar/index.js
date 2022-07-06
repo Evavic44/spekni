@@ -86,7 +86,7 @@ export default function Example() {
                     <Popover.Button
                       className={classNames(
                         open ? "" : "",
-                        "group bg-white rounded-md inline-flex items-center text-base border border-gray-300 px-2"
+                        "group bg-white rounded-md inline-flex items-center text-base"
                       )}
                     >
                       <span>Explore</span>
