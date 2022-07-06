@@ -14,6 +14,7 @@
     "next": "12.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-lazy-load-image-component": "^1.5.4",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {

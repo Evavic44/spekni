@@ -170,7 +170,7 @@ export default function Example() {
               </a>
               <a
                 href="/signup"
-                className="btn ml-6 inline-flex items-center justify-center"
+                className="btn btn-primary ml-6 inline-flex items-center justify-center"
               >
                 Sign up
               </a>
