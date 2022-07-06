@@ -66,8 +66,8 @@ export default function Example() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
           <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
             <div className="flex items-center  lg:flex-1">
-              <Image src={Logo} alt="Workflow" width="30px" height="30px" />
-              <span className="font-medium text-lg ml-1">Spekni</span>
+              <Image src={Logo} alt="Workflow" width="40px" height="40px" />
+              <span className="font-bold text-2xl ml-1">Spekni</span>
             </div>
 
             <div className="-mr-2 -my-2 md:hidden">
@@ -86,7 +86,7 @@ export default function Example() {
                     <Popover.Button
                       className={classNames(
                         open ? "" : "",
-                        "group bg-white rounded-md inline-flex items-center text-base"
+                        "group bg-white rounded-md inline-flex items-center text-base border border-gray-300 px-2"
                       )}
                     >
                       <span>Explore</span>
@@ -201,7 +201,7 @@ export default function Example() {
                       width="30px"
                       height="30px"
                     />
-                    <span className="font-medium text-base ml-1">Spekni</span>
+                    {/* <span className="font-medium text-base ml-1">Spekni</span> */}
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center  hover: hover:bg-gray-100">

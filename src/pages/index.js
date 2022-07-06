@@ -54,10 +54,12 @@ const Heading = styled.div`
     font-weight: 700;
     letter-spacing: -1px;
     margin-bottom: 1.5rem;
+    z-index: -10;
 
     .icon {
       &-one {
         position: relative;
+        z-index: -20;
 
         &::before {
           content: "";
@@ -74,6 +76,7 @@ const Heading = styled.div`
 
       &-two {
         position: relative;
+        z-index: -20;
 
         &::before {
           content: "";
@@ -110,7 +113,7 @@ const Heading = styled.div`
     max-width: 700px;
 
     h1 {
-      line-height: 1.1;
+      line-height: 1.11;
     }
   }
 `;
