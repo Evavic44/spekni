@@ -1,4 +1,4 @@
-export const cats = [
+export default [
   {
     id: 1,
     name: "John Boyega",

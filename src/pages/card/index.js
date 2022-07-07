@@ -1,10 +1,11 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-import styles from "../styles/Card.module.css";
-import Image from "next/image";
-import Badge from "../public/images/logo.svg";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Navbar from "../../components/Navbar";
+import Card from "../../components/Card";
+import userData from "../../data";
+console.log(userData);
 
-export default function card() {
+export default function Cards({ image, name, job, endorsements, id }) {
   return (
     <div>
       <Head lang="en">
@@ -22,25 +23,33 @@ export default function card() {
         />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-
       <Navbar />
-      <section className={styles.container}>
+      {/* <section className={styles.container}>
         <article className={styles.card}>
-          <img
-            className={styles.photo}
-            src="https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png"
+          <LazyLoadImage
+            className={styles.image}
+            src={image.url}
+            alt={image.alt}
             width={170}
             height={170}
-            alt="John Boyega"
           />
-          <h2 className={styles.name}>John Boyega</h2>
-          <p className={styles.job}>Software Engineer</p>
+          <h2 className={styles.name}>{name}</h2>
+          <p className={styles.job}>{job}</p>
           <div className={styles.badge} title="Spekni Endorsement Badge">
             <Image src={Badge} width={18} height={18} />
-            <span className={styles.count}>55 Endorsements</span>
+            <span className={styles.count}>{endorsements} Endorsements</span>
           </div>
         </article>
-      </section>
+      </section> */}
+      {userData.map((data) => (
+        <Card
+          key={data.id}
+          name={data.name}
+          job={data.job}
+          image={data.image}
+          endorsements={data.endorsements}
+        />
+      ))}
     </div>
   );
 }
