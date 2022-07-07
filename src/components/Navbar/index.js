@@ -10,10 +10,13 @@ import {
   TerminalIcon,
   UserCircleIcon,
   CodeIcon,
+  HomeIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Logo from "../../public/images/logo.svg";
+import HashnodeLogo from "../../public/images/hashnode.svg";
+import GithubDarkLogo from "../../public/github-dark.svg";
 import Link from "next/link";
 
 const explore = [
@@ -28,6 +31,12 @@ const explore = [
     description: "See trusted developers endorsed on Spekni",
     href: "/developer",
     icon: CodeIcon,
+  },
+  {
+    name: "About Us",
+    description: "Want to know more about Spekni? Read more here",
+    href: "/about",
+    icon: HomeIcon,
   },
 ];
 const callsToAction = [
@@ -165,15 +174,17 @@ export default function Example() {
               </Link>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a href="/login" className="whitespace-nowrap text-base">
+              {/* <a href="/login" className="whitespace-nowrap text-base">
                 Login
-              </a>
-              <a
-                href="/signup"
-                className="btn btn-primary ml-6 inline-flex items-center justify-center"
-              >
-                Sign up
-              </a>
+              </a> */}
+              <Link href="/login">
+                <a
+                  href="/login"
+                  className="btn btn-primary ml-6 inline-flex items-center justify-center"
+                >
+                  Get Started
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -256,16 +267,37 @@ export default function Example() {
                 <div>
                   <a
                     href="#"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base btn text-center"
+                    className="btn btn-primary w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base btn text-center"
                   >
-                    Sign up
+                    Get Started
                   </a>
-                  <p className="mt-6 text-center text-base font-medium ">
+                  <div className="mt-6 text-center ">
+                    <a
+                      className="mr-5"
+                      href="https://github.com/evavic44/spekni"
+                    >
+                      <Image
+                        src={GithubDarkLogo}
+                        width="21px"
+                        height="21"
+                        title="Github logo"
+                      />
+                    </a>
+                    <a href="https://eke.hashnode.dev">
+                      <Image
+                        src={HashnodeLogo}
+                        width="21px"
+                        height="21px"
+                        title="Hashnode logo"
+                      />
+                    </a>
+                  </div>
+                  {/* <p className="mt-6 text-center text-base font-medium ">
                     Existing customer?{" "}
                     <a href="#" className="highlight">
                       Sign in
                     </a>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
