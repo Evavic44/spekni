@@ -75,7 +75,7 @@ export default function Example() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
           <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
             <div className="flex items-center  lg:flex-1">
-              <Image src={Logo} alt="Workflow" width="40px" height="40px" />
+              <Image src={Logo} alt="Logo" width="40px" height="40px" />
               <span className="font-bold text-2xl ml-1">Spekni</span>
             </div>
 
@@ -203,12 +203,7 @@ export default function Example() {
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    <Image
-                      src={Logo}
-                      alt="Workflow"
-                      width="30px"
-                      height="30px"
-                    />
+                    <Image src={Logo} alt="Logo" width="30px" height="30px" />
                     {/* <span className="font-medium text-base ml-1">Spekni</span> */}
                   </div>
                   <div className="-mr-2">
@@ -278,6 +273,7 @@ export default function Example() {
                         width="21px"
                         height="21"
                         title="Github logo"
+                        alt="GitHub Logo"
                       />
                     </a>
                     <a href="https://eke.hashnode.dev">
@@ -286,6 +282,7 @@ export default function Example() {
                         width="21px"
                         height="21px"
                         title="Hashnode logo"
+                        alt="Hashnode logo"
                       />
                     </a>
                   </div>

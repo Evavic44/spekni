@@ -23,6 +23,7 @@ export default function Card({ image, name, job, endorsements }) {
             src={Badge}
             width={18}
             height={18}
+            alt="badge"
           />
           <span className={styles.count}>{endorsements} Endorsements</span>
         </div>
