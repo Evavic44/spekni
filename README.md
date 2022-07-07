@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://spekni.netlify.app"><img src="https://user-images.githubusercontent.com/62628408/177589795-7ea1c382-db97-4c70-9108-b9ea3ab059f4.svg" width="80px"></a>
+<a href="https://spekni.netlify.app"><img src="https://user-images.githubusercontent.com/62628408/177589795-7ea1c382-db97-4c70-9108-b9ea3ab059f4.svg" width="60px"></a>
 </div>
 
 <div align="center">
@@ -19,10 +19,6 @@
 <a href="https://hashnode.com">
 <img alt="code style: prettier" src="https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white">
 </a> 
-    
-<a href="fontawesome.com/">
-<img src="https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white">
-</a>
 
 <a href="https://vercel.com/evavic44/spekni/4g6cAgSJ2JQcGxpwQew77Ny9jDdC">
     <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
