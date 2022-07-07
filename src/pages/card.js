@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import styles from "../styles/Card.module.css";
 import Image from "next/image";
 import Badge from "../public/images/logo.svg";
