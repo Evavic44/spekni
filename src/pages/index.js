@@ -94,7 +94,7 @@ const Heading = styled.div`
     font-weight: 700;
     letter-spacing: -1px;
     margin-bottom: 1.5rem;
-    z-index: -10;
+    z-index: 9;
 
     .icon {
       &-one {

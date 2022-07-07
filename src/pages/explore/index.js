@@ -5,7 +5,7 @@ import Card from "../../components/Card";
 import userData from "../../data";
 console.log(userData);
 
-export default function Cards({ image, name, job, endorsements, id }) {
+export default function Explore({ image, name, job, endorsements, id }) {
   return (
     <div>
       <Head lang="en">

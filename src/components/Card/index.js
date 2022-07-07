@@ -4,7 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Image from "next/image";
 import Badge from "../../public/badge.svg";
 
-export default function Card({ image, name, job, Badge, endorsements }) {
+export default function Card({ image, name, job, endorsements }) {
   return (
     <section className={styles.container}>
       <article className={styles.card}>
@@ -20,7 +20,7 @@ export default function Card({ image, name, job, Badge, endorsements }) {
         <div className={styles.badge} title="Spekni Endorsement Badge">
           <Image
             loader={() => "/badge.svg"}
-            src={"/badge.svg"}
+            src={Badge}
             width={18}
             height={18}
           />
