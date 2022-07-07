@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Logo from "../public/logo.svg";
 import Navbar from "../components/Navbar";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 /* // Todo
 ? Fix styled components import issue 
 ? Structure pages styles folders
@@ -66,7 +67,7 @@ export default function Home() {
       <Container>
         <Navbar />
 
-        <Heading className="max-w-4xl px-4 pt-0 pb-4 mt-14 mx-auto mb-auto text-center">
+        <Heading className="max-w-4xl px-4 pt-0 pb-4 text-center">
           {/* <Image src={Logo} width="40px" height="40px"></Image> */}
           <h1 className="text-7xl font-bold leading mb-5">
             Hiring and <span className="icon-one">Freelance</span> organization
@@ -76,7 +77,11 @@ export default function Home() {
             Marketplace for top developers, engineers, programmers, coders,
             architects, and consultants
           </p>
+
+          <a className="btn btn-dark mt-5">Explore Now</a>
         </Heading>
+
+        <Section></Section>
       </Container>
     </div>
   );
@@ -85,6 +90,8 @@ export default function Home() {
 const Container = styled.main``;
 
 const Heading = styled.div`
+  margin: 5rem auto 11rem;
+
   h1 {
     line-height: 1;
     font-size: 4.5rem;
@@ -131,6 +138,11 @@ const Heading = styled.div`
     }
   }
 
+  .btn {
+    width: 230px;
+    padding: 0.8rem;
+  }
+
   p {
     max-width: 600px;
     margin: 0 auto;
@@ -153,4 +165,10 @@ const Heading = styled.div`
       line-height: 1.11;
     }
   }
+`;
+
+// Section
+const Section = styled.section`
+  background: black;
+  min-height: 80vh;
 `;
