@@ -6,7 +6,7 @@ export const cats = [
     endorsements: 2300,
     favoured: false,
     image: {
-      url: "https://res.cloudinary.com/rocketmeme/image/upload/v1657144819/Spekni/user-1_kknjns.png",
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png",
       alt: "John Boyega",
     },
     description:
@@ -21,7 +21,7 @@ export const cats = [
     endorsements: 20,
     favoured: false,
     image: {
-      url: "https://res.cloudinary.com/rocketmeme/image/upload/v1657144819/Spekni/user-2_oied7n.png",
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-2_oied7n.png",
       alt: "Bisola Olu",
     },
     description:
@@ -36,7 +36,7 @@ export const cats = [
     endorsements: 400,
     favoured: false,
     image: {
-      url: "https://res.cloudinary.com/rocketmeme/image/upload/v1657144819/Spekni/user-3_sqsxou.png",
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-3_sqsxou.png",
       alt: "Karim Benzema",
     },
     description:
@@ -51,7 +51,7 @@ export const cats = [
     endorsements: 208,
     favoured: false,
     image: {
-      url: "https://res.cloudinary.com/rocketmeme/image/upload/v1657144819/Spekni/user-4_t1x47w.png",
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-4_t1x47w.png",
       alt: "Rebeccah Liam",
     },
     description:
@@ -66,7 +66,7 @@ export const cats = [
     endorsements: 68,
     favoured: false,
     image: {
-      url: "https://res.cloudinary.com/rocketmeme/image/upload/v1657144819/Spekni/user-5_prpty1.png",
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-5_prpty1.png",
       alt: "Emeka Paul",
     },
     description:
@@ -81,7 +81,7 @@ export const cats = [
     endorsements: 100,
     favoured: false,
     image: {
-      url: "https://res.cloudinary.com/rocketmeme/image/upload/v1657144820/Spekni/user-6_wj51gs.png",
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144820/Spekni/user-6_wj51gs.png",
       alt: "Sophia Turner",
     },
     description:

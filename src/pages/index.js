@@ -90,7 +90,7 @@ export default function Home() {
 const Container = styled.main``;
 
 const Heading = styled.div`
-  margin: 5rem auto 11rem;
+  margin: 5rem auto 1rem;
 
   h1 {
     line-height: 1;
@@ -169,6 +169,17 @@ const Heading = styled.div`
 
 // Section
 const Section = styled.section`
-  background: black;
-  min-height: 80vh;
+  z-index: 1;
+  position: relative;
+  min-height: 900px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: url(/maps.svg) no-repeat center center/ cover;
+  }
 `;
