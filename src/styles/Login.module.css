@@ -67,4 +67,12 @@
   .container {
     grid-template-columns: 100vw 0;
   }
+
+  .leftContainer {
+    margin: 1rem auto 2rem;
+  }
+
+  .leftContainer h2 {
+    margin-bottom: 2rem;
+  }
 }
