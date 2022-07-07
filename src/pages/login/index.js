@@ -18,15 +18,14 @@ export default function login() {
               </span>
             </div>
 
-            <div className={styles.form}>
+            <div>
               <h2>Let's help recruiters understand your skills.</h2>
-
               <div className={styles.buttonContainer}>
-                <button className={styles.githubButton}>
+                <button className="bg-black text-white">
                   <Image src={GitHubIcon} width={17} height={17} />
                   <span>Get Started with GitHub</span>
                 </button>
-                <button className={styles.gooleButton}>
+                <button>
                   <Image src={GoogleIcon} width={17} height={17} />
                   <span>Get Started with Google</span>
                 </button>
@@ -34,8 +33,15 @@ export default function login() {
 
               <p className={styles.tc}>
                 By signing up, you are agreeing to our{" "}
-                <a href="https://google.com">Terms of Service</a> and
-                <a href="https://google.com"> Privacy Policy</a>.
+                <a href="https://policies.google.com/terms?hl=en-US">
+                  Terms of Service
+                </a>{" "}
+                and
+                <a href="https://policies.google.com/privacy?hl=en-US">
+                  {" "}
+                  Privacy Policy
+                </a>
+                .
               </p>
             </div>
           </div>
