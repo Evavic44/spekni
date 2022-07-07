@@ -4,7 +4,6 @@ import Image from "next/image";
 import Logo from "../../public/logo.svg";
 import GitHubIcon from "../../public/github.svg";
 import GoogleIcon from "../../public/google.svg";
-import People from "../../public/images/login.svg";
 
 export default function login() {
   return (
@@ -12,7 +11,7 @@ export default function login() {
       <section>
         <div className={styles.container}>
           <div className={styles.leftContainer}>
-            <div className="flex items-center mb-20">
+            <div href="/index" className="flex items-center mb-20">
               <Image src={Logo} alt="logo" width="30px" height="30px" />
               <span className="font-bold text-black text-xl ml-0.5">
                 Spekni
@@ -35,17 +34,13 @@ export default function login() {
 
               <p className={styles.tc}>
                 By signing up, you are agreeing to our{" "}
-                <a href="google.com">Terms of Service</a> and
-                <a href="google.com"> Privacy Policy</a>.
+                <a href="https://google.com">Terms of Service</a> and
+                <a href="https://google.com"> Privacy Policy</a>.
               </p>
             </div>
           </div>
 
-          <div className={styles.rightContainer}>
-            <div>
-              {/* <h2>Hiring and Freelance organization Recruiters can Trust</h2> */}
-            </div>
-          </div>
+          <div className={styles.rightContainer}></div>
         </div>
       </section>
     </div>
