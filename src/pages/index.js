@@ -1,12 +1,9 @@
 import Head from "next/head";
-// import Heading from "./styles/Index.styled.js";
-// import styles from "../styles/Utilities.module.css";
 import Image from "next/image";
 import Logo from "../public/logo.svg";
 import Navbar from "../components/Navbar";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 /* // Todo
-? Fix styled components import issue 
 ? Structure pages styles folders
 */
 import styled from "styled-components";
@@ -63,7 +60,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       {/* Markup */}
-      {/* <main className={styles.main}> // ? Module styling (Don't delete) */}
       <Container>
         <Navbar />
 
@@ -162,7 +158,7 @@ const Heading = styled.div`
     max-width: 700px;
 
     h1 {
-      line-height: 1.11;
+      line-height: 1.1;
     }
   }
 `;
