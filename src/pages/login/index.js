@@ -32,16 +32,14 @@ export default function login() {
               </div>
 
               <p className={styles.tc}>
-                By signing up, you are agreeing to our{" "}
+                By signing up, you are agreeing to our
                 <a href="https://policies.google.com/terms?hl=en-US">
                   Terms of Service
-                </a>{" "}
+                </a>
                 and
                 <a href="https://policies.google.com/privacy?hl=en-US">
-                  {" "}
                   Privacy Policy
                 </a>
-                .
               </p>
             </div>
           </div>
