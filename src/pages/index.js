@@ -1,11 +1,9 @@
 import Head from "next/head";
-// import Heading from "./styles/Index.styled.js";
-// import styles from "../styles/Utilities.module.css";
 import Image from "next/image";
 import Logo from "../public/logo.svg";
 import Navbar from "../components/Navbar";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 /* // Todo
-? Fix styled components import issue 
 ? Structure pages styles folders
 */
 import styled from "styled-components";
@@ -62,11 +60,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       {/* Markup */}
-      {/* <main className={styles.main}> // ? Module styling (Don't delete) */}
       <Container>
         <Navbar />
 
-        <Heading className="max-w-4xl px-4 pt-0 pb-4 mt-14 mx-auto mb-auto text-center">
+        <Heading className="max-w-4xl px-4 pt-0 pb-4 text-center">
           {/* <Image src={Logo} width="40px" height="40px"></Image> */}
           <h1 className="text-7xl font-bold leading mb-5">
             Hiring and <span className="icon-one">Freelance</span> organization
@@ -76,7 +73,11 @@ export default function Home() {
             Marketplace for top developers, engineers, programmers, coders,
             architects, and consultants
           </p>
+
+          <a className="btn btn-dark mt-5">Explore Now</a>
         </Heading>
+
+        <Section></Section>
       </Container>
     </div>
   );
@@ -85,6 +86,8 @@ export default function Home() {
 const Container = styled.main``;
 
 const Heading = styled.div`
+  margin: 5rem auto 1rem;
+
   h1 {
     line-height: 1;
     font-size: 4.5rem;
@@ -131,6 +134,11 @@ const Heading = styled.div`
     }
   }
 
+  .btn {
+    width: 230px;
+    padding: 0.8rem;
+  }
+
   p {
     max-width: 600px;
     margin: 0 auto;
@@ -150,7 +158,24 @@ const Heading = styled.div`
     max-width: 700px;
 
     h1 {
-      line-height: 1.11;
+      line-height: 1.1;
     }
+  }
+`;
+
+// Section
+const Section = styled.section`
+  z-index: 1;
+  position: relative;
+  min-height: 900px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: url(/maps.svg) no-repeat center center/ cover;
   }
 `;
