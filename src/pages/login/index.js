@@ -19,14 +19,14 @@ export default function login() {
             </div>
 
             <div>
-              <h2>Lets help recruiters understand your skills.</h2>
+              <h2>Let&apos;s help recruiters understand your skills.</h2>
               <div className={styles.buttonContainer}>
                 <button className="bg-black text-white">
-                  <Image src={GitHubIcon} width={17} height={17} />
+                  <Image src={GitHubIcon} width={17} height={17} alt="GitHub" />
                   <span>Get Started with GitHub</span>
                 </button>
                 <button>
-                  <Image src={GoogleIcon} width={17} height={17} />
+                  <Image src={GoogleIcon} width={17} height={17} alt="Google" />
                   <span>Get Started with Google</span>
                 </button>
               </div>
