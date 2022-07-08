@@ -76,18 +76,20 @@ export default function Home() {
           </a>
         </header>
 
-        <section className={styles.homeProfile}>
-          {userData.map((data) => (
-            <Card
-              className={styles.card}
-              key={data.id}
-              name={data.name}
-              job={data.job}
-              image={data.image}
-              endorsements={data.endorsements}
-            />
-          ))}
-        </section>
+        <div className={styles.mapContainer}>
+          <section className={styles.homeProfile}>
+            {userData.map((data) => (
+              <Card
+                className={styles.card}
+                key={data.id}
+                name={data.name}
+                job={data.job}
+                image={data.image}
+                endorsements={data.endorsements}
+              />
+            ))}
+          </section>
+        </div>
       </main>
     </div>
   );
