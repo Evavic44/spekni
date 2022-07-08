@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
 import Card from "../components/Card";
 import userData from "../data";
+import Section from "../components/Section";
 
 export default function Home() {
   return (
@@ -60,6 +61,7 @@ export default function Home() {
 
       <main>
         <Navbar />
+        {/* Hero */}
         <header className={styles.hero}>
           <h1 className={styles.heading}>
             Hiring and <span className={styles.iconOne}>Freelance</span>{" "}
@@ -76,6 +78,7 @@ export default function Home() {
           </a>
         </header>
 
+        {/* Profiles */}
         <div className={styles.mapContainer}>
           <section className={styles.homeProfile}>
             {userData.map((data) => (
@@ -91,6 +94,8 @@ export default function Home() {
           </section>
         </div>
       </main>
+
+      <Section />
     </div>
   );
 }
