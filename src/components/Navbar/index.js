@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import styled from "styled-components";
 import {
   MenuIcon,
   PlayIcon,
@@ -56,13 +55,15 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Container>
+    <div>
       <Popover className="test relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
           <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
             <div className="flex items-center  lg:flex-1">
               <Image src={Logo} alt="Logo" width="40px" height="40px" />
-              <span className="font-bold text-2xl ml-1">Spekni</span>
+              <Link href="/">
+                <a className="font-bold text-2xl ml-1">Spekni</a>
+              </Link>
             </div>
 
             <div className="-mr-2 -my-2 md:hidden">
@@ -131,7 +132,6 @@ export default function Example() {
                             {callsToAction.map((item) => (
                               <div key={item.name} className="flow-root">
                                 <a
-                                  //  href={item.href}
                                   href={item.href}
                                   className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100"
                                 >
@@ -155,7 +155,10 @@ export default function Example() {
               <Link href="/about" className="text-base font-medium  ">
                 About
               </Link>
-              <Link href="/documentation" className="text-base font-medium  ">
+              <Link
+                href="https://github.com/Evavic44/spekni"
+                className="text-base font-medium  "
+              >
                 Docs
               </Link>
             </Popover.Group>
@@ -287,17 +290,6 @@ export default function Example() {
           </Popover.Panel>
         </Transition>
       </Popover>
-    </Container>
+    </div>
   );
 }
-
-const Container = styled.div`
-  position: sticky;
-  width: 100%;
-
-  @media (max-width: 1000px) {
-    .logo .logo-text {
-      display: none;
-    }
-  }
-`;

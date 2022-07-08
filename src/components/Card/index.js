@@ -6,28 +6,26 @@ import Badge from "../../public/badge.svg";
 
 export default function Card({ image, name, job, endorsements }) {
   return (
-    <section className={styles.container}>
-      <article className={styles.card}>
-        <LazyLoadImage
-          className={styles.image}
-          src={image.url}
-          alt={image.alt}
-          width={170}
-          height={170}
+    <article className={styles.card}>
+      <LazyLoadImage
+        className={styles.image}
+        src={image.url}
+        alt={image.alt}
+        width={150}
+        height={150}
+      />
+      <h2 className={styles.name}>{name}</h2>
+      <p className={styles.job}>{job}</p>
+      <div className={styles.badge} title="Spekni Endorsement Badge">
+        <Image
+          loader={() => "/badge.svg"}
+          src={Badge}
+          width={16}
+          height={16}
+          alt="badge"
         />
-        <h2 className={styles.name}>{name}</h2>
-        <p className={styles.job}>{job}</p>
-        <div className={styles.badge} title="Spekni Endorsement Badge">
-          <Image
-            loader={() => "/badge.svg"}
-            src={Badge}
-            width={18}
-            height={18}
-            alt="badge"
-          />
-          <span className={styles.count}>{endorsements} Endorsements</span>
-        </div>
-      </article>
-    </section>
+        <span className={styles.count}>{endorsements} Endorsements</span>
+      </div>
+    </article>
   );
 }

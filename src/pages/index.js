@@ -2,7 +2,9 @@ import Head from "next/head";
 // import Image from "next/image";
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 import Navbar from "../components/Navbar";
-import styles from "../styles/Home.module.css"
+import styles from "../styles/Home.module.css";
+import Card from "../components/Card";
+import userData from "../data";
 
 export default function Home() {
   return (
@@ -60,18 +62,32 @@ export default function Home() {
         <Navbar />
         <header className={styles.hero}>
           <h1 className={styles.heading}>
-            Hiring and <span className={styles.iconOne}>Freelance</span> organization
-            Recruiters can <span className={styles.iconTwo}>Trust</span>
+            Hiring and <span className={styles.iconOne}>Freelance</span>{" "}
+            organization Recruiters can{" "}
+            <span className={styles.iconTwo}>Trust</span>
           </h1>
           <p>
             Marketplace for top developers, engineers, programmers, coders,
             architects, and consultants
           </p>
 
-          <a href="/about" className={styles.btn}>Explore Now</a>
+          <a href="/about" className={styles.btn}>
+            Explore Now
+          </a>
         </header>
 
-        <section className={styles.homeProfile}></section>
+        <section className={styles.homeProfile}>
+          {userData.map((data) => (
+            <Card
+              className={styles.card}
+              key={data.id}
+              name={data.name}
+              job={data.job}
+              image={data.image}
+              endorsements={data.endorsements}
+            />
+          ))}
+        </section>
       </main>
     </div>
   );
