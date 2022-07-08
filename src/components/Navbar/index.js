@@ -179,7 +179,7 @@ export default function Example() {
               </a> */}
               <Link href="/login">
                 <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
-                  Get Started
+                  Sign Up
                 </a>
               </Link>
             </div>
