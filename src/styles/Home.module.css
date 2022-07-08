@@ -2,7 +2,8 @@
   text-align: center;
   margin: 4rem auto 1rem;
   padding-bottom: 0 1rem 1rem;
-  max-width: 56rem;
+  max-width: 900px;
+  overflow-x: hidden;
 }
 
 .hero h1 {
@@ -11,15 +12,16 @@
   font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 1.5rem;
-  z-index: 9;
+  padding: 0 1rem;
   text-align: center;
 }
 
 .hero p {
   max-width: 600px;
-  margin: 2rem auto .5rem;
+  margin: 2rem auto 0.5rem;
   font-size: 1.1rem;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .iconOne {
@@ -85,29 +87,45 @@
   background: url(/maps.svg) no-repeat center center/ cover;
 }
 
-@media (max-width: 900px) {
-  .hero {
-    max-width: 700px;
-  }
-
-  .hero h1 {
-    line-height: 1.1;
-    font-size: 3rem;
-  }
-}
-
 @media (max-width: 800px) {
   .hero h1 {
-    line-height: 1.1;
+    font-size: 2.8rem;
   }
 
-  .iconOne::before,
-  .iconTwo::before {
-    display: none;
+  .iconTwo::before,
+  .iconOne::before {
+    right: -140px;
+    top: -30px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    margin-top: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
   .btn {
     width: 90%;
   }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "../../public/logo.svg";
 import GitHubIcon from "../../public/github.svg";
 import GoogleIcon from "../../public/google.svg";
+import Link from "next/link";
 
 export default function login() {
   return (
@@ -11,11 +12,11 @@ export default function login() {
       <section>
         <div className={styles.container}>
           <div className={styles.leftContainer}>
-            <div href="/index" className="flex items-center mb-20">
+            <div className="flex items-center mb-20">
               <Image src={Logo} alt="logo" width="30px" height="30px" />
-              <span className="font-bold text-black text-xl ml-0.5">
-                Spekni
-              </span>
+              <Link href="/">
+                <a className="font-bold text-black text-xl ml-0.5">Spekni</a>
+              </Link>
             </div>
 
             <div>

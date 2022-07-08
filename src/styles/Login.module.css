@@ -73,6 +73,26 @@
   }
 
   .leftContainer h2 {
+    font-size: 2.5rem;
     margin-bottom: 2rem;
+  }
+
+  .leftContainer p {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .leftContainer > div {
+    margin-bottom: 3rem;
+  }
+
+  .leftContainer h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .leftContainer p {
+    margin-top: 1rem;
   }
 }

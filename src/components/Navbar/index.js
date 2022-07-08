@@ -4,10 +4,7 @@ import styled from "styled-components";
 import {
   MenuIcon,
   PlayIcon,
-  ShieldCheckIcon,
-  SupportIcon,
   XIcon,
-  TerminalIcon,
   UserCircleIcon,
   CodeIcon,
   HomeIcon,
@@ -23,13 +20,13 @@ const explore = [
   {
     name: "Recruiters",
     description: "See a list of vetted recruiters currently hiring",
-    href: "/about",
+    href: "/recruiters",
     icon: UserCircleIcon,
   },
   {
     name: "Developers",
     description: "See trusted developers endorsed on Spekni",
-    href: "/developer",
+    href: "/explore",
     icon: CodeIcon,
   },
   {
@@ -45,22 +42,11 @@ const callsToAction = [
 const resources = [
   {
     name: "API",
-    description: "Start integrating Spekni's API.",
     href: "/developer",
-    icon: TerminalIcon,
   },
   {
-    name: "Help Center",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
-    href: "#",
-    icon: SupportIcon,
-  },
-  {
-    name: "Security",
-    description: "Understand how we take your privacy seriously.",
-    href: "#",
-    icon: ShieldCheckIcon,
+    name: "License",
+    href: "https://github.com/Evavic44/spekni/blob/main/LICENSE",
   },
 ];
 
@@ -202,10 +188,15 @@ export default function Example() {
             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <Image src={Logo} alt="Logo" width="30px" height="30px" />
-                    {/* <span className="font-medium text-base ml-1">Spekni</span> */}
-                  </div>
+                  <Link href="/" className="flex items-center">
+                    <Image
+                      className="cursor-pointer"
+                      src={Logo}
+                      alt="Logo"
+                      width="30px"
+                      height="30px"
+                    />
+                  </Link>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center  hover: hover:bg-gray-100">
                       <span className="sr-only">Close menu</span>
@@ -233,15 +224,14 @@ export default function Example() {
               </div>
               <div className="py-6 px-5 space-y-6">
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                  <a
-                    href="#"
-                    className="text-base font-medium  hover:text-gray-700"
-                  >
-                    Developers
-                  </a>
+                  <Link href="/explore">
+                    <a className="text-base font-medium  hover:text-gray-700">
+                      Explore
+                    </a>
+                  </Link>
 
                   <a
-                    href="#"
+                    href="https://github.com/Evavic44/spekni"
                     className="text-base font-medium  hover:text-gray-700"
                   >
                     Documentation
@@ -257,12 +247,11 @@ export default function Example() {
                   ))}
                 </div>
                 <div>
-                  <a
-                    href="#"
-                    className="btn btn-primary w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base btn text-center"
-                  >
-                    Get Started
-                  </a>
+                  <Link href="/login">
+                    <a className="btn btn-primary w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base btn text-center">
+                      Get Started
+                    </a>
+                  </Link>
                   <div className="mt-6 text-center ">
                     <a
                       className="mr-5"
