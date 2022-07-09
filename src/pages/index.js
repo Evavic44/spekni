@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 // import Image from "next/image";
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 import Navbar from "../components/Navbar";
@@ -73,9 +74,9 @@ export default function Home() {
             architects, and consultants
           </p>
 
-          <a href="/about" className={styles.btn}>
-            Explore Now
-          </a>
+          <Link href="/about">
+            <a className={styles.btn}>Explore Now</a>
+          </Link>
         </header>
 
         {/* Profiles */}
