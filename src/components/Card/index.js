@@ -13,6 +13,7 @@ export default function Card({ image, name, job, endorsements }) {
         alt={image.alt}
         width={150}
         height={150}
+        placeholderSrc="https://res.cloudinary.com/victoreke/image/upload/v1657357322/Spekni/placeholder_piuucr.svg"
       />
       <h2 className={styles.name}>{name}</h2>
       <p className={styles.job}>{job}</p>
