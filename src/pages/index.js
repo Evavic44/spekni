@@ -14,6 +14,13 @@ export default function Home() {
   return (
     <div>
       <Head lang="en">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="keywords"
+          content="Developer, Endorsements, Hiring, Job, Victor Eke, Planetscale, Hashnode, Hackathon"
+        />
+        {/* Primary met tags */}
         <title>
           Spekni - Hiring and Freelance organization Recruiters can Trust
         </title>

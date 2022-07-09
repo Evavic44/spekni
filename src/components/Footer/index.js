@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./Footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../public/logo.svg";
+import Logo from "../../public/images/logo.svg";
 import HashnodeLogo from "../../public/images/hashnode.svg";
 import PlanetScaleLogo from "../../public/images/planetscale.svg";
-import TwitterLogo from "../../public/twitter.svg";
-import GitHubLogo from "../../public/github-dark.svg";
+import TwitterLogo from "../../public/images/twitter.svg";
+import GitHubLogo from "../../public/images/github-dark.svg";
 
 export default function index() {
   return (

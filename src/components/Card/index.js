@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Card.module.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Image from "next/image";
-import Badge from "../../public/badge.svg";
+import Badge from "../../public/images/badge.svg";
 
 export default function Card({ image, name, job, endorsements }) {
   return (
@@ -19,8 +19,10 @@ export default function Card({ image, name, job, endorsements }) {
       <p className={styles.job}>{job}</p>
       <div className={styles.badge} title="Spekni Endorsement Badge">
         <Image
-          loader={() => "/badge.svg"}
-          src={Badge}
+          loader={() =>
+            "https://res.cloudinary.com/victoreke/image/upload/v1657402772/Spekni/badge.svg"
+          }
+          src="https://res.cloudinary.com/victoreke/image/upload/v1657402772/Spekni/badge.svg"
           width={16}
           height={16}
           alt="badge"

@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../../styles/Login.module.css";
 import Image from "next/image";
-import Logo from "../../public/logo.svg";
-import GitHubIcon from "../../public/github.svg";
-import GoogleIcon from "../../public/google.svg";
+import Logo from "../../public/images/logo.svg";
+import GitHubIcon from "../../public/images/github.svg";
+import GoogleIcon from "../../public/images/google.svg";
 import Link from "next/link";
 
 export default function login() {

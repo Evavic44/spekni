@@ -12,7 +12,7 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Logo from "../../public/images/logo.svg";
 import HashnodeLogo from "../../public/images/hashnode.svg";
-import GithubDarkLogo from "../../public/github-dark.svg";
+import GithubDarkLogo from "../../public/images/github-dark.svg";
 import Link from "next/link";
 
 const explore = [

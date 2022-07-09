@@ -99,7 +99,7 @@
   left: 0;
   width: 100%;
   height: 90%;
-  background: url(/maps.svg) no-repeat center center/ cover;
+  background: url(/images/maps.svg) no-repeat center center/ cover;
   z-index: -10;
   animation: color-transition infinite 6s alternate-reverse ease-in-out;
 }
