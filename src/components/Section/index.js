@@ -11,7 +11,7 @@ export default function index() {
           <span>What is Spekni?</span>
           <h2>A trust network built on endorsements</h2>
           <p>
-            Signaling and mobilizing your Indivisible group's support for a
+            Signaling and mobilizing your Indivisible group&apos;s support for a
             candidate. Powerful endorsements are not empty statements
           </p>
         </div>
@@ -22,9 +22,9 @@ export default function index() {
             height="415"
             src="https://www.youtube.com/embed/KObiuTFYTkM?controls=0"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </section>
