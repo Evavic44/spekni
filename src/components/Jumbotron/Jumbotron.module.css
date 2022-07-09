@@ -1,5 +1,5 @@
 .jumbotron {
-  background-color: var(--primaryColor);
+  background-color: var(--bgDark);
 }
 
 .jumbotron div {
@@ -8,28 +8,32 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 380px;
-  max-width: 830px;
+  min-height: 500px;
+  max-width: 800px;
   margin: 0 auto;
   color: var(--bgLight);
-  padding: 3rem 1rem 1rem;
+  padding: 1rem;
 }
 
 .jumbotron span {
   font-size: 1.1rem;
   margin-bottom: 1.2rem;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .jumbotron h2 {
-  line-height: 1;
-  font-size: 3.3rem;
-  font-weight: 700;
-  letter-spacing: -1px;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 900;
+  margin: 0.6rem 0 1.4rem;
 }
 
 @media (max-width: 800px) {
   .jumbotron h2 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+    line-height: 1.01;
+    margin-bottom: 1.4rem;
   }
 }
 
@@ -41,6 +45,6 @@
 
 @media (max-width: 400px) {
   .jumbotron h2 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 }
