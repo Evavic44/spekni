@@ -7,6 +7,7 @@ import styles from "../styles/Home.module.css";
 import Card from "../components/Card";
 import userData from "../data";
 import Section from "../components/Section";
+import Jumbotron from "../components/Jumbotron";
 
 export default function Home() {
   return (
@@ -74,7 +75,7 @@ export default function Home() {
             architects, and consultants
           </p>
 
-          <Link href="/about">
+          <Link href="/explore">
             <a className={styles.btn}>Explore Now</a>
           </Link>
         </header>
@@ -97,6 +98,7 @@ export default function Home() {
       </main>
 
       <Section />
+      <Jumbotron />
     </div>
   );
 }
