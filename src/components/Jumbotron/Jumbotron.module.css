@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 350px;
+  min-height: 380px;
   max-width: 830px;
   margin: 0 auto;
   color: var(--bgLight);
@@ -22,7 +22,7 @@
 
 .jumbotron h2 {
   line-height: 1;
-  font-size: 4rem;
+  font-size: 3.3rem;
   font-weight: 700;
   letter-spacing: -1px;
 }

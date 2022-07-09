@@ -29,6 +29,10 @@ body {
   color: var(--textColor);
 }
 
+img {
+  display: block;
+}
+
 p,
 small,
 b {
