@@ -60,7 +60,7 @@ export default function index() {
             <span>Hackathon Project by</span>
 
             <div>
-              <a href="https://planetscale.com/">
+              <a href="https://planetscale.com/" title="Planetscale">
                 <Image
                   src={PlanetScaleLogo}
                   width={20}
@@ -70,7 +70,7 @@ export default function index() {
                 <small className="ml-3">PlanetScale</small>
               </a>
               X
-              <a href="https://hashnode.com">
+              <a href="https://hashnode.com" title="Hashnode">
                 <Image
                   className="mr-3"
                   src={HashnodeLogo}
@@ -83,7 +83,7 @@ export default function index() {
             </div>
           </div>
 
-          <p>&copy; All rights reserved 2022 Spekni</p>
+          <p className="text-sm">&copy; All rights reserved 2022 Spekni</p>
         </div>
       </div>
     </footer>
