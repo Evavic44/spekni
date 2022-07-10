@@ -1,17 +1,26 @@
 import Head from "next/head";
-import Image from "next/image";
-import Logo from "../public/logo.svg";
+import Link from "next/link";
+// import Image from "next/image";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
 import Navbar from "../components/Navbar";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-/* // Todo
-? Structure pages styles folders
-*/
-import styled from "styled-components";
+import styles from "../styles/Home.module.css";
+import Card from "../components/Card";
+import userData from "../data";
+import Section from "../components/Section";
+import Jumbotron from "../components/Jumbotron";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <div>
       <Head lang="en">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="keywords"
+          content="Developer, Endorsements, Hiring, Job, Victor Eke, Planetscale, Hashnode, Hackathon"
+        />
+        {/* Primary met tags */}
         <title>
           Spekni - Hiring and Freelance organization Recruiters can Trust
         </title>
@@ -59,123 +68,46 @@ export default function Home() {
         {/* Favicon */}
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      {/* Markup */}
-      <Container>
-        <Navbar />
 
-        <Heading className="max-w-4xl px-4 pt-0 pb-4 text-center">
-          {/* <Image src={Logo} width="40px" height="40px"></Image> */}
-          <h1 className="text-7xl font-bold leading mb-5">
-            Hiring and <span className="icon-one">Freelance</span> organization
-            Recruiters can <span className="icon-two highlight">Trust</span>
+      <main>
+        <Navbar />
+        {/* Hero */}
+        <header className={styles.hero}>
+          <h1 className={styles.heading}>
+            Hiring and <span className={styles.iconOne}>Freelance</span>{" "}
+            organization Recruiters can{" "}
+            <span className={styles.iconTwo}>Trust</span>
           </h1>
-          <p className="my-0 mx-auto max-w-xl">
+          <p>
             Marketplace for top developers, engineers, programmers, coders,
             architects, and consultants
           </p>
 
-          <a className="btn btn-dark mt-5">Explore Now</a>
-        </Heading>
+          <Link href="/explore">
+            <a className={styles.btn}>Explore Now</a>
+          </Link>
+        </header>
 
-        <Section></Section>
-      </Container>
+        {/* Profiles */}
+        <div className={styles.mapContainer}>
+          <section className={styles.homeProfile}>
+            {userData.map((data) => (
+              <Card
+                className={styles.card}
+                key={data.id}
+                name={data.name}
+                job={data.job}
+                image={data.image}
+                endorsements={data.endorsements}
+              />
+            ))}
+          </section>
+        </div>
+      </main>
+
+      <Section />
+      <Jumbotron />
+      <Footer />
     </div>
   );
 }
-
-const Container = styled.main``;
-
-const Heading = styled.div`
-  margin: 5rem auto 1rem;
-
-  h1 {
-    line-height: 1;
-    font-size: 4.5rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-    margin-bottom: 1.5rem;
-    z-index: -10;
-
-    .icon {
-      &-one {
-        position: relative;
-        z-index: -20;
-
-        &::before {
-          content: "";
-          position: absolute;
-          right: -85px;
-          top: 10px;
-          background-image: url(/images/icon-three.svg);
-          background-size: 35px;
-          background-repeat: no-repeat;
-          width: 90px;
-          height: 90px;
-        }
-      }
-
-      &-two {
-        position: relative;
-        z-index: -20;
-
-        &::before {
-          content: "";
-          position: absolute;
-          right: -70px;
-          top: -10px;
-          background-image: url(/images/icon-one.svg);
-          background-size: 35px;
-          background-repeat: no-repeat;
-          width: 90px;
-          height: 90px;
-          transform: rotate(180deg);
-        }
-      }
-    }
-  }
-
-  .btn {
-    width: 230px;
-    padding: 0.8rem;
-  }
-
-  p {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-  }
-
-  @media (max-width: 900px) {
-    max-width: 700px;
-
-    h1 {
-      line-height: 1.1;
-      font-size: 3rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    max-width: 700px;
-
-    h1 {
-      line-height: 1.1;
-    }
-  }
-`;
-
-// Section
-const Section = styled.section`
-  z-index: 1;
-  position: relative;
-  min-height: 900px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    background: url(/maps.svg) no-repeat center center/ cover;
-  }
-`;

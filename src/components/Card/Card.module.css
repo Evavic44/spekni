@@ -1,16 +1,9 @@
-/* Card */
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5rem;
-}
-
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid #e6e6e6;
+  background-color: var(--bgLight);
   border-radius: 10px;
   padding: 1.5rem 1rem;
   height: auto;
@@ -18,13 +11,23 @@
   cursor: cell;
 }
 
+.image {
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
 .name {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin-top: 1rem;
 }
 
 .job {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
@@ -35,4 +38,6 @@
 
 .count {
   margin-left: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--primaryColor);
 }

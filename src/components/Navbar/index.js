@@ -1,33 +1,38 @@
 import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import styled from "styled-components";
 import {
   MenuIcon,
   PlayIcon,
-  ShieldCheckIcon,
-  SupportIcon,
   XIcon,
-  TerminalIcon,
   UserCircleIcon,
   CodeIcon,
+  HomeIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Logo from "../../public/images/logo.svg";
+import HashnodeLogo from "../../public/images/hashnode.svg";
+import GithubDarkLogo from "../../public/images/github-dark.svg";
 import Link from "next/link";
 
 const explore = [
   {
     name: "Recruiters",
     description: "See a list of vetted recruiters currently hiring",
-    href: "/about",
+    href: "/recruiters",
     icon: UserCircleIcon,
   },
   {
     name: "Developers",
     description: "See trusted developers endorsed on Spekni",
-    href: "/developer",
+    href: "/explore",
     icon: CodeIcon,
+  },
+  {
+    name: "About Us",
+    description: "Want to know more about Spekni? Read more here",
+    href: "/about",
+    icon: HomeIcon,
   },
 ];
 const callsToAction = [
@@ -36,22 +41,11 @@ const callsToAction = [
 const resources = [
   {
     name: "API",
-    description: "Start integrating Spekni's API.",
     href: "/developer",
-    icon: TerminalIcon,
   },
   {
-    name: "Help Center",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
-    href: "#",
-    icon: SupportIcon,
-  },
-  {
-    name: "Security",
-    description: "Understand how we take your privacy seriously.",
-    href: "#",
-    icon: ShieldCheckIcon,
+    name: "License",
+    href: "https://github.com/Evavic44/spekni/blob/main/LICENSE",
   },
 ];
 
@@ -61,13 +55,15 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Container>
-      <Popover className="test relative">
+    <div>
+      <Popover className="test relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
           <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
             <div className="flex items-center  lg:flex-1">
-              <Image src={Logo} alt="Workflow" width="40px" height="40px" />
-              <span className="font-bold text-2xl ml-1">Spekni</span>
+              <Image src={Logo} alt="Logo" width="40px" height="40px" />
+              <Link href="/">
+                <a className="font-bold text-2xl ml-1">Spekni</a>
+              </Link>
             </div>
 
             <div className="-mr-2 -my-2 md:hidden">
@@ -108,7 +104,7 @@ export default function Example() {
                       leaveFrom="opacity-100 translate-y-0"
                       leaveTo="opacity-0 translate-y-1"
                     >
-                      <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                      <Popover.Panel className="absolute z-100 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                           <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                             {explore.map((item) => (
@@ -136,7 +132,6 @@ export default function Example() {
                             {callsToAction.map((item) => (
                               <div key={item.name} className="flow-root">
                                 <a
-                                  //  href={item.href}
                                   href={item.href}
                                   className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100"
                                 >
@@ -160,20 +155,22 @@ export default function Example() {
               <Link href="/about" className="text-base font-medium  ">
                 About
               </Link>
-              <Link href="/documentation" className="text-base font-medium  ">
+              <Link
+                href="https://github.com/Evavic44/spekni"
+                className="text-base font-medium  "
+              >
                 Docs
               </Link>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a href="/login" className="whitespace-nowrap text-base">
+              {/* <a href="/login" className="whitespace-nowrap text-base">
                 Login
-              </a>
-              <a
-                href="/signup"
-                className="btn btn-primary ml-6 inline-flex items-center justify-center"
-              >
-                Sign up
-              </a>
+              </a> */}
+              <Link href="/login">
+                <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
+                  Sign Up
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -194,15 +191,15 @@ export default function Example() {
             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center">
+                  <Link href="/" className="flex items-center">
                     <Image
+                      className="cursor-pointer"
                       src={Logo}
-                      alt="Workflow"
+                      alt="Logo"
                       width="30px"
                       height="30px"
                     />
-                    {/* <span className="font-medium text-base ml-1">Spekni</span> */}
-                  </div>
+                  </Link>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center  hover: hover:bg-gray-100">
                       <span className="sr-only">Close menu</span>
@@ -230,15 +227,14 @@ export default function Example() {
               </div>
               <div className="py-6 px-5 space-y-6">
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                  <a
-                    href="#"
-                    className="text-base font-medium  hover:text-gray-700"
-                  >
-                    Developers
-                  </a>
+                  <Link href="/explore">
+                    <a className="text-base font-medium  hover:text-gray-700">
+                      Explore
+                    </a>
+                  </Link>
 
                   <a
-                    href="#"
+                    href="https://github.com/Evavic44/spekni"
                     className="text-base font-medium  hover:text-gray-700"
                   >
                     Documentation
@@ -254,35 +250,46 @@ export default function Example() {
                   ))}
                 </div>
                 <div>
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base btn text-center"
-                  >
-                    Sign up
-                  </a>
-                  <p className="mt-6 text-center text-base font-medium ">
+                  <Link href="/login">
+                    <a className="btn btn-primary w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base btn text-center">
+                      Get Started
+                    </a>
+                  </Link>
+                  <div className="mt-6 text-center ">
+                    <a
+                      className="mr-5"
+                      href="https://github.com/evavic44/spekni"
+                    >
+                      <Image
+                        src={GithubDarkLogo}
+                        width="21px"
+                        height="21"
+                        title="Github logo"
+                        alt="GitHub Logo"
+                      />
+                    </a>
+                    <a href="https://eke.hashnode.dev">
+                      <Image
+                        src={HashnodeLogo}
+                        width="21px"
+                        height="21px"
+                        title="Hashnode logo"
+                        alt="Hashnode logo"
+                      />
+                    </a>
+                  </div>
+                  {/* <p className="mt-6 text-center text-base font-medium ">
                     Existing customer?{" "}
                     <a href="#" className="highlight">
                       Sign in
                     </a>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
           </Popover.Panel>
         </Transition>
       </Popover>
-    </Container>
+    </div>
   );
 }
-
-const Container = styled.div`
-  position: sticky;
-  width: 100%;
-
-  @media (max-width: 1000px) {
-    .logo .logo-text {
-      display: none;
-    }
-  }
-`;

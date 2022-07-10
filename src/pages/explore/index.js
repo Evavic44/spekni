@@ -3,9 +3,8 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import Navbar from "../../components/Navbar";
 import Card from "../../components/Card";
 import userData from "../../data";
-console.log(userData);
 
-export default function Cards({ image, name, job, endorsements, id }) {
+export default function Explore() {
   return (
     <div>
       <Head lang="en">
@@ -24,23 +23,7 @@ export default function Cards({ image, name, job, endorsements, id }) {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <Navbar />
-      {/* <section className={styles.container}>
-        <article className={styles.card}>
-          <LazyLoadImage
-            className={styles.image}
-            src={image.url}
-            alt={image.alt}
-            width={170}
-            height={170}
-          />
-          <h2 className={styles.name}>{name}</h2>
-          <p className={styles.job}>{job}</p>
-          <div className={styles.badge} title="Spekni Endorsement Badge">
-            <Image src={Badge} width={18} height={18} />
-            <span className={styles.count}>{endorsements} Endorsements</span>
-          </div>
-        </article>
-      </section> */}
+
       {userData.map((data) => (
         <Card
           key={data.id}

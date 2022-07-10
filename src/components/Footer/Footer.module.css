@@ -1,0 +1,143 @@
+.footer {
+  min-height: 320px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.footerHead,
+.footerBottom {
+  max-width: 1230px;
+  padding: 1.8rem 1.5rem;
+}
+
+.footerHead {
+  display: flex;
+  align-items: center;
+  margin: 3rem auto 1.5rem;
+  justify-content: space-between;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+}
+
+.footerLinks .footerLogo {
+  display: flex;
+  align-items: center;
+}
+
+.footerLinks a {
+  margin-right: 2.2rem;
+}
+
+.footerLinks a:hover {
+  color: var(--primaryColor);
+}
+
+.footerIcons a {
+  margin-left: 1.2rem;
+}
+
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem auto;
+}
+
+.attribution span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.attribution div {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.attribution div a {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.4rem 0.6rem;
+  width: 160px;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.attribution div a:nth-child(2) {
+  margin-left: 1rem;
+}
+
+@media (max-width: 800px) {
+  .footerHead,
+  .footerBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerBottom {
+    text-align: center;
+  }
+
+  .footerBottom p {
+    margin-top: 1rem;
+  }
+
+  .footerLinks {
+    margin-bottom: 2rem;
+  }
+
+  .footerLinks a {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .footerHead {
+    align-items: flex-start;
+  }
+
+  .footerIcons a {
+    margin: 0 1.2rem 0 0;
+  }
+
+  .footerLinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+  }
+
+  .footerBottom {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .footerLinks {
+    grid-template-columns: 1fr;
+  }
+
+  .footerBottom {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .attribution div {
+    flex-direction: column;
+  }
+
+  .attribution div a:nth-child(2) {
+    margin-left: initial;
+  }
+}

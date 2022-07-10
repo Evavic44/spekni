@@ -29,6 +29,10 @@ body {
   color: var(--textColor);
 }
 
+img {
+  display: block;
+}
+
 p,
 small,
 b {
@@ -39,6 +43,11 @@ b {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
 }
 
 .btn {
