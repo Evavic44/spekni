@@ -15,6 +15,7 @@ import HashnodeLogo from "../../public/images/hashnode.svg";
 import GithubDarkLogo from "../../public/images/github-dark.svg";
 import Link from "next/link";
 
+
 const explore = [
   {
     name: "Recruiters",

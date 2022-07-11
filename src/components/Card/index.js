@@ -19,9 +19,6 @@ export default function Card({ image, name, job, endorsements }) {
       <p className={styles.job}>{job}</p>
       <div className={styles.badge} title="Spekni Endorsement Badge">
         <Image
-          loader={() =>
-            "https://res.cloudinary.com/victoreke/image/upload/v1657402772/Spekni/badge.svg"
-          }
           src="https://res.cloudinary.com/victoreke/image/upload/v1657402772/Spekni/badge.svg"
           width={16}
           height={16}
