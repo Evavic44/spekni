@@ -4,14 +4,67 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 60vh;
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 2rem auto 0;
+  font-family: "Space Grotesk", sans-serif;
 }
 
-.about h1 {
-  font-size: 3.3rem;
+.about .hero h1 {
+  font-size: 3rem;
+  line-height: 1.4;
   font-weight: 700;
+  text-align: left;
 }
 
-.about p {
-  font-size: 1.2rem;
+.about .hero .heroImage {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4rem 0;
+  column-gap: 3rem;
+  row-gap: 0.5rem;
+}
+
+.aboutSection {
+  margin: 0 0 3rem;
+}
+
+.aboutSection .aboutImage {
+  position: relative;
+}
+
+.aboutSection .aboutImage svg {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-20deg);
+}
+
+.aboutSection .aboutText {
+  margin: 6rem 0 4rem;
+  font-size: 1.3rem;
+  text-align: left;
+  line-height: 1.8;
+  line-height: 2.2;
+}
+
+.aboutSection .aboutText .highlight {
+  font-size: 80px;
+  line-height: normal;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  color: var(--primaryColor);
+}
+
+@media (max-width: 900px) {
+  .aboutSection .aboutImage {
+    width: 100%;
+  }
 }
