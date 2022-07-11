@@ -4,6 +4,7 @@ import styles from "../../styles/About.module.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Jumbotron from "../../components/Jumbotron";
+import Testimonials from "../../components/Testimonials";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 // import ProductHuntLogo from "../../public/images/producthunt.svg";
@@ -77,10 +78,22 @@ export default function index() {
       <Navbar />
       <main className={styles.about}>
         <div className={styles.hero}>
-          <h1>
+          {/* <h1>
             We make it possble for people to endorse developers based on the
             skillsets they are proved to be proficient in.
+          </h1> */}
+          <h1>
+            Recieving positive feedback from someone is always a good feeling.
+            It&apos;s even better when it&apos;s in writing
           </h1>
+          {/* <h1>
+            “Showing gratitude is one of the simplest yet most powerful things
+            humans can do for each other.” —Randy Pausch
+          </h1> */}
+          {/* <h1>
+            “Kind words can be short and easy to speak, but their echoes are
+            truly endless.” —Mother Teresa
+          </h1> */}
           <figure className={styles.heroImage}>
             <svg
               width="140"
@@ -94,7 +107,7 @@ export default function index() {
                 fill="#444444"
               />
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 clip-rule="evenodd"
                 d="M12.9971 10H22.6638C26.5298 10 29.6638 13.134 29.6638 17C29.6638 20.866 26.5298 24 22.6638 24H16.9971V30H12.9971V10ZM16.9978 20.0024H22.6645C24.3212 20.0024 25.6645 18.6593 25.6645 17.0024C25.6645 15.3456 24.3212 14.0024 22.6645 14.0024H16.9978V20.0024Z"
                 fill="white"
@@ -211,6 +224,7 @@ export default function index() {
           </blockquote>
         </section>
       </main>
+      {/* <Testimonials /> */}
       <Jumbotron />
       <Footer />
     </div>
