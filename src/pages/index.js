@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <Head lang="en">
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="keywords"
@@ -32,7 +32,7 @@ export default function Home() {
           name="description"
           content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
         />
-
+        <meta name="author" content="EKe Victor, Spiff Jekey-Green, Nicholas Ovunda" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://spekni.vercel.app/" />
         <meta
