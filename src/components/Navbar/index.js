@@ -14,7 +14,7 @@ import Logo from "../../public/images/logo.svg";
 import HashnodeLogo from "../../public/images/hashnode.svg";
 import GithubDarkLogo from "../../public/images/github-dark.svg";
 import Link from "next/link";
-
+import { useSession } from "next-auth/react";
 
 const explore = [
   {
@@ -55,6 +55,7 @@ function classNames(...classes) {
 }
 
 export default function Example() {
+  const { data: session, status } = useSession();
   return (
     <div>
       <Popover className="test relative z-10">
@@ -167,11 +168,19 @@ export default function Example() {
               {/* <a href="/login" className="whitespace-nowrap text-base">
                 Login
               </a> */}
-              <Link href="/login">
+              {status === "loading" ? (<a className="btn btn-primary ml-6 inline-flex items-center justify-center">
+                <span className="loading"></span>
+              </a>) : null}
+              {status === "authenticated" ? (<Link href="/profile">
+                <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
+                  Profile
+                </a>
+              </Link>) : null}
+              {status === "unauthenticated" ? (<Link href="/login">
                 <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
                   Sign Up
                 </a>
-              </Link>
+              </Link>) : null}
             </div>
           </div>
         </div>

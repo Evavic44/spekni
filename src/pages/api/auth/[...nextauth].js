@@ -11,6 +11,9 @@ export default NextAuth({
     GithubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
+      httpOptions: {
+        timeout: 40000,
+      },
       profile(profile) {
         return {
           id: profile.id.toString(),

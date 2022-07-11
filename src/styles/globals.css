@@ -80,3 +80,27 @@ button {
 .highlight {
   color: var(--primaryColor);
 }
+
+.loader {
+  width: 48px !important;
+  height: 48px !important;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  display: block;
+  background: red;
+}
+
+
+/* Animations */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
