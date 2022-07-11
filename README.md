@@ -8,6 +8,10 @@
 </div>
 
 <p align="center">
+<a href="https://vercel.com/evavic44/spekni/4g6cAgSJ2JQcGxpwQew77Ny9jDdC">
+  <img src="https://user-images.githubusercontent.com/62628408/178318439-dd015ff3-5ebd-43d8-a84f-6f6d4876a5b0.svg" width="130px">
+</a>
+    
 <a href="https://prisma.io/">
     <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white">
 </a>
@@ -21,8 +25,8 @@
 </a> 
 
 <a href="https://vercel.com/evavic44/spekni/4g6cAgSJ2JQcGxpwQew77Ny9jDdC">
-    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white">
-</a>  
+    <img src="https://user-images.githubusercontent.com/62628408/178316423-5dc0c0bb-2ebb-4c7f-9635-164a324d4897.svg" width="150px">
+</a>      
 </p>
 
 <a href="https://spekni.vercel.app">
