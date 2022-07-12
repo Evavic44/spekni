@@ -9,8 +9,8 @@ export default function Explore() {
     <div>
       <Head lang="en">
         <title>
-          User Profile | Spekni - Hiring and Freelance organization Recruiters
-          can Trust
+          Explore | Spekni - Hiring and Freelance organization Recruiters can
+          Trust
         </title>
         <meta
           name="title"
