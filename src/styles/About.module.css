@@ -63,6 +63,28 @@
   color: var(--primaryColor);
 }
 
+.testimonials h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.testimonialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.testimonialContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
 @media (max-width: 900px) {
   .aboutSection .aboutImage {
     width: 100%;
