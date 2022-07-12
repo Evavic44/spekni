@@ -7,6 +7,7 @@ import Jumbotron from "../../components/Jumbotron";
 import Testimonials from "../../components/Testimonials";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import testimonialData from "../../feedback"
 // import ProductHuntLogo from "../../public/images/producthunt.svg";
 // import PlanetScaleLogo from "../../public/images/planetscale-about.svg";
 // import HashnodeLogo from "../../public/images/hashnode-about.svg";
@@ -224,7 +225,19 @@ export default function index() {
           </blockquote>
         </section>
       </main>
-      {/* <Testimonials /> */}
+
+      <section className={styles.testimonialSection}>
+        <h2 className="text-center text-3xl text-gray-900 font-bold">What People are saying</h2>
+        <div className={styles.testimonialContainer}>
+          {testimonialData.map((feedback) => (
+            <Testimonials
+              name={feedback.name}
+              image={feedback.image}
+              review={feedback.review}
+            />
+          ))}
+        </div>
+      </section>
       <Jumbotron />
       <Footer />
     </div>

@@ -1,27 +1,24 @@
-const testimonials = [
+export default [
   {
     name: "Victor Eke",
     image: {
-      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png",
-      alt: this.name,
+      url: `https://avatars.dicebear.com/api/bottts/victor.svg`,
     },
     review:
-      "Spekni is an amazing idea, well thought off and excellent. It's a big suprise nobody has thought about building something like this before.",
+      "Spekni is an amazing service for getting developers noticed for their contributions and assistance in the developer world.",
   },
   {
     name: "Spiff Jekey Green",
     image: {
-      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png",
-      alt: this.name,
+      url: `https://avatars.dicebear.com/api/bottts/spiff.svg`,
     },
     review:
-      "Spekni is an amazing idea, well thought off and excelent. It's a big suprise nobody has thought about building something like this before.",
+      "Practically a well thought off and excelent project. It's a big suprise nobody has thought about building something like this before.",
   },
   {
     name: "Nicholas Ovunda",
     image: {
-      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png",
-      alt: this.name,
+      url: `https://avatars.dicebear.com/api/bottts/nick.svg`,
     },
     review:
       "Spekni is an amazing idea, well thought off and excelent. It's a big suprise nobody has thought about building something like this before.",
