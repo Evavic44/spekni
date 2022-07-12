@@ -1,11 +1,30 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 1.5rem;
-  width: 350px;
-  min-height: 270px;
-  border: 1px solid #ddd;
+  min-height: 260px;
+  border: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon {
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  transform: rotate(-30deg);
 }
 
 .name {
-  font-weight: 700;
-  font-size: 1.04rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.review {
+  font-size: 0.96rem;
 }

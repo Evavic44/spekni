@@ -2,7 +2,7 @@ export default [
   {
     name: "Victor Eke",
     image: {
-      url: `https://avatars.dicebear.com/api/bottts/victor.svg`,
+      url: `https://res.cloudinary.com/victoreke/image/upload/v1657623824/Spekni/eke_tuqz8f.png`,
     },
     review:
       "Spekni is an amazing service for getting developers noticed for their contributions and assistance in the developer world.",
@@ -10,7 +10,7 @@ export default [
   {
     name: "Spiff Jekey Green",
     image: {
-      url: `https://avatars.dicebear.com/api/bottts/spiff.svg`,
+      url: `https://res.cloudinary.com/victoreke/image/upload/v1657623824/Spekni/spiff_yuk6sb.jpg`,
     },
     review:
       "Practically a well thought off and excelent project. It's a big suprise nobody has thought about building something like this before.",
@@ -18,9 +18,9 @@ export default [
   {
     name: "Nicholas Ovunda",
     image: {
-      url: `https://avatars.dicebear.com/api/bottts/nick.svg`,
+      url: `https://res.cloudinary.com/victoreke/image/upload/v1657623824/Spekni/nick_a14bi5.jpg`,
     },
     review:
-      "Spekni is an amazing idea, well thought off and excelent. It's a big suprise nobody has thought about building something like this before.",
+      "Quite amazed by the creativity the team's creativity. It's a big suprise nobody has thought about building something like this before.",
   },
 ];
