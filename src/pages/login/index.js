@@ -8,7 +8,7 @@ import GoogleIcon from "../../public/images/google.svg";
 import Link from "next/link";
 import Router from "next/router";
 
-export default function login({ providers }) {
+export default function Login({ providers }) {
   const { data: session, status } = useSession();
 
   const signInWithGithub = () => {
