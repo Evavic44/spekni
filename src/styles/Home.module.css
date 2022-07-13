@@ -1,27 +1,23 @@
 .hero {
-  text-align: center;
   margin: 4rem auto;
-  padding-bottom: 0 1rem 1rem;
+  padding: 0 1rem 1rem;
   max-width: 900px;
   overflow-x: hidden;
+  text-align: center;
 }
 
 .hero h1 {
-  line-height: 1;
-  font-size: 4.5rem;
+  line-height: 1.06;
+  font-size: 5vw;
   font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 1.5rem;
-  padding: 0 1rem;
-  text-align: center;
 }
 
 .hero p {
   max-width: 600px;
-  margin: 2rem auto 0.5rem;
+  margin: 2rem auto 1rem;
   font-size: 1.1rem;
-  text-align: center;
-  padding: 0 1rem;
 }
 
 .iconOne {
@@ -32,13 +28,13 @@
 .iconOne::before {
   content: "";
   position: absolute;
-  right: -85px;
-  top: 10px;
+  left: -420px;
+  top: 100px;
   background-image: url(/images/icon-three.svg);
   background-size: 35px;
   background-repeat: no-repeat;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
 }
 
 .iconTwo {
@@ -69,6 +65,11 @@
   background: var(--bgDark);
   width: 250px;
   color: var(--bgLight);
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: #111;
 }
 
 .homeProfile {
@@ -95,7 +96,7 @@
   min-height: 900px;
   content: "";
   position: absolute;
-  top: 430px;
+  top: 450px;
   left: 0;
   width: 100%;
   height: 90%;
@@ -122,6 +123,7 @@
 @media (max-width: 800px) {
   .hero h1 {
     font-size: 2.8rem;
+    line-height: 1.15;
   }
 
   .iconTwo::before,

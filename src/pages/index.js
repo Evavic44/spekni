@@ -32,7 +32,10 @@ export default function Home() {
           name="description"
           content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
         />
-        <meta name="author" content="EKe Victor, Spiff Jekey-Green, Nicholas Ovunda" />
+        <meta
+          name="author"
+          content="EKe Victor, Spiff Jekey-Green, Nicholas Ovunda"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://spekni.vercel.app/" />
         <meta
@@ -74,17 +77,17 @@ export default function Home() {
         {/* Hero */}
         <header className={styles.hero}>
           <h1 className={styles.heading}>
-            Hiring and <span className={styles.iconOne}>Freelance</span>{" "}
-            organization Recruiters can{" "}
-            <span className={styles.iconTwo}>Trust</span>
+            Recognition <span className={styles.iconOne}>Platform</span> built
+            for developers through{" "}
+            <span className={styles.iconTwo}>endorsements</span>
           </h1>
           <p>
-            Marketplace for top developers, engineers, programmers, coders,
-            architects, and consultants
+            A system built to reward developers, engineers, programmers,
+            creators that are making impact in the tech space
           </p>
 
           <Link href="/explore">
-            <a className={styles.btn}>Explore Now</a>
+            <a className={styles.btn}>Start Endorsing</a>
           </Link>
         </header>
 

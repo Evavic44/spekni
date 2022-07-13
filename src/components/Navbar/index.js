@@ -62,9 +62,9 @@ export default function Example() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
           <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
             <div className="flex items-center  lg:flex-1">
-              <Image src={Logo} alt="Logo" width="40px" height="40px" />
+              <Image src={Logo} alt="Logo" width="30px" height="30px" />
               <Link href="/">
-                <a className="font-bold text-2xl ml-1">Spekni</a>
+                <a className="font-bold text-xl ml-1">Spekni</a>
               </Link>
             </div>
 
@@ -168,19 +168,25 @@ export default function Example() {
               {/* <a href="/login" className="whitespace-nowrap text-base">
                 Login
               </a> */}
-              {status === "loading" ? (<a className="btn btn-primary ml-6 inline-flex items-center justify-center">
-                <span className="loading"></span>
-              </a>) : null}
-              {status === "authenticated" ? (<Link href="/profile">
+              {status === "loading" ? (
                 <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
-                  Profile
+                  <span className="loading"></span>
                 </a>
-              </Link>) : null}
-              {status === "unauthenticated" ? (<Link href="/login">
-                <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
-                  Sign Up
-                </a>
-              </Link>) : null}
+              ) : null}
+              {status === "authenticated" ? (
+                <Link href="/profile">
+                  <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
+                    Profile
+                  </a>
+                </Link>
+              ) : null}
+              {status === "unauthenticated" ? (
+                <Link href="/login">
+                  <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
+                    Sign Up
+                  </a>
+                </Link>
+              ) : null}
             </div>
           </div>
         </div>
@@ -265,7 +271,13 @@ export default function Example() {
                       Get Started
                     </a>
                   </Link>
-                  <div className="mt-6 text-center ">
+                  <p className="mt-6 text-center text-base">
+                    Existing User?{" "}
+                    <Link href="/explore">
+                      <a className="text-base highlight">Endorse a dev</a>
+                    </Link>
+                  </p>
+                  <div className="mt-6 text-center">
                     <a
                       className="mr-5"
                       href="https://github.com/evavic44/spekni"
@@ -288,12 +300,6 @@ export default function Example() {
                       />
                     </a>
                   </div>
-                  {/* <p className="mt-6 text-center text-base font-medium ">
-                    Existing customer?{" "}
-                    <a href="#" className="highlight">
-                      Sign in
-                    </a>
-                  </p> */}
                 </div>
               </div>
             </div>
