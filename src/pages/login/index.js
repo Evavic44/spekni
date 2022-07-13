@@ -12,11 +12,11 @@ export default function Login({ providers }) {
   const { data: session, status } = useSession();
 
   const signInWithGithub = () => {
-    signIn(providers.github.id, { callbackUrl: '/' });
+    signIn(providers.github.id, { callbackUrl: "/" });
   };
 
   const signInWithGoogle = () => {
-    // signIn(providers.google.id);
+    signIn(providers.google.id);
   };
 
   if (status === "authenticated") {
@@ -39,12 +39,25 @@ export default function Login({ providers }) {
               <div>
                 <h2>Let&apos;s help recruiters understand your skills.</h2>
                 <div className={styles.buttonContainer}>
-                  <button className="bg-black text-white" onClick={signInWithGithub}>
-                    <Image src={GitHubIcon} width={17} height={17} alt="GitHub" />
+                  <button
+                    className="bg-black text-white"
+                    onClick={signInWithGithub}
+                  >
+                    <Image
+                      src={GitHubIcon}
+                      width={17}
+                      height={17}
+                      alt="GitHub"
+                    />
                     <span>Get Started with GitHub</span>
                   </button>
                   <button onClick={signInWithGoogle}>
-                    <Image src={GoogleIcon} width={17} height={17} alt="Google" />
+                    <Image
+                      src={GoogleIcon}
+                      width={17}
+                      height={17}
+                      alt="Google"
+                    />
                     <span>Get Started with Google</span>
                   </button>
                 </div>
@@ -70,11 +83,10 @@ export default function Login({ providers }) {
     );
   }
 
-  if(status === "loading") {
+  if (status === "loading") {
     // @TODO: Please add a loader with full screen view to display while session is decoded
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
-
 }
 
 export async function getServerSideProps(context) {

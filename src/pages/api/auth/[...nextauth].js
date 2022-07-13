@@ -1,5 +1,5 @@
 import NextAuth from "next-auth";
-import GithubProvider from "next-auth/providers/github";
+import { GithubProvider, GoogleProvider } from "next-auth/providers/github";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
 
@@ -20,8 +20,12 @@ export default NextAuth({
           name: profile.name || profile.login,
           email: profile.email,
           image: profile.avatar_url,
-        }
+        };
       },
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
     // ...add more providers here
   ],
@@ -30,5 +34,5 @@ export default NextAuth({
   adapter: PrismaAdapter(prisma),
   pages: {
     signIn: "/login",
-  }
+  },
 });
