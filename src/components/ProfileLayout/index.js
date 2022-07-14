@@ -1,5 +1,6 @@
 import styles from "./ProfileLayout.module.css";
-import ActiveLink from "../../utils/ActiveLink";
+// import ActiveLink from "./ActiveLink";
+import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 import GitHubIcon from "../../public/images/github.svg";
@@ -166,7 +167,7 @@ export default function Layout({ children }) {
       </header>
 
       <section className={styles.line}>
-        <ActiveLink href="/profile/endorsement">
+        <Link href="/profile/endorsement">
           <a className="pb-4 flex item-center">
             <BadgeCheckIcon
               className="mr-2"
@@ -176,8 +177,8 @@ export default function Layout({ children }) {
             />{" "}
             Endorsements
           </a>
-        </ActiveLink>
-        <ActiveLink href="/profile/recommendation">
+        </Link>
+        <Link href="/profile/recommendation">
           <a className="pb-4 flex item-center">
             <SparklesIcon
               className="mr-2"
@@ -187,7 +188,7 @@ export default function Layout({ children }) {
             />
             Recommendations
           </a>
-        </ActiveLink>
+        </Link>
       </section>
       <main className={styles.main}>{children}</main>
     </>
