@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import styles from "../../styles/Profile.module.css";
+// import styles from "../../styles/Profile.module.css";
 import Navbar from "../../components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
