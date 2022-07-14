@@ -11,7 +11,7 @@ function Recommendation() {
           <h1>Recommendations</h1>
           <p>
             Thanks for visiting my page, kindly drop a recommendation based on
-            past experiences you've had with me.
+            past experiences you&apos;ve had with me.
           </p>
         </div>
       </section>
