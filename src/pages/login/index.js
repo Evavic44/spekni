@@ -16,7 +16,7 @@ export default function Login({ providers }) {
   };
 
   const signInWithGoogle = () => {
-    signIn(providers.google.id);
+    // signIn(providers.google.id, { callbackUrl: "/" });
   };
 
   if (status === "authenticated") {
