@@ -167,7 +167,7 @@ export default function Layout({ children }) {
       </header>
 
       <section className={styles.line}>
-        <Link href="/profile/endorsement">
+        <Link href="/profile/endorsement" scroll={false}>
           <a className="pb-4 flex item-center">
             <BadgeCheckIcon
               className="mr-2"
@@ -178,7 +178,7 @@ export default function Layout({ children }) {
             Endorsements
           </a>
         </Link>
-        <Link href="/profile/recommendation">
+        <Link href="/profile/recommendation" scroll={false}>
           <a className="pb-4 flex item-center">
             <SparklesIcon
               className="mr-2"

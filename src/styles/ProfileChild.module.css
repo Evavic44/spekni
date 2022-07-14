@@ -1,5 +1,6 @@
 .container {
   padding: 3rem 1rem 0 2.5rem;
+  max-width: 1100px;
 }
 
 .header {
@@ -14,8 +15,14 @@
 
 .header p {
   color: #333;
-  max-width: 700px;
+  max-width: 650px;
   margin-bottom: 1.5rem;
+}
+
+.endorsements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .endorsements,
@@ -23,21 +30,38 @@
   margin: 4rem 0;
 }
 
-.endorsements,
-.recommendation .title {
-  font-size: 1.3rem;
-  font-weight: 500;
+.endorsements .title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.endorsements .endorsementCard {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 500px;
+  height: auto;
+  padding: 1.5rem;
+  gap: 1.5rem;
 }
 
 .skill {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+}
+
+.endorseImage,
+.endorseName {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.endorseName {
+  font-size: 0.8rem;
 }
 
 .endorseImage {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.3rem;
+  margin: 1rem 0;
+}
+.endorseImage img {
+  border-radius: 50%;
 }
