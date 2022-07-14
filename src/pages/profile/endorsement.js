@@ -12,7 +12,7 @@ function Endorsement() {
           <h1>Endorsements</h1>
           <p>
             Thanks for visiting my page, kindly endorse my skills based on past
-            experiences you've had with me.
+            experiences you&apos;ve had with me.
           </p>
         </div>
         <div className={styles.endorsements}>

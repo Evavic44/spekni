@@ -104,40 +104,62 @@ export default function Layout({ children }) {
             distributed applications that solve real-world problems.{" "}
           </span>
           <div className={styles.social}>
-            <a href="https://victoreke.com" target="_blank">
+            <a href="https://victoreke.com" target="_blank" rel="noreferrer">
               Portfolio
             </a>
-            <a href="https://victoreke.com" target="_blank">
+            <a href="https://victoreke.com" target="_blank" rel="noreferrer">
               Resume
             </a>
             <a
               className="flex"
               href="https://github.com/evavic44"
               target="_blank"
+              rel="noreferrer"
             >
-              <Image src={GitHubIcon} width={20} height={20} title="GitHub" />
+              <Image
+                src={GitHubIcon}
+                width={20}
+                height={20}
+                title="GitHub"
+                alt="GitHub Icon"
+              />
             </a>
             <a
               className="flex"
               href="https://linkedin.com/in/victorekeawa"
               target="_blank"
+              rel="noreferrer"
             >
               <Image
                 src={LinkedInIcon}
                 width={20}
                 height={20}
                 title="LinkedIn"
+                alt="LinkedIn Icon"
               />
             </a>
             <a
               className="flex"
               href="https://twitter.com/evavic44"
               target="_blank"
+              rel="noreferrer"
             >
-              <Image src={TwitterIcon} width={20} height={20} title="Twitter" />
+              <Image
+                src={TwitterIcon}
+                width={20}
+                height={20}
+                title="Twitter"
+                alt="Twitter Icon"
+              />
             </a>
             <a className="flex" href="https://mailto:evavic44@gmail.com">
-              <Image src={MailIcon} width={20} height={20} title="Mail" />
+              <Image
+                src={MailIcon}
+                width={20}
+                height={20}
+                title="Mail"
+                alt="Mail Icon"
+              />
             </a>
           </div>
         </div>
