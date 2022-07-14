@@ -15,20 +15,19 @@
   display: flex;
   align-items: center;
   font-size: 0.9rem;
-  column-gap: 1rem;
+  column-gap: 1.7rem;
   margin-top: 1rem;
 }
 
 .social a {
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   font-weight: 600;
-  border-radius: 5px;
-  background-color: #f1f3ff;
+  border-radius: 2px;
   transition: 0.2s ease-in-out;
 }
 
 .social a:hover {
-  background-color: #dbe2ff;
+  color: var(--primaryColor);
 }
 
 .line {
