@@ -1,0 +1,43 @@
+.container {
+  padding: 3rem 1rem 0 2.5rem;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #333;
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+
+.endorsements,
+.recommendation {
+  margin: 4rem 0;
+}
+
+.endorsements,
+.recommendation .title {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.endorseImage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}

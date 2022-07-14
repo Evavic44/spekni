@@ -1,10 +1,14 @@
 import styles from "./ProfileLayout.module.css";
+// import ActiveLink from "./ActiveLink";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import { GlobeIcon, MailIcon } from "@heroicons/react/outline";
-import { UserCircleIcon } from "@heroicons/react/solid";
+import GitHubIcon from "../../public/images/github.svg";
+import LinkedInIcon from "../../public/images/linkedin.svg";
+import MailIcon from "../../public/images/mail.svg";
+import TwitterIcon from "../../public/images/twitter.svg";
 import Navbar from "../Navbar";
+import { BadgeCheckIcon, SparklesIcon } from "@heroicons/react/outline";
 
 export default function Layout({ children }) {
   return (
@@ -72,53 +76,120 @@ export default function Layout({ children }) {
       <header className={styles.head}>
         <div className={styles.headStart}>
           <Image
+            className="rounded-full"
             src="https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png"
-            width={100}
-            height={100}
             alt="User Profile"
+            width={190}
+            height={190}
+            placeholderSrc="https://res.cloudinary.com/victoreke/image/upload/v1657357322/Spekni/placeholder_piuucr.svg"
           />
-          <div>
+          <div className="flex items-center gap-2 mt-4">
             <Image
               src="https://res.cloudinary.com/victoreke/image/upload/v1657402772/Spekni/badge.svg"
-              width="25px"
-              height="25px"
-            />{" "}
-            <span>500 Endorsements</span>
+              width={15}
+              height={15}
+              alt="badge"
+            />
+            <span className="highlight">500 Endorsements</span>
           </div>
         </div>
 
         <div className={styles.headEnd}>
-          <h1 className={styles.name}>John Boyega</h1>
-          <h3 className={styles.job}>Senior Software Engineer</h3>
-          <p className={styles.about}>
+          <h1 className="font-bold text-3xl">John Boyega</h1>
+          <h3 className="font-medium my-2 text-base">
+            Senior Software Engineer
+          </h3>
+          <span className="text-sm">
             John is a senior software engineer with a passion for learning with
             over 15+ years of experience leading teams to build enterprise-grade
             distributed applications that solve real-world problems.{" "}
-          </p>
+          </span>
           <div className={styles.social}>
-            <a href="https://spekni.vercel.app">Portfolio</a>
-            <a href="https://spekni.vercel.app">Resume</a>
-            <a href="github.com/evavic44">
-              <GlobeIcon width={20} height={20} /> GitHub
+            <a href="https://victoreke.com" target="_blank" rel="noreferrer">
+              Portfolio
             </a>
-            <a href="linkedin.com/in/victorekeawa">
-              <UserCircleIcon width={20} height={20} /> LinkedIn
+            <a href="https://victoreke.com" target="_blank" rel="noreferrer">
+              Resume
             </a>
-            <a href="mailto:evavic44@gmai.com">
-              <MailIcon width={20} height={20} /> Email
+            <a
+              className="flex"
+              href="https://github.com/evavic44"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src={GitHubIcon}
+                width={20}
+                height={20}
+                title="GitHub"
+                alt="GitHub Icon"
+              />
+            </a>
+            <a
+              className="flex"
+              href="https://linkedin.com/in/victorekeawa"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src={LinkedInIcon}
+                width={20}
+                height={20}
+                title="LinkedIn"
+                alt="LinkedIn Icon"
+              />
+            </a>
+            <a
+              className="flex"
+              href="https://twitter.com/evavic44"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                src={TwitterIcon}
+                width={20}
+                height={20}
+                title="Twitter"
+                alt="Twitter Icon"
+              />
+            </a>
+            <a className="flex" href="https://mailto:evavic44@gmail.com">
+              <Image
+                src={MailIcon}
+                width={20}
+                height={20}
+                title="Mail"
+                alt="Mail Icon"
+              />
             </a>
           </div>
         </div>
       </header>
 
-      <div>
+      <section className={styles.line}>
         <Link href="/profile/endorsement">
-          <a>Endorsement</a>
+          <a className="pb-4 flex item-center">
+            <BadgeCheckIcon
+              className="mr-2"
+              width={20}
+              height={20}
+              title="Endorse Icon"
+            />{" "}
+            Endorsements
+          </a>
         </Link>
         <Link href="/profile/recommendation">
-          <a>Recommendation</a>
+          <a className="pb-4 flex item-center">
+            <SparklesIcon
+              className="mr-2"
+              width={20}
+              height={20}
+              title="Recommendation Icon"
+            />
+            Recommendations
+          </a>
         </Link>
-      </div>
+      </section>
       <main className={styles.main}>{children}</main>
     </>
   );
