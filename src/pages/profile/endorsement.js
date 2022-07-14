@@ -25,7 +25,7 @@ function Endorsement() {
                 height={27}
                 alt="check circle"
               />
-              <h2 className="ml-4 font-medium">Node JS</h2>
+              <h3 className="ml-4 font-medium">Node JS</h3>
             </div>
             <div className={styles.endorseImage}>
               <a href="spekin.vercel.app">
@@ -139,16 +139,16 @@ function Endorsement() {
               </a>
             </div>
             <div className={styles.endorseName}>
-              <span>James Clear,</span>
-              <span>Ben Cluster,</span>
-              <span>Sarah Conors,</span>
-              <span>Bob Dylan,</span>
-              <span>Mark Knopfler,</span>
-              <span>Steve Vai,</span>
-              <span>Mellisande Cole,</span>
-              <span>Paul Stiller,</span>
-              <span>Brad Traversy,</span>
-              <span>Scott Tolinski</span>
+              <p>James Clear,</p>
+              <p>Ben Cluster,</p>
+              <p>Sarah Conors,</p>
+              <p>Bob Dylan,</p>
+              <p>Mark Knopfler,</p>
+              <p>Steve Vai,</p>
+              <p>Mellisande Cole,</p>
+              <p>Paul Stiller,</p>
+              <p>Brad Traversy,</p>
+              <p>Scott Tolinski</p>
             </div>
           </article>
 
@@ -161,7 +161,7 @@ function Endorsement() {
                 height={27}
                 alt="check circle"
               />
-              <h2 className="ml-4 font-medium">Python</h2>
+              <h3 className="ml-4 font-medium">Python</h3>
             </div>
             <div className={styles.endorseImage}>
               <a href="spekin.vercel.app">
@@ -220,12 +220,12 @@ function Endorsement() {
               </a>
             </div>
             <div className={styles.endorseName}>
-              <span>Sarah Conors,</span>
-              <span>Spiff Jekey Green</span>
-              <span>Steve Vai,</span>
-              <span>Mellisande Cole,</span>
-              <span>Paul Stiller,</span>
-              <span>Brad Traversy,</span>
+              <p>Sarah Conors,</p>
+              <p>Spiff Jekey Green</p>
+              <p>Steve Vai,</p>
+              <p>Mellisande Cole,</p>
+              <p>Paul Stiller,</p>
+              <p>Brad Traversy,</p>
             </div>
           </article>
 
@@ -238,7 +238,7 @@ function Endorsement() {
                 height={27}
                 alt="check circle"
               />
-              <h2 className="ml-4 font-medium">GraphQL</h2>
+              <h3 className="ml-4 font-medium">GraphQL</h3>
             </div>
           </article>
 
@@ -246,12 +246,27 @@ function Endorsement() {
           <article className={styles.endorsementCard}>
             <div className={styles.skill}>
               <PlusCircleIcon
-                className="cursor-pointer"
+                className="cursor-pointer highlight"
                 width={27}
                 height={27}
                 alt="check circle"
               />
-              <h2 className="ml-4 font-medium">Next JS</h2>
+              <h3 className="ml-4 font-medium">Next JS</h3>
+            </div>
+
+            <div className={styles.endorseImage}>
+              <a href="spekin.vercel.app">
+                <Image
+                  src="https://res.cloudinary.com/victoreke/image/upload/v1657623824/Spekni/eke_tuqz8f.png"
+                  width="40px"
+                  height="40px"
+                  alt="User"
+                  title="Victor Eke"
+                />
+              </a>
+            </div>
+            <div className={styles.endorseName}>
+              <p>Victor Eke</p>
             </div>
           </article>
 
@@ -264,7 +279,7 @@ function Endorsement() {
                 height={27}
                 alt="check circle"
               />
-              <h2 className="ml-4 font-medium">TypeScript</h2>
+              <h3 className="ml-4 font-medium">TypeScript</h3>
             </div>
 
             <div className={styles.endorseImage}>
@@ -274,7 +289,7 @@ function Endorsement() {
                   width="40px"
                   height="40px"
                   alt="User"
-                  title="Sophia Turner"
+                  title="Victor Eke"
                 />
               </a>
               <a href="spekin.vercel.app">
@@ -324,12 +339,12 @@ function Endorsement() {
               </a>
             </div>
             <div className={styles.endorseName}>
-              <span>Sarah Conors,</span>
-              <span>Spiff Jekey Green</span>
-              <span>Steve Vai,</span>
-              <span>Mellisande Cole,</span>
-              <span>Paul Stiller,</span>
-              <span>Brad Traversy,</span>
+              <p>Victor Eke,</p>
+              <p>Spiff Jekey Green</p>
+              <p>Steve Vai,</p>
+              <p>Mellisande Cole,</p>
+              <p>Paul Stiller,</p>
+              <p>Brad Traversy,</p>
             </div>
           </article>
         </div>

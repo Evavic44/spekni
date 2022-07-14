@@ -35,7 +35,8 @@ img {
 
 p,
 small,
-b {
+b,
+h3 {
   font-family: var(--fontSecondary), sans-serif;
   color: var(--textColor2);
 }
