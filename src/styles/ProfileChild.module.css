@@ -19,6 +19,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* Endorsements */
 .endorsements {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -26,7 +27,7 @@
 }
 
 .endorsements,
-.recommendation {
+.recommendations {
   margin: 4rem 0;
 }
 
@@ -64,4 +65,25 @@
 }
 .endorseImage img {
   border-radius: 50%;
+}
+
+/* Recommendation */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  max-width: 700px;
+}
+
+.recommendContainer {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.recommendCard {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
 }

@@ -51,6 +51,10 @@ button {
   border: none;
 }
 
+.borderLight {
+  border: 1px solid #ddd;
+}
+
 .btn {
   outline: none;
   display: inline-block;
