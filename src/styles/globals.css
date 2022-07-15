@@ -32,13 +32,12 @@ img {
   display: block;
 }
 
-p,
+/* p,
 small,
 b,
 h3 {
-  /* font-family: var(--fontSecondary), sans-serif; */
   color: var(--textColor2);
-}
+} */
 
 a {
   color: inherit;

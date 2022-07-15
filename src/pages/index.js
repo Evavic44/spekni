@@ -76,10 +76,9 @@ export default function Home() {
         <Navbar />
         {/* Hero */}
         <header className={styles.hero}>
-          <h1 className={styles.heading}>
-            Recognition <span className={styles.iconOne}>Platform</span> built
-            for developers through{" "}
-            <span className={styles.iconTwo}>endorsements</span>
+          <h1 className="font-extrabold max-w-4xl mx-auto text-5xl sm:text-5xl lg:text-6xl tracking-tight text-center">
+            Recognition <span className={styles.iconOne}>platform</span> built
+            for developer <span className={styles.iconTwo}>endorsements</span>
           </h1>
           <p>
             A system built to reward developers, engineers, programmers,

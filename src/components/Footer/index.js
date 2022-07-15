@@ -57,7 +57,7 @@ export default function index() {
 
         <div className={styles.footerBottom}>
           <div className={styles.attribution}>
-            <span>Hackathon Project by</span>
+            <small>Hackathon Project by</small>
 
             <div>
               <a href="https://planetscale.com/" title="Planetscale">
@@ -67,9 +67,9 @@ export default function index() {
                   height={20}
                   alt="PlanetScale Logo"
                 />
-                <small className="ml-3">PlanetScale</small>
+                <small className="ml-2">PlanetScale</small>
               </a>
-              X
+              <span className="mx-2">&frasl;</span>
               <a href="https://hashnode.com" title="Hashnode">
                 <Image
                   className="mr-3"
@@ -78,12 +78,22 @@ export default function index() {
                   height={20}
                   alt="Hashnode Logo"
                 />
-                <small className="ml-3">Hashnode</small>
+                <small className="ml-1">hashnode</small>
               </a>
             </div>
           </div>
 
-          <p className="text-sm">&copy; All rights reserved 2022 Spekni</p>
+          <div className={styles.tc}>
+            <small>&copy; All rights reserved 2022 Spekni</small>
+            <a href="https://www.buymeacoffee.com/evavic44">
+              <img
+                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                width="150px"
+                height="150px"
+                alt="buymeacoffee"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

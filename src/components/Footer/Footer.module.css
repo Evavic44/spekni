@@ -17,7 +17,7 @@
 .footerHead {
   display: flex;
   align-items: center;
-  margin: 3rem auto 1.5rem;
+  margin: 3.5rem auto 1.5rem;
   justify-content: space-between;
 }
 
@@ -47,34 +47,37 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
 }
 
-.attribution span {
-  font-size: 1.1rem;
-  font-weight: 600;
+.attribution > span {
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 
 .attribution div {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .attribution div a {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 0.4rem 0.6rem;
-  width: 160px;
-  margin-right: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .attribution div a:nth-child(2) {
   margin-left: 1rem;
+}
+
+.tc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 0.7rem;
 }
 
 @media (max-width: 800px) {
@@ -134,7 +137,8 @@
   }
 
   .attribution div {
-    flex-direction: column;
+    row-gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .attribution div a:nth-child(2) {

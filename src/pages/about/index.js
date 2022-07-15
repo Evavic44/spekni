@@ -83,7 +83,7 @@ export default function index() {
             We make it possble for people to endorse developers based on the
             skillsets they are proved to be proficient in.
           </h1> */}
-          <h1>
+          <h1 className="font-extrabold max-w-4xl text-4xl sm:text-5xl lg:text-6xl tracking-tight text-left">
             Recieving positive feedback from someone is always a good feeling.
             It&apos;s even better when it&apos;s in writing
           </h1>
