@@ -3,7 +3,7 @@ import styles from "./ProfileLayout.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-import GitHubIcon from "../../public/images/github.svg";
+import GitHubIcon from "../../public/images/github-dark.svg";
 import LinkedInIcon from "../../public/images/linkedin.svg";
 import MailIcon from "../../public/images/mail.svg";
 import TwitterIcon from "../../public/images/twitter.svg";

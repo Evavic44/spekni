@@ -84,8 +84,9 @@ export default function index() {
             skillsets they are proved to be proficient in.
           </h1> */}
           <h1 className="font-extrabold max-w-4xl text-4xl sm:text-5xl lg:text-6xl tracking-tight text-left">
-            Recieving positive feedback from someone is always a good feeling.
-            It&apos;s even better when it&apos;s in writing
+            Recieving <span className="highlight">positive feedback</span> from
+            someone is always a good feeling. It&apos;s even better when
+            it&apos;s in writing
           </h1>
           {/* <h1>
             “Showing gratitude is one of the simplest yet most powerful things
@@ -244,12 +245,12 @@ export default function index() {
           ))}
         </div>
         <span className="text-center text-sm">
-          Want your reviews to be added here? Fill this{" "}
+          Add your reviews{" "}
           <a
             className="underline text-blue-700"
             href="https://forms.gle/MisTGbxSyw3Ji8hf7"
           >
-            form
+            here
           </a>
         </span>
       </section>
