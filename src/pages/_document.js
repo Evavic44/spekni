@@ -60,11 +60,7 @@ class MyDocument extends Document {
 
           {/* Font */}
           <link
-            href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,regular,500,600,700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic&display=swap"
             rel="stylesheet"
           />
         </Head>

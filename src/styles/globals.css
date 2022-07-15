@@ -12,8 +12,7 @@
   --darkGrey: #bfbfbf;
   --lightGrey: #f4f4f4;
   --bgLight: #ffffff;
-  --fontPrimary: "Space Grotesk", Monospace, sans-serif;
-  --fontSecondary: "Inter", sans-serif;
+  --fontPrimary: "Plus Jakarta Sans", sans-serif;
 }
 
 * {
@@ -24,7 +23,7 @@
 
 body {
   line-height: 1.5;
-  font-family: var(--fontPrimary), sans-serif;
+  font-family: var(--fontPrimary);
   background: var(--bgLight);
   color: var(--textColor);
 }
@@ -37,7 +36,7 @@ p,
 small,
 b,
 h3 {
-  font-family: var(--fontSecondary), sans-serif;
+  /* font-family: var(--fontSecondary), sans-serif; */
   color: var(--textColor2);
 }
 
