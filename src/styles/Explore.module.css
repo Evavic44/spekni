@@ -1,0 +1,53 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+}
+
+.searchContainer {
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 700px;
+}
+
+.searchContainer div {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.searchBar {
+  height: 60px;
+  width: 92%;
+  margin: 3rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-right: none;
+  text-indent: 1rem;
+  outline: none;
+  transition: 0.1s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.searchContainer button {
+  height: 60px;
+  padding: 1rem 2.6rem;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 8%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.searchIcon {
+  transform: translateX(-10px);
+  color: #777;
+}
