@@ -4,6 +4,7 @@ import styles from "../../styles/Explore.module.css";
 import Navbar from "../../components/Navbar";
 import Card from "../../components/Card";
 import userData from "../../data";
+import { SearchIcon } from "@heroicons/react/outline";
 
 export default function Explore() {
   return (
@@ -30,17 +31,26 @@ export default function Explore() {
           Explore over <span className="highlight">50,000+</span> Developers
         </h1>
 
-        <div>
-          <input
-            className={styles.searchBar}
-            type="search"
-            id="Search"
-            placeholder="E.g: Victor Eke"
-          />
-          <button type="submit" aria-label="Search Button">
-            <i class="icon fas fa-search"></i>
-          </button>
-        </div>
+        <form className={styles.searchContainer}>
+          <div>
+            <input
+              className={styles.searchBar}
+              type="search"
+              name="Email"
+              id="Email"
+              placeholder="E.g: Victor Eke"
+              required
+            />
+            <button value="Subscribe" ariaLabel="Search Button">
+              <SearchIcon
+                className={styles.searchIcon}
+                width={20}
+                height={20}
+                ariaLabel="Search Icon"
+              />
+            </button>
+          </div>
+        </form>
       </header>
 
       <section className={styles.profileContainer}>
