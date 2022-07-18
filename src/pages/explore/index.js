@@ -1,9 +1,11 @@
 import Head from "next/head";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import styles from "../../styles/Explore.module.css";
+import Data from "../../developers";
 import Navbar from "../../components/Navbar";
-import Card from "../../components/Card";
-import userData from "../../data";
+import Footer from "../../components/Footer";
+import Jumbotron from "../../components/Jumbotron";
+import ExploreCard from "../../components/ExploreCard";
+import styles from "../../styles/Explore.module.css";
 import { SearchIcon } from "@heroicons/react/outline";
 
 export default function Explore() {
@@ -46,7 +48,7 @@ export default function Explore() {
                 className={styles.searchIcon}
                 width={20}
                 height={20}
-                ariaLabel="Search Icon"
+                aria-label="Search Icon"
               />
             </button>
           </div>
@@ -54,16 +56,21 @@ export default function Explore() {
       </header>
 
       <section className={styles.profileContainer}>
-        {userData.map((data) => (
-          <Card
-            key={data.id}
-            name={data.name}
-            job={data.job}
-            image={data.image}
-            endorsements={data.endorsements}
+        {Data.map((userData) => (
+          <ExploreCard
+            key={userData.id}
+            name={userData.name}
+            job={userData.job}
+            image={userData.image}
+            bio={userData.bio}
+            endorsements={userData.endorsements}
+            skills={userData.skills}
           />
         ))}
       </section>
+
+      <Jumbotron />
+      <Footer />
     </div>
   );
 }
