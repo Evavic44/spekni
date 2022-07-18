@@ -67,6 +67,8 @@ export default function Explore() {
             skills={userData.skills}
           />
         ))}
+
+        <p className="font-medium text-lg mt-4">Loading...</p>
       </section>
 
       <Jumbotron />

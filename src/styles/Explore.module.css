@@ -54,7 +54,7 @@
 
 .profileContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(320px, auto));
   max-width: 1200px;
   margin: 0 auto;
   gap: 2rem;
