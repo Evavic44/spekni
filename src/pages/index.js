@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-// import Image from "next/image";
-// import { LazyLoadImage } from "react-lazy-load-image-component";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
 import Card from "../components/Card";
