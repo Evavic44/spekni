@@ -1,0 +1,42 @@
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1200px;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.errorContainer h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+}
+
+.errorContainer p {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  color: blue;
+  text-decoration: underline;
+}
+
+.image {
+  animation: animate infinite 3.4s alternate ease-in-out;
+  transform-origin: 50% 50% 0px;
+}
+
+@keyframes animate {
+  from {
+    transform: translate3d(0px, -25px, 0px) rotate(0deg);
+  }
+
+  to {
+    transform: translate3d(30px, 10px, 10px) rotate(2deg);
+  }
+}
