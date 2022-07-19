@@ -69,7 +69,7 @@ export default function Example() {
             </div>
 
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center  hover: hover:bg-gray-100 ">
+              <Popover.Button className="bg-white dark:bg-black rounded-md p-2 inline-flex items-center justify-center hover:bg-gray-100 dark:hover:bg-zinc-900">
                 <span className="sr-only">Open menu</span>
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -84,7 +84,7 @@ export default function Example() {
                     <Popover.Button
                       className={classNames(
                         open ? "" : "",
-                        "group bg-white rounded-md inline-flex items-center text-base"
+                        "group rounded-md inline-flex items-center text-base"
                       )}
                     >
                       <span>Explore</span>
@@ -108,12 +108,12 @@ export default function Example() {
                     >
                       <Popover.Panel className="absolute z-100 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                          <div className="relative grid gap-6 bg-white dark:bg-zinc-900 px-5 py-6 sm:gap-8 sm:p-8">
                             {explore.map((item) => (
                               <a
                                 key={item.name}
                                 href={item.href}
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-zinc-800"
                               >
                                 <item.icon
                                   className="flex-shrink-0 h-6 w-6 highlight"
@@ -130,12 +130,12 @@ export default function Example() {
                               </a>
                             ))}
                           </div>
-                          <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                          <div className="px-5 py-5 bg-gray-50 dark:bg-blue-800 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                             {callsToAction.map((item) => (
-                              <div key={item.name} className="flow-root">
+                              <div key={item.name} className="flow-root w-full">
                                 <a
                                   href={item.href}
-                                  className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100"
+                                  className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100 dark:hover:bg-blue-800"
                                 >
                                   <item.icon
                                     className="flex-shrink-0 h-6 w-6 "
@@ -204,7 +204,7 @@ export default function Example() {
             focus
             className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           >
-            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            <div className="highlight-bg rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-100 dark:divide-zinc-900">
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <Link href="/" className="flex items-center">
@@ -217,7 +217,7 @@ export default function Example() {
                     />
                   </Link>
                   <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center  hover: hover:bg-gray-100">
+                    <Popover.Button className="p-2 inline-flex items-center justify-center">
                       <span className="sr-only">Close menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
@@ -229,7 +229,7 @@ export default function Example() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-100 dark:hover:bg-zinc-900"
                       >
                         <item.icon
                           className="flex-shrink-0 h-6 w-6 highlight"
@@ -244,14 +244,14 @@ export default function Example() {
               <div className="py-6 px-5 space-y-6">
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                   <Link href="/explore">
-                    <a className="text-base font-medium  hover:text-gray-700">
+                    <a className="text-base font-medium  hover:text-zinc-700">
                       Explore
                     </a>
                   </Link>
 
                   <a
                     href="https://github.com/Evavic44/spekni"
-                    className="text-base font-medium  hover:text-gray-700"
+                    className="text-base font-medium  hover:text-zinc-700"
                   >
                     Documentation
                   </a>
@@ -259,7 +259,7 @@ export default function Example() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-base font-medium  hover:text-gray-700"
+                      className="text-base font-medium  hover:text-zinc-700"
                     >
                       {item.name}
                     </a>

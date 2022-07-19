@@ -1,5 +1,5 @@
 .jumbotron {
-  background-color: var(--bgDark);
+  background-color: var(--bgSecondary);
 }
 
 .jumbotron div {
@@ -13,20 +13,6 @@
   margin: 0 auto;
   color: var(--bgLight);
   padding: 1rem;
-}
-
-.jumbotron span {
-  font-size: 1.1rem;
-  margin-bottom: 1.2rem;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.jumbotron h2 {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  font-weight: 900;
-  margin: 0.6rem 0 1.4rem;
 }
 
 @media (max-width: 800px) {
