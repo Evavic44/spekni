@@ -14,7 +14,7 @@ export default function ExploreCard({
 }) {
   return (
     <article className={styles.exploreCard}>
-      <div className="flex items-center gap-x-5">
+      <div className="flex items-start gap-x-5">
         <LazyLoadImage
           className="rounded-full"
           src={image.url}
