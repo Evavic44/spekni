@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/404.module.css";
-import Navbar from "../../components/Navbar";
 
 export default function Error() {
   return (
@@ -10,12 +9,11 @@ export default function Error() {
         <title>Oops! Page not found</title>
       </Head>
 
-      <Navbar />
       <main className={styles.errorContainer}>
         <svg
           className={styles.image}
-          width="640"
-          height="220"
+          width={290}
+          height={180}
           viewBox="0 0 1085 709"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -433,7 +431,7 @@ export default function Error() {
         <p>Oops! this page is lost in space</p>
 
         <Link href="/">
-          <a className={styles.btn}>Return home</a>
+          <a className="btn btn-primary">Return home</a>
         </Link>
       </main>
     </>
