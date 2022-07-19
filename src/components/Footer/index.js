@@ -86,7 +86,7 @@ export default function index() {
           <div className={styles.tc}>
             <small>&copy; All rights reserved 2022 Spekni</small>
             <a href="https://www.buymeacoffee.com/evavic44">
-              <img
+              <Image
                 src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
                 width="150px"
                 height="150px"

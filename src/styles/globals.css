@@ -84,20 +84,28 @@ button {
   color: var(--primaryColor);
 }
 
+/* Loader */
 .loader {
-  width: 48px !important;
-  height: 48px !important;
-  border: 5px solid #fff;
-  border-bottom-color: transparent;
   border-radius: 50%;
-  display: block;
+  display: flex;
   box-sizing: border-box;
-  animation: rotation 1s linear infinite;
-  display: block;
-  background: red;
+  animation: rotation 0.5s linear infinite;
 }
 
-/* Animations */
+.loaderLight {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid #fff;
+  border-bottom-color: transparent;
+}
+
+.loaderDark {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #000;
+  border-bottom-color: transparent;
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
