@@ -48,22 +48,6 @@
   transform: rotate(180deg);
 }
 
-.btn {
-  display: inline-block;
-  text-align: center;
-  padding: 0.8rem;
-  border-radius: 5px;
-  margin: 1.25rem;
-  background: var(--bgDark);
-  width: 250px;
-  color: var(--bgLight);
-  transition: 0.2s ease-in-out;
-}
-
-.btn:hover {
-  background: #111;
-}
-
 .homeProfile {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -95,15 +79,7 @@
   background: url(/images/maps.svg) no-repeat center center/ cover;
   z-index: -10;
   animation: color-transition infinite 6s alternate-reverse ease-in-out;
-}
-
-@keyframes color-transition {
-  from {
-    filter: grayscale(0);
-  }
-  to {
-    filter: grayscale(100) contrast(97%);
-  }
+  filter: var(--filterPrimary);
 }
 
 @media (min-width: 1500px) {
@@ -115,7 +91,7 @@
 @media (min-width: 1366px) {
   .mapContainer::before {
     min-height: 900px;
-    top: 600px;
+    top: 500px;
   }
 }
 
@@ -141,10 +117,6 @@
   .hero p {
     font-size: 1rem;
   }
-
-  .btn {
-    width: 90%;
-  }
 }
 
 @media (max-width: 400px) {
@@ -154,9 +126,5 @@
 
   .hero p {
     font-size: 0.96rem;
-  }
-
-  .btn {
-    width: 90%;
   }
 }

@@ -4,15 +4,35 @@
 
 /* Variables */
 :root {
-  --bgDark: #000000;
-  --textColor: #222222;
-  --textColor2: #333333;
+  --bgPrimary: #ffffff;
+  --bgSecondary: #f4f4f4;
+  --bgAlternate: #000000;
+  --textColorPrimary: #111111;
+  --textColorSecondary: #333333;
+  --textColorAlternate: #ffffff;
   --primaryColor: #3a52ee;
   --secondaryColor: #3246c9;
-  --darkGrey: #bfbfbf;
-  --lightGrey: #f4f4f4;
-  --bgLight: #ffffff;
-  --fontPrimary: "Plus Jakarta Sans", sans-serif;
+  --bgTertiary: #bfbfbf;
+  --miscColor: #f4f4f4;
+  --borderPrimary: 1px solid #dddddd;
+  --borderSecondary: 1px solid #777777;
+  --filterPrimary: none;
+}
+
+[data-theme="dark"] {
+  --bgPrimary: #000000;
+  --bgSecondary: #111111;
+  --bgAlternate: #ffffff;
+  --textColorPrimary: #fff;
+  --textColorSecondary: #dddddd;
+  --textColorAlternate: #111111;
+  --primaryColor: #3a52ee;
+  --secondaryColor: #3246c9;
+  --bgTertiary: #777777;
+  --miscColor: ##111111;
+  --borderPrimary: 1px solid #111111;
+  --borderSecondary: 1px solid #333333;
+  --filterPrimary: grayscale(10%) brightness(19%) saturate(0%) contrast(98%);
 }
 
 * {
@@ -23,34 +43,30 @@
 
 body {
   line-height: 1.5;
-  font-family: var(--fontPrimary);
-  background: var(--bgLight);
-  color: var(--textColor);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bgPrimary);
+  color: var(--textColorPrimary);
 }
 
 img {
   display: block;
 }
 
-/* p,
-small,
-b,
-h3 {
-  color: var(--textColor2);
-} */
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
-button {
+button,
+button::before,
+button::after,
+button:focus {
   outline: none;
   border: none;
 }
 
 .borderLight {
-  border: 1px solid #ddd;
+  border: var(--borderPrimary);
 }
 
 .btn {
@@ -64,7 +80,7 @@ button {
 
 .btn-primary {
   background: var(--primaryColor);
-  color: var(--bgLight);
+  color: white;
 }
 
 .btn-primary:hover {
@@ -72,16 +88,23 @@ button {
 }
 
 .btn-dark {
-  background: var(--bgDark);
-  color: var(--bgLight);
+  background: var(--bgAlternate);
+  color: var(--textColorAlternate);
 }
 
 .btn-dark:hover {
-  background: var(--textColor);
+  background: var(--bgPrimary);
+  color: var(--textColorPrimary);
+  border: var(--borderPrimary);
 }
 
 .highlight {
   color: var(--primaryColor);
+}
+
+.highlight-bg {
+  background: var(--bgPrimary);
+  border: var(--borderPrimary);
 }
 
 /* Loader */

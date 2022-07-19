@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-
+import { ThemeProvider } from "next-themes";
 import { SessionProvider } from "next-auth/react";
 
 export default function App({
@@ -7,14 +7,16 @@ export default function App({
   pageProps: { session, ...pageProps },
 }) {
   return (
-    <SessionProvider session={session}>
-      {Component.PageLayout ? (
-        <Component.PageLayout>
+    <ThemeProvider>
+      <SessionProvider session={session}>
+        {Component.PageLayout ? (
+          <Component.PageLayout>
+            <Component {...pageProps} />
+          </Component.PageLayout>
+        ) : (
           <Component {...pageProps} />
-        </Component.PageLayout>
-      ) : (
-        <Component {...pageProps} />
-      )}
-    </SessionProvider>
+        )}
+      </SessionProvider>
+    </ThemeProvider>
   );
 }

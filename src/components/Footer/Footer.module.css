@@ -5,7 +5,7 @@
 .line {
   width: 100%;
   height: 1px;
-  background-color: #ddd;
+  background-color: var(--bgSecondary);
 }
 
 .footerHead,
@@ -103,6 +103,14 @@
   .footerLinks a {
     margin-right: 2rem;
   }
+
+  .attribution div {
+    margin: 0.7em 0;
+  }
+
+  .tc {
+    align-items: center;
+  }
 }
 
 @media (max-width: 650px) {
@@ -143,5 +151,13 @@
 
   .attribution div a:nth-child(2) {
     margin-left: initial;
+  }
+
+  .tc {
+    align-items: flex-start;
+  }
+
+  .tc small {
+    display: none;
   }
 }

@@ -84,7 +84,9 @@ export default function Home() {
           </p>
 
           <Link href="/explore">
-            <a className={styles.btn}>Start Endorsing</a>
+            <a className="btn btn-dark my-5 h-12 w-full sm:w-60">
+              Start Endorsing
+            </a>
           </Link>
         </header>
 
