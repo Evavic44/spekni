@@ -165,9 +165,9 @@ export default function Example() {
               </Link>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <a href="/login" className="whitespace-nowrap text-base">
-                Login
-              </a>
+              <Link href="/login">
+                <a className="whitespace-nowrap text-base">Login</a>
+              </Link>
               {status === "loading" ? (
                 <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
                   <span className="loader loaderLight"></span>
