@@ -67,6 +67,10 @@ button:focus {
   border: none;
 }
 
+.buttonSpecial {
+  border-bottom: var(--borderPrimary) !important;
+}
+
 .buttonShadow {
   box-shadow: var(--shadow);
 }

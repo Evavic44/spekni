@@ -15,6 +15,7 @@ import HashnodeLogo from "../../public/images/hashnode.svg";
 import GithubDarkLogo from "../../public/images/github-dark.svg";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
+import Menubar from "../Menubar";
 
 const explore = [
   {
@@ -165,9 +166,9 @@ export default function Example() {
               </Link>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <Link href="/login">
-                <a className="whitespace-nowrap text-base">Login</a>
-              </Link>
+              {/* <Link href="/Sign Up">
+                <a className="whitespace-nowrap text-base">Sign Up</a>
+              </Link> */}
               {status === "loading" ? (
                 <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
                   <span className="loader loaderLight"></span>
@@ -183,10 +184,11 @@ export default function Example() {
               {status === "unauthenticated" ? (
                 <Link href="/login">
                   <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
-                    Sign Up
+                    Login
                   </a>
                 </Link>
               ) : null}
+              <Menubar />
             </div>
           </div>
         </div>
