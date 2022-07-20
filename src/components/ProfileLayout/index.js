@@ -81,7 +81,7 @@ export default function Layout({ children }) {
             alt="User Profile"
             width={190}
             height={190}
-            // placeholderSrc="https://res.cloudinary.com/victoreke/image/upload/v1657357322/Spekni/placeholder_piuucr.svg"
+            placeholderSrc="https://res.cloudinary.com/victoreke/image/upload/v1657357322/Spekni/placeholder_piuucr.svg"
           />
           <div className="flex items-center gap-2 mt-4">
             <Image

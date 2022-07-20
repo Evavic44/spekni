@@ -32,7 +32,7 @@ export default function Login({ providers }) {
               <div className="flex items-center mb-20">
                 <Image src={Logo} alt="logo" width="30px" height="30px" />
                 <Link href="/">
-                  <a className="font-bold text-black text-xl ml-0.5">Spekni</a>
+                  <a className="font-bold text-xl ml-0.5">Spekni</a>
                 </Link>
               </div>
 

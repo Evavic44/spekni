@@ -20,7 +20,6 @@
 }
 
 .social a {
-  /* padding: 0.5rem; */
   font-weight: 600;
   border-radius: 2px;
   transition: 0.2s ease-in-out;
@@ -33,12 +32,12 @@
 .line {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: var(--borderPrimary);
   padding: 3rem 1.5rem 0 2.5rem;
   color: var(--textColor2);
   column-gap: 2rem;
 }
 
 .line a:hover {
-  color: #000;
+  color: var(--textColorSecondary);
 }

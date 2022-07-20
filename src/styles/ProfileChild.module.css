@@ -14,7 +14,6 @@
 }
 
 .header p {
-  color: #333;
   max-width: 650px;
   margin-bottom: 1.5rem;
 }
@@ -37,7 +36,7 @@
 }
 
 .endorsements .endorsementCard {
-  border: 1px solid #ddd;
+  border: var(--borderPrimary);
   border-radius: 5px;
   max-width: 500px;
   height: auto;
@@ -72,7 +71,7 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  border: 1px solid #ddd;
+  border: var(--borderPrimary);
   max-width: 700px;
 }
 
@@ -84,6 +83,6 @@
 }
 
 .recommendCard {
-  border: 1px solid #ddd;
+  border: var(--borderPrimary);
   padding: 1.5rem;
 }

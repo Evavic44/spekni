@@ -26,7 +26,7 @@ export default function ExploreCard({
 
         <div>
           <h2 className="font-bold text-xl">{name}</h2>
-          <p className="text-sm text-gray-600">{job}</p>
+          <p className="text-sm">{job}</p>
           <div
             className="flex items-center gap-x-1 my-1"
             title="Spekni Endorsement Badge"

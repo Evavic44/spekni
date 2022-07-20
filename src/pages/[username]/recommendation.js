@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import ProfileLayout from "../../components/ProfileLayout";
 import styles from "../../styles/ProfileChild.module.css";
 

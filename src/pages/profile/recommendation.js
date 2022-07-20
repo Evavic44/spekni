@@ -23,24 +23,15 @@ function Recommendation() {
 
         <div className={styles.recommendations}>
           <div className={styles.formContainer}>
-            <label className="text-gray-600">
+            <label className="text-zinc-500 dark:text-zinc-600 text-sm">
               What would you like to say about John?
             </label>
             <input
-              className="borderLight px-4 radius-100 my-4 rounded-md py-6"
+              className="px-4 border border-zinc-200 dark:border-zinc-900 bg-transparent radius-100 my-4 rounded-md py-6"
               type="text"
             />
 
             <button className="btn btn-primary mb-4">Send</button>
-            <small className="text-center flex items-center justify-center">
-              <ExclamationCircleIcon
-                className="text-blue-700 mr-2"
-                width={15}
-                height={15}
-              />
-              Your information is only used to display your name and profile
-              picture.
-            </small>
           </div>
         </div>
 
@@ -67,7 +58,7 @@ function Recommendation() {
                 a variety of roles. Above all, John is a really nice person, and
                 great team player.
               </p>
-              <small className="text-gray-500 text-sm flex items-center gap-4">
+              <small className="text-zinc-500 dark:text-zinc-600 text-xs flex items-center gap-4">
                 <span className="flex items-center gap-1">
                   <CalendarIcon width="12px" height="12px" title="Time" />{" "}
                   <span>28 March 2022</span>
@@ -101,7 +92,7 @@ function Recommendation() {
                 He is very talented and would be a great addition to your team,
                 if you have an opening.
               </p>
-              <small className="text-gray-500 text-sm flex items-center gap-4">
+              <small className="text-zinc-500 dark:text-zinc-600 text-xs flex items-center gap-4">
                 <span className="flex items-center gap-1">
                   <CalendarIcon width="12px" height="12px" title="Time" />{" "}
                   <span>28 March 2022</span>

@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   border: none;
-  border: 1px solid #d4d4d4;
+  border: var(--borderPrimary);
   padding: 1rem;
   gap: 3rem;
   margin: 0.4rem 0;

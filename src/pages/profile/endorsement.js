@@ -20,7 +20,7 @@ function Endorsement() {
           <article className={styles.endorsementCard}>
             <div className={styles.skill}>
               <CheckCircleIcon
-                className="cursor-pointer highlight"
+                className="cursor-pointer text-green-500"
                 width={27}
                 height={27}
                 alt="check circle"
@@ -156,7 +156,7 @@ function Endorsement() {
           <article className={styles.endorsementCard}>
             <div className={styles.skill}>
               <CheckCircleIcon
-                className="cursor-pointer highlight"
+                className="cursor-pointer text-green-500"
                 width={27}
                 height={27}
                 alt="check circle"
@@ -245,8 +245,8 @@ function Endorsement() {
           {/* Skills Four */}
           <article className={styles.endorsementCard}>
             <div className={styles.skill}>
-              <PlusCircleIcon
-                className="cursor-pointer highlight"
+              <CheckCircleIcon
+                className="cursor-pointer text-green-500"
                 width={27}
                 height={27}
                 alt="check circle"
@@ -274,7 +274,7 @@ function Endorsement() {
           <article className={styles.endorsementCard}>
             <div className={styles.skill}>
               <CheckCircleIcon
-                className="cursor-pointer highlight"
+                className="cursor-pointer text-green-500"
                 width={27}
                 height={27}
                 alt="check circle"
