@@ -4,7 +4,7 @@
   justify-content: center;
   padding: 1.5rem;
   min-height: 260px;
-  border: 1px solid #eee;
+  border: var(--borderPrimary);
   position: relative;
   overflow: hidden;
 }
