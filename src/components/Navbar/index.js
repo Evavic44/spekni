@@ -174,7 +174,7 @@ export default function Example() {
                 </a>
               ) : null}
               {status === "authenticated" ? (
-                <Link href="/profile">
+                <Link href="/spiffgreen">
                   <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
                     Profile
                   </a>

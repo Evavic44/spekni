@@ -36,6 +36,13 @@
   padding: 3rem 1.5rem 0 2.5rem;
   color: var(--textColor2);
   column-gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .line a:hover {
