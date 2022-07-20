@@ -9,6 +9,6 @@ module.exports = {
     defaultLocale: "en",
   },
   images: {
-    domains: ["res.cloudinary.com", "cdn.buymeacoffee.com"],
+    domains: ['res.cloudinary.com', 'avatars.githubusercontent.com'],
   },
 };

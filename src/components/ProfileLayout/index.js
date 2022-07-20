@@ -10,7 +10,7 @@ import TwitterIcon from "../../public/images/twitter.svg";
 import Navbar from "../Navbar";
 import { BadgeCheckIcon, SparklesIcon } from "@heroicons/react/outline";
 
-export default function Layout({ children }) {
+export default function Layout({ children, user }) {
   return (
     <>
       <Head lang="en">
@@ -21,7 +21,7 @@ export default function Layout({ children }) {
           content="Developer, Endorsements, Hiring, Job, Victor Eke, Planetscale, Hashnode, Hackathon"
         />
         {/* Primary met tags */}
-        <title>User Profile - Spekni</title>
+        <title>{user.name} - Spekni</title>
         <meta
           name="title"
           content="Spekni - Hiring and Freelance organization Recruiters can Trust"
@@ -77,7 +77,8 @@ export default function Layout({ children }) {
         <div className={styles.headStart}>
           <Image
             className="rounded-full"
-            src="https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png"
+            // src="https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png"
+            src={user.image}
             alt="User Profile"
             width={190}
             height={190}
@@ -95,7 +96,7 @@ export default function Layout({ children }) {
         </div>
 
         <div className={styles.headEnd}>
-          <h1 className="font-bold text-3xl">John Boyega</h1>
+          <h1 className="font-bold text-3xl">{user.name}</h1>
           <h3 className="font-medium my-2 text-base">
             Senior Software Engineer
           </h3>
