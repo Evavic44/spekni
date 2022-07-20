@@ -84,8 +84,11 @@ export default function Login({ providers }) {
   }
 
   if (status === "loading") {
-    // @TODO: Please add a loader with full screen view to display while session is decoded
-    return <div>Loading...</div>;
+    return (
+      <div className={styles.loadingContainer}>
+        <span className="loader loaderDark"></span>
+      </div>
+    );
   }
 }
 

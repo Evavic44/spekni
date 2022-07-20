@@ -69,7 +69,7 @@ export default function index() {
                 />
                 <small className="ml-2">PlanetScale</small>
               </a>
-              <span className="mx-2">&frasl;</span>
+              <span className="font-bold text-sm mx-2">&frasl;</span>
               <a href="https://hashnode.com" title="Hashnode">
                 <Image
                   className="mr-3"
@@ -86,11 +86,11 @@ export default function index() {
           <div className={styles.tc}>
             <small>&copy; All rights reserved 2022 Spekni</small>
             <a href="https://www.buymeacoffee.com/evavic44">
-              <img
-                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                width="150px"
-                height="150px"
+              <Image
+                src="https://res.cloudinary.com/victoreke/image/upload/v1658271681/Spekni/bmc_jaukkk.png"
                 alt="buymeacoffee"
+                width={140}
+                height={40}
               />
             </a>
           </div>

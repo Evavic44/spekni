@@ -53,6 +53,14 @@
   background-position: center center;
 }
 
+/* Loading container */
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 @media (max-width: 1100px) {
   .container {
     grid-template-columns: 60vw 40vw;

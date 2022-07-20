@@ -231,7 +231,7 @@ export default function index() {
       </main>
 
       <section className={styles.testimonialSection}>
-        <h2 className="text-center text-3xl text-gray-900 font-bold mb-5">
+        <h2 className="text-center text-3xl font-bold mb-5">
           What People are saying
         </h2>
         <div className={styles.testimonialContainer}>
