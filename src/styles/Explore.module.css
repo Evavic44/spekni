@@ -10,7 +10,6 @@
 }
 
 .searchContainer {
-  margin: 1rem 0;
   width: 100%;
   max-width: 700px;
 }
@@ -26,7 +25,7 @@
   width: 92%;
   margin: 3rem 0;
   padding: 1rem;
-  border: 1px solid #ccc;
+  border: var(--borderPrimary);
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   border-right: none;
@@ -35,6 +34,7 @@
   transition: 0.1s ease-in-out;
   appearance: none;
   -webkit-appearance: none;
+  background: transparent;
 }
 
 .searchContainer button {
@@ -43,13 +43,13 @@
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 8%;
-  border: 1px solid #ccc;
+  border: var(--borderPrimary);
   cursor: pointer;
 }
 
 .searchIcon {
   transform: translateX(-10px);
-  color: #777;
+  color: var(--textColorSecondary);
 }
 
 .profileContainer {

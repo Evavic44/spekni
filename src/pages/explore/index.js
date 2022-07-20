@@ -29,7 +29,7 @@ export default function Explore() {
       <Navbar />
 
       <header className={styles.hero}>
-        <h1 className="font-extrabold max-w-2xl mx-auto text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center">
+        <h1 className="font-extrabold max-w-2xl mx-auto text-3xl sm:text-5xl lg:text-6xl tracking-tight text-center">
           Explore over <span className="highlight">50,000+</span> Developers
         </h1>
 
