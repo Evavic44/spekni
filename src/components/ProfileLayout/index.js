@@ -8,7 +8,12 @@ import LinkedInIcon from "../../public/images/linkedin.svg";
 import MailIcon from "../../public/images/mail.svg";
 import TwitterIcon from "../../public/images/twitter.svg";
 import Navbar from "../Navbar";
-import { BadgeCheckIcon, SparklesIcon } from "@heroicons/react/outline";
+import {
+  BadgeCheckIcon,
+  GlobeAltIcon,
+  GlobeIcon,
+  SparklesIcon,
+} from "@heroicons/react/outline";
 
 export default function Layout({ children, user }) {
   return (
@@ -106,62 +111,76 @@ export default function Layout({ children, user }) {
             distributed applications that solve real-world problems.{" "}
           </span>
           <div className={styles.social}>
-            <a href="https://victoreke.com" target="_blank" rel="noreferrer">
-              Portfolio
-            </a>
-            <a href="https://victoreke.com" target="_blank" rel="noreferrer">
+            {/* <a href="https://victoreke.com" target="_blank" rel="noreferrer">
               Resume
+            </a> */}
+            <a
+              className={styles.socialIcon}
+              href="https://victoreke.com"
+              title="Portfolio"
+            >
+              Portfolio
+              <GlobeAltIcon
+                className="highlight"
+                width={18}
+                height={18}
+                title="Mail"
+                alt="Mail Icon"
+              />
             </a>
             <a
-              className="flex"
+              className={styles.socialIcon}
               href="https://github.com/evavic44"
               target="_blank"
               rel="noreferrer"
+              title="GitHub"
             >
+              {" "}
+              GitHub
               <Image
                 src={GitHubIcon}
-                width={20}
-                height={20}
-                title="GitHub"
+                width={16}
+                height={16}
                 alt="GitHub Icon"
               />
             </a>
             <a
-              className="flex"
+              className={styles.socialIcon}
               href="https://linkedin.com/in/victorekeawa"
               target="_blank"
               rel="noreferrer"
+              title="LinkedIn"
             >
+              LinkedIn
               <Image
                 src={LinkedInIcon}
-                width={20}
-                height={20}
-                title="LinkedIn"
+                width={16}
+                height={16}
                 alt="LinkedIn Icon"
               />
             </a>
             <a
-              className="flex"
+              className={styles.socialIcon}
               href="https://twitter.com/evavic44"
               target="_blank"
               rel="noreferrer"
+              title="Twitter"
             >
+              Twitter
               <Image
                 src={TwitterIcon}
                 width={20}
                 height={20}
-                title="Twitter"
                 alt="Twitter Icon"
               />
             </a>
-            <a className="flex" href="https://mailto:evavic44@gmail.com">
-              <Image
-                src={MailIcon}
-                width={20}
-                height={20}
-                title="Mail"
-                alt="Mail Icon"
-              />
+            <a
+              className={styles.socialIcon}
+              href="mailto:evavic44@gmail.com"
+              title="Mail"
+            >
+              Email
+              <Image src={MailIcon} width={17} height={17} alt="Mail Icon" />
             </a>
           </div>
         </div>

@@ -39,6 +39,11 @@
   color: var(--primaryColor);
 }
 
+.footerIcons {
+  display: flex;
+  align-items: center;
+}
+
 .footerIcons a {
   margin-left: 1.2rem;
 }
