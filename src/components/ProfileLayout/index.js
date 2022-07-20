@@ -97,7 +97,7 @@ export default function Layout({ children, user }) {
 
         <div className={styles.headEnd}>
           <h1 className="font-bold text-3xl">{"User Name"}</h1>
-          <h3 className="font-medium my-2 text-base">
+          <h3 className="font-medium mt-2 mb-4 text-base">
             Senior Software Engineer
           </h3>
           <span className="text-sm">
@@ -169,22 +169,22 @@ export default function Layout({ children, user }) {
 
       <section className={styles.line}>
         <Link href="/profile/endorsement" scroll={false}>
-          <a className="pb-4 flex item-center">
+          <a className="pb-4 flex item-center text-sm">
             <BadgeCheckIcon
               className="mr-2"
-              width={20}
-              height={20}
+              width={19}
+              height={19}
               title="Endorse Icon"
             />{" "}
             Endorsements
           </a>
         </Link>
         <Link href="/profile/recommendation" scroll={false}>
-          <a className="pb-4 flex item-center">
+          <a className="pb-4 flex item-center text-sm">
             <SparklesIcon
               className="mr-2"
-              width={20}
-              height={20}
+              width={19}
+              height={19}
               title="Recommendation Icon"
             />
             Recommendations

@@ -26,7 +26,7 @@ export default function Menubar() {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className="origin-top-right absolute right-0 mt-4 w-56 rounded-md shadow-lg bg-white dark:bg-black border dark:text-white dark:border-zinc-800 ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1 divide-y">
+          <div className="py-1">
             <Menu.Item>
               <a
                 href="#"
@@ -40,7 +40,7 @@ export default function Menubar() {
                 href="#"
                 className="block px-4 py-3 text-sm border-zinc-200 dark:border-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-900"
               >
-                Support
+                License
               </a>
             </Menu.Item>
             <Menu.Item>
@@ -48,7 +48,7 @@ export default function Menubar() {
                 href="#"
                 className="block px-4 py-3 text-sm border-zinc-200 dark:border-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-900"
               >
-                License
+                Changelog
               </a>
             </Menu.Item>
             <form method="POST" action="#">
