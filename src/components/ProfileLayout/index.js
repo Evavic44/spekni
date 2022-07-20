@@ -21,7 +21,7 @@ export default function Layout({ children, user }) {
           content="Developer, Endorsements, Hiring, Job, Victor Eke, Planetscale, Hashnode, Hackathon"
         />
         {/* Primary met tags */}
-        <title>{"User Name"} - Spekni</title>
+        <title>User Name - Spekni</title>
         <meta
           name="title"
           content="Spekni - Hiring and Freelance organization Recruiters can Trust"
