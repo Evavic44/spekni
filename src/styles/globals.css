@@ -31,10 +31,9 @@
   --secondaryColor: #3246c9;
   --bgTertiary: #777777;
   --miscColor: ##111111;
-  --borderPrimary: 1px solid #111111;
+  --borderPrimary: 1px solid #222222;
   --borderSecondary: 1px solid #333333;
   --filterPrimary: grayscale(10%) brightness(19%) saturate(0%) contrast(98%);
-  --shadow: 0px 0px 30px 0 rgb(82, 255, 168);
 }
 
 * {
