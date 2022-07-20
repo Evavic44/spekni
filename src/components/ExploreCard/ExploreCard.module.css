@@ -2,15 +2,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.03) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  border-radius: 3px;
+  border: var(--borderPrimary);
+  border-radius: 5px;
   padding: 2rem;
   height: auto;
 }
 
 .skills {
-  color: #555;
+  display: flex;
+  gap: 0.3rem;
+  background: var(--bgSecondary);
+  border: var(--borderPrimary);
+  border-radius: 10px;
+  padding: 0.2rem 0.4rem;
   font-size: 0.75rem;
   flex-wrap: wrap;
 }

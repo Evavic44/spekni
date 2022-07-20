@@ -10,7 +10,15 @@ export default [
       alt: "John Boyega",
     },
     bio: "John Boyega is an excellent Frontend Developer and one of the core maintainers of the React team with a passion for creating quality software using languages like React, JavaScript, NodeJS, Express, Remix, Etc",
-    skills: "React, NodeJS, Firebase, NextJS, Python, Vitess, Golang",
+    skills: [
+      "React",
+      "NodeJS",
+      "Firebase",
+      "NextJS",
+      "Python",
+      "Vitess",
+      "Golang",
+    ],
     color: "orange",
   },
   {

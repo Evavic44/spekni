@@ -5,7 +5,7 @@
 /* Variables */
 :root {
   --bgPrimary: #ffffff;
-  --bgSecondary: #f4f4f4;
+  --bgSecondary: #fafafa;
   --bgAlternate: #000000;
   --textColorPrimary: #111111;
   --textColorSecondary: #333333;
@@ -17,6 +17,7 @@
   --borderPrimary: 1px solid #dddddd;
   --borderSecondary: 1px solid #777777;
   --filterPrimary: none;
+  --shadow: 0px 0px 30px 0 rgb(82, 255, 168);
 }
 
 [data-theme="dark"] {
@@ -30,7 +31,7 @@
   --secondaryColor: #3246c9;
   --bgTertiary: #777777;
   --miscColor: ##111111;
-  --borderPrimary: 1px solid #111111;
+  --borderPrimary: 1px solid #222222;
   --borderSecondary: 1px solid #333333;
   --filterPrimary: grayscale(10%) brightness(19%) saturate(0%) contrast(98%);
 }
@@ -43,7 +44,8 @@
 
 body {
   line-height: 1.5;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Plus Jakarta Sans", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
   background: var(--bgPrimary);
   color: var(--textColorPrimary);
 }
@@ -65,6 +67,10 @@ button:focus {
   border: none;
 }
 
+.buttonShadow {
+  box-shadow: var(--shadow);
+}
+
 .borderLight {
   border: var(--borderPrimary);
 }
@@ -76,6 +82,7 @@ button:focus {
   transition: 0.2s ease-in-out;
   border-radius: 5px;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .btn-primary {
