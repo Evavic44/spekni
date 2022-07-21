@@ -6,7 +6,7 @@ export default function Error() {
   return (
     <>
       <Head>
-        <title>Oops! Page not found</title>
+        <title>404 Page not found | Spekni</title>
       </Head>
 
       <main className={styles.errorContainer}>

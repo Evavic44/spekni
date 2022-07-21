@@ -14,60 +14,58 @@ export default function Home() {
       <Head lang="en">
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="keywords"
-          content="Developer, Endorsements, Hiring, Job, Victor Eke, Planetscale, Hashnode, Hackathon"
-        />
-        {/* Primary met tags */}
         <title>
-          Spekni - Hiring and Freelance organization Recruiters can Trust
+          Spekni - Recognition platform built for developer endorsements
         </title>
         <meta
+          name="keywords"
+          content="Developer, Endorsements, Hiring, Job, Planetscale, Hashnode, Hackathon"
+        />
+        {/* Primary met tags */}
+        <meta
           name="title"
-          content="Spekni - Hiring and Freelance organization Recruiters can Trust"
+          content="About: Spekni - Recognition platform built for developer endorsements"
         />
         <meta
           name="description"
-          content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
+          content="Spekni is a platform built for recognizing developers making impact in the tech space through endorsements and recommendations."
         />
         <meta
           name="author"
-          content="EKe Victor, Spiff Jekey-Green, Nicholas Ovunda"
+          content="Victor Eke, Spiff Jekey-Green, Nicholas Ovunda"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://spekni.vercel.app/" />
         <meta
           property="og:title"
-          content="Spekni - Hiring and Freelance organization Recruiters can Trust"
+          content="About: Spekni - Recognition platform built for developer endorsements"
         />
         <meta
           property="og:description"
-          content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
+          content="Spekni is a platform built for recognizing developers making impact in the tech space through endorsements and recommendations."
         />
         <meta
           property="og:image"
-          content="https://user-images.githubusercontent.com/62628408/177588390-29fc8f28-2088-4209-98b4-677b84c0e700.jpg"
+          content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-home.png"
         />
 
         <meta
           property="twitter:card"
-          content="https://user-images.githubusercontent.com/62628408/177588390-29fc8f28-2088-4209-98b4-677b84c0e700.jpg"
+          content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-home.png"
         />
         <meta property="twitter:url" content="https://spekni.vercel.app/" />
         <meta
           property="twitter:title"
-          content="Spekni - Hiring and Freelance organization Recruiters can Trust"
+          content="About: Spekni - Recognition platform built for developer endorsements"
         />
         <meta
           property="twitter:description"
-          content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
+          content="Spekni is a platform built for recognizing developers making impact in the tech space through endorsements and recommendations."
         />
         <meta
           property="twitter:image"
-          content="https://user-images.githubusercontent.com/62628408/177588390-29fc8f28-2088-4209-98b4-677b84c0e700.jpg"
+          content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-home.png"
         />
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <main>

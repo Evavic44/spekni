@@ -8,9 +8,6 @@ import Testimonials from "../../components/Testimonials";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import testimonialData from "../../feedback";
-// import ProductHuntLogo from "../../public/images/producthunt.svg";
-// import PlanetScaleLogo from "../../public/images/planetscale-about.svg";
-// import HashnodeLogo from "../../public/images/hashnode-about.svg";
 
 export default function index() {
   return (
@@ -18,69 +15,62 @@ export default function index() {
       <Head lang="en">
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About: Spekni - Our Mission and Goals</title>
         <meta
           name="keywords"
-          content="Developer, Endorsements, Hiring, Job, Victor Eke, Planetscale, Hashnode, Hackathon"
+          content="Developer, Endorsements, Hiring, Job, Planetscale, Hashnode, Hackathon"
         />
         {/* Primary met tags */}
-        <title>
-          About - Spekni - Hiring and Freelance organization Recruiters can
-          Trust
-        </title>
-        <meta
-          name="title"
-          content="Spekni - Hiring and Freelance organization Recruiters can Trust"
-        />
+        <meta name="title" content="About: Spekni - Our Mission and Goals" />
         <meta
           name="description"
-          content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
+          content="Building an open-source community that rewards developers for their contribution to the tech ecosystem"
         />
         <meta
           name="author"
-          content="EKe Victor, Spiff Jekey-Green, Nicholas Ovunda"
+          content="Victor Eke, Spiff Jekey-Green, Nicholas Ovunda"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://spekni.vercel.app/" />
         <meta
           property="og:title"
-          content="Spekni - Hiring and Freelance organization Recruiters can Trust"
+          content="About: Spekni - Our Mission and Goals"
         />
         <meta
           property="og:description"
-          content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
+          content="Building an open-source community that rewards developers for their contribution to the tech ecosystem"
         />
         <meta
           property="og:image"
-          content="https://user-images.githubusercontent.com/62628408/177588390-29fc8f28-2088-4209-98b4-677b84c0e700.jpg"
+          content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-about.png"
         />
 
         <meta
           property="twitter:card"
-          content="https://user-images.githubusercontent.com/62628408/177588390-29fc8f28-2088-4209-98b4-677b84c0e700.jpg"
+          content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-about.png"
         />
         <meta property="twitter:url" content="https://spekni.vercel.app/" />
         <meta
           property="twitter:title"
-          content="Spekni - Hiring and Freelance organization Recruiters can Trust"
+          content="About: Spekni - Our Mission and Goals"
         />
         <meta
           property="twitter:description"
-          content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
+          content="Building an open-source community that rewards developers for their contribution to the tech ecosystem"
         />
         <meta
           property="twitter:image"
-          content="https://user-images.githubusercontent.com/62628408/177588390-29fc8f28-2088-4209-98b4-677b84c0e700.jpg"
+          content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-about.png"
         />
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       {/* About Layout */}
       <Navbar />
       <main className={styles.about}>
         <div className={styles.hero}>
-          {/* <h1>
-            We make it possble for people to endorse developers based on the
+          {/* <h1 className="font-extrabold max-w-4xl text-4xl sm:text-5xl lg:text-6xl tracking-tight text-left">
+            Making it possble for people to{" "}
+            <span className="highlight">endorse</span> developers based on the
             skillsets they are proved to be proficient in.
           </h1> */}
           <h1 className="font-extrabold max-w-4xl text-4xl sm:text-5xl lg:text-6xl tracking-tight text-left">
