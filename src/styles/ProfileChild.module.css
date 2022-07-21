@@ -21,7 +21,7 @@
 /* Endorsements */
 .endorsements {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   gap: 2rem;
 }
 
@@ -85,4 +85,15 @@
 .recommendCard {
   border: var(--borderPrimary);
   padding: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 3rem 1.5rem 0;
+  }
+
+  .endorsements {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }

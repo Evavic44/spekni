@@ -1,13 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "../../public/images/logo-dark.svg";
 import ProfileLayout from "../../components/ProfileLayout";
 import styles from "../../styles/ProfileChild.module.css";
-import {
-  CalendarIcon,
-  ClockIcon,
-  ExclamationCircleIcon,
-} from "@heroicons/react/outline";
+import { CalendarIcon, ClockIcon } from "@heroicons/react/outline";
 
 function Recommendation() {
   return (
@@ -106,6 +101,7 @@ function Recommendation() {
           </article>
         </section>
       </section>
+
     </div>
   );
 }

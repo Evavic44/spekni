@@ -15,6 +15,7 @@ import HashnodeLogo from "../../public/images/hashnode.svg";
 import GithubDarkLogo from "../../public/images/github-dark.svg";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
+import Menubar from "../Menubar";
 
 const explore = [
   {
@@ -120,7 +121,7 @@ export default function Example() {
                                   aria-hidden="true"
                                 />
                                 <div className="ml-4">
-                                  <h3 className="text-base font-medium ">
+                                  <h3 className="text-base font-medium">
                                     {item.name}
                                   </h3>
                                   <p className="mt-1 text-sm ">
@@ -154,7 +155,7 @@ export default function Example() {
                 )}
               </Popover>
 
-              <Link href="/about" className="text-base font-medium  ">
+              <Link href="/about" className="text-base font-medium">
                 About
               </Link>
               <Link
@@ -165,9 +166,9 @@ export default function Example() {
               </Link>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <Link href="/login">
-                <a className="whitespace-nowrap text-base">Login</a>
-              </Link>
+              {/* <Link href="/Sign Up">
+                <a className="whitespace-nowrap text-base">Sign Up</a>
+              </Link> */}
               {status === "loading" ? (
                 <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
                   <span className="loader loaderLight"></span>
@@ -183,10 +184,11 @@ export default function Example() {
               {status === "unauthenticated" ? (
                 <Link href="/login">
                   <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
-                    Sign Up
+                    Login
                   </a>
                 </Link>
               ) : null}
+              <Menubar />
             </div>
           </div>
         </div>
@@ -267,30 +269,32 @@ export default function Example() {
                 </div>
                 <div>
                   <Link href="/login">
-                    <a className="btn btn-primary w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base btn text-center">
+                    <a className="btn btn-dark w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base btn text-center">
                       Get Started
                     </a>
                   </Link>
                   <p className="mt-6 text-center text-base">
                     Existing User?{" "}
                     <Link href="/explore">
-                      <a className="text-base highlight">Endorse a dev</a>
+                      <a className="text-zinc-500 dark:text-zinc-900">
+                        Endorse a dev
+                      </a>
                     </Link>
                   </p>
-                  <div className="mt-6 text-center">
+                  <div className="mt-6 text-left">
                     <a
                       className="mr-5"
                       href="https://github.com/evavic44/spekni"
                     >
                       <Image
                         src={GithubDarkLogo}
-                        width="21px"
-                        height="21"
+                        width={20}
+                        height={20}
                         title="Github logo"
                         alt="GitHub Logo"
                       />
                     </a>
-                    <a href="https://eke.hashnode.dev">
+                    {/* <a href="https://eke.hashnode.dev">
                       <Image
                         src={HashnodeLogo}
                         width="21px"
@@ -298,7 +302,7 @@ export default function Example() {
                         title="Hashnode logo"
                         alt="Hashnode logo"
                       />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>

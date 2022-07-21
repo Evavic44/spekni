@@ -1,14 +1,14 @@
 .head {
   display: flex;
   align-items: center;
-  padding: 3rem 1rem 4rem 5rem;
+  padding: 3rem 1rem 4rem 3rem;
   gap: 5rem;
   max-width: 1280px;
   margin: 0 auto;
 }
 
 .headEnd {
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .social {
@@ -20,13 +20,24 @@
 }
 
 .social a {
-  font-weight: 600;
-  border-radius: 2px;
+  font-size: 0.8rem;
   transition: 0.2s ease-in-out;
 }
 
-.social a:hover {
-  color: var(--primaryColor);
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: var(--borderPrimary);
+  border-radius: 3px;
+  width: 100px;
+  height: 35px;
+  padding: 0.5rem;
+  column-gap: 0.4rem;
+}
+
+.socialIcon:hover {
+  background: var(--bgSecondary);
 }
 
 .line {
@@ -47,4 +58,25 @@
 
 .line a:hover {
   color: var(--textColorSecondary);
+}
+
+@media (max-width: 960px) {
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem 3rem;
+    gap: 2rem;
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
 }

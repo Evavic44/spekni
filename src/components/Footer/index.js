@@ -35,8 +35,8 @@ export default function index() {
             <a href="https://twitter.com">
               <Image
                 src={TwitterLogo}
-                width={17}
-                height={17}
+                width={20}
+                height={20}
                 alt="Twitter Logo"
                 title="Twitter"
               />
