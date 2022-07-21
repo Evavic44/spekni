@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://spekni.netlify.app"><img src="https://user-images.githubusercontent.com/62628408/177589795-7ea1c382-db97-4c70-9108-b9ea3ab059f4.svg" width="60px"></a>
+<a href="https://spekni.netlify.app"><img src="https://user-images.githubusercontent.com/62628408/180232284-6f172c0b-6b34-4189-819d-4d270424003f.svg" width="60px"></a>
 </div>
 
 <div align="center">
@@ -30,8 +30,9 @@
 </p>
 
 <a href="https://spekni.vercel.app">
-<img src="https://user-images.githubusercontent.com/62628408/177588390-29fc8f28-2088-4209-98b4-677b84c0e700.jpg" alt="Spekni">
+<img src="https://user-images.githubusercontent.com/62628408/180232616-d2ab3cba-e5f8-4b2d-bfa0-8b2b12059f23.png" alt="Spekni">
 </a>
+
 
 <div align="left">
   <h1>How to run locally ✨</h1>
