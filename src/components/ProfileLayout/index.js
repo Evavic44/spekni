@@ -1,6 +1,7 @@
 import styles from "./ProfileLayout.module.css";
 // import ActiveLink from "./ActiveLink";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Head from "next/head";
 import GitHubIcon from "../../public/images/github-dark.svg";
@@ -16,6 +17,8 @@ import {
 } from "@heroicons/react/outline";
 
 export default function Layout({ children, user }) {
+  const router = useRouter();
+  console.log(router);
   return (
     <>
       <Head lang="en">
@@ -188,7 +191,7 @@ export default function Layout({ children, user }) {
 
       <section className={styles.line}>
         <Link href="/profile/endorsement" scroll={false}>
-          <a className="pb-4 flex item-center text-sm">
+          <a className={`pb-4 flex item-center text-sm ${router.pathname == "/[username]/endorsement" ? "activeTabLink" : ""}`}>
             <BadgeCheckIcon
               className="mr-2"
               width={19}
@@ -199,7 +202,7 @@ export default function Layout({ children, user }) {
           </a>
         </Link>
         <Link href="/profile/recommendation" scroll={false}>
-          <a className="pb-4 flex item-center text-sm">
+          <a className={`pb-4 flex item-center text-sm ${router.pathname == "/[username]/recommendation" ? "activeTabLink" : ""}`}>
             <SparklesIcon
               className="mr-2"
               width={19}
