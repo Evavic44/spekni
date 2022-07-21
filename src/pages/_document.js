@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script"
 
 class MyDocument extends Document {
   render() {
@@ -9,16 +8,16 @@ class MyDocument extends Document {
           <meta charSet="UTF-8" />
           <meta
             name="keywords"
-            content="Developer, Endorsements, Hiring, Job, Victor Eke, Planetscale, Hashnode, Hackathon"
+            content="Developer, Endorsements, Hiring, Job, Planetscale, Hashnode, Hackathon"
           />
           {/* Primary met tags */}
           <meta
             name="title"
-            content="Spekni - Hiring and Freelance organization Recruiters can Trust"
+            content="Spekni - Recognition platform built for developer endorsements"
           />
           <meta
             name="description"
-            content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
+            content="Spekni is a platform built for recognizing developers making impact in the tech space through endorsements and recommendations."
           />
           <meta
             name="author"
@@ -28,11 +27,11 @@ class MyDocument extends Document {
           <meta property="og:url" content="https://spekni.vercel.app/" />
           <meta
             property="og:title"
-            content="Spekni - Hiring and Freelance organization Recruiters can Trust"
+            content="Spekni - Recognition platform built for developer endorsements"
           />
           <meta
             property="og:description"
-            content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
+            content="Spekni is a platform built for recognizing developers making impact in the tech space through endorsements and recommendations."
           />
           <meta
             property="og:image"
@@ -46,18 +45,48 @@ class MyDocument extends Document {
           <meta property="twitter:url" content="https://spekni.vercel.app/" />
           <meta
             property="twitter:title"
-            content="Spekni - Hiring and Freelance organization Recruiters can Trust"
+            content="Spekni - Recognition platform built for developer endorsements"
           />
           <meta
             property="twitter:description"
-            content="Spekni is a hiring platform built for recruiters to find the best developers based on reputable endorsements."
+            content="Spekni is a platform built for recognizing developers making impact in the tech space through endorsements and recommendations."
           />
           <meta
             property="twitter:image"
             content="https://user-images.githubusercontent.com/62628408/177588390-29fc8f28-2088-4209-98b4-677b84c0e700.jpg"
           />
           {/* Favicon */}
-          <link rel="icon" href="/favicon.svg" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/images/android-chrome-192x192.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="/images/android-chrome-512x512.png"
+          />
+          <link rel="icon" type="image/png" href="/images/favicon.svg" />
+          <link rel="manifest" href="/images/site.webmanifest" />
 
           {/* Font */}
           <link
@@ -70,7 +99,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
 
-        <script async
+        <script
+          async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
         />
         <script
@@ -83,7 +113,8 @@ class MyDocument extends Document {
         page_path: window.location.pathname,
       });
     `,
-          }} />
+          }}
+        />
       </Html>
     );
   }

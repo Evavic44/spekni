@@ -1,4 +1,4 @@
-import React from "react";
+import Head from "next/head";
 import { getProviders, signIn, useSession } from "next-auth/react";
 import styles from "../../styles/Login.module.css";
 import Image from "next/image";
@@ -26,6 +26,64 @@ export default function Login({ providers }) {
   if (status === "unauthenticated") {
     return (
       <div>
+        <Head lang="en">
+          <meta charSet="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <meta
+            name="keywords"
+            content="Developer, Endorsements, Hiring, Job, Planetscale, Hashnode, Hackathon"
+          />
+          {/* Primary met tags */}
+          <title>Sigup/login - Spekni</title>
+          <meta
+            name="title"
+            content="Create an account on Spekni using your Github or Google account to start receiving endorsements and recommendations"
+          />
+          <meta
+            name="description"
+            content="Create an account on Spekni using your Github or Google account to start receiving endorsements and recommendations"
+          />
+          <meta
+            name="author"
+            content="EKe Victor, Spiff Jekey-Green, Nicholas Ovunda"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://spekni.vercel.app/" />
+          <meta
+            property="og:title"
+            content="Create an account on Spekni using your Github or Google account to start receiving endorsements and recommendations"
+          />
+          <meta
+            property="og:description"
+            content="Create an account on Spekni using your Github or Google account to start receiving endorsements and recommendations"
+          />
+          <meta
+            property="og:image"
+            content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-home.png"
+          />
+
+          <meta
+            property="twitter:card"
+            content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-home.png"
+          />
+          <meta property="twitter:url" content="https://spekni.vercel.app/" />
+          <meta
+            property="twitter:title"
+            content="Create an account on Spekni using your Github or Google account to start receiving endorsements and recommendations"
+          />
+          <meta
+            property="twitter:description"
+            content="Create an account on Spekni using your Github or Google account to start receiving endorsements and recommendations"
+          />
+          <meta
+            property="twitter:image"
+            content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-home.png"
+          />
+        </Head>
+
         <section>
           <div className={styles.container}>
             <div className={styles.leftContainer}>
