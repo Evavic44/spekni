@@ -1,5 +1,4 @@
 import styles from "./ProfileLayout.module.css";
-// import ActiveLink from "./ActiveLink";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -12,13 +11,12 @@ import Navbar from "../Navbar";
 import {
   BadgeCheckIcon,
   GlobeAltIcon,
-  GlobeIcon,
   SparklesIcon,
 } from "@heroicons/react/outline";
+import prisma from "../../prisma";
 
 export default function Layout({ children, user }) {
   const router = useRouter();
-  console.log(router);
   return (
     <>
       <Head lang="en">
@@ -90,7 +88,7 @@ export default function Layout({ children, user }) {
             alt="User Profile"
             width={190}
             height={190}
-            placeholderSrc="https://res.cloudinary.com/victoreke/image/upload/v1657357322/Spekni/placeholder_piuucr.svg"
+            // placeholderSrc="https://res.cloudinary.com/victoreke/image/upload/v1657357322/Spekni/placeholder_piuucr.svg"
           />
           <div className="flex items-center gap-2 mt-4">
             <Image
