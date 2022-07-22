@@ -163,6 +163,10 @@ button:focus {
   border-bottom-right-radius: 10px;
 }
 
+.dropdownHamburger {
+  background: var(--bgPrimary);
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);

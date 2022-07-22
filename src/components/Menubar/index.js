@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { CubeIcon, MoonIcon, SunIcon } from "@heroicons/react/outline";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 export default function Menubar() {
   const { theme, setTheme } = useTheme();
@@ -29,19 +30,22 @@ export default function Menubar() {
         <Menu.Items className="dropdown origin-top-right absolute right-0 mt-4 w-56 rounded-md">
           <div className="py-1">
             <Menu.Item>
-              <a href="#" className="block px-4 py-3 text-sm">
-                Account settings
-              </a>
+              <Link href="/profile">
+                <a className="block px-4 py-3 text-sm">Account settings</a>
+              </Link>
             </Menu.Item>
             <Menu.Item>
-              <a href="#" className="block px-4 py-3 text-sm">
+              <a
+                href="https://github.com/Evavic44/spekni/blob/main/LICENSE"
+                className="block px-4 py-3 text-sm"
+              >
                 License
               </a>
             </Menu.Item>
             <Menu.Item>
-              <a href="#" className="block px-4 py-3 text-sm">
-                Changelog
-              </a>
+              <Link href="/changelog">
+                <a className="block px-4 py-3 text-sm">Changelog</a>
+              </Link>
             </Menu.Item>
             <form method="POST" action="#">
               <Menu.Item>
