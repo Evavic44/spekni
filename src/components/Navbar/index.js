@@ -278,10 +278,10 @@ export default function Example() {
                       Get Started
                     </a>
                   </Link>
-                  <p className="mt-6 text-center text-base">
+                  <p className="mt-6 text-center text-sm">
                     Existing User?{" "}
                     <Link href="/explore">
-                      <a className="highlight">Endorse a dev</a>
+                      <a className="highlight text-sm">Endorse a dev</a>
                     </Link>
                   </p>
                   <div className="mt-6 flex items-center justify-between">
