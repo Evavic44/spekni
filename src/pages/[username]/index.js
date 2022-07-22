@@ -3,8 +3,9 @@ import ProfileLayout from "../../components/ProfileLayout";
 import styles from "../../styles/ProfileChild.module.css";
 import { CheckCircleIcon, PlusCircleIcon } from "@heroicons/react/outline";
 import Image from "next/image";
+import prisma from "../../prisma";
 
-function Endorsement() {
+function Endorsement(props) {
   return (
     <div>
       <section className={styles.container}>
@@ -341,3 +342,13 @@ function Endorsement() {
 Endorsement.PageLayout = ProfileLayout;
 
 export default Endorsement;
+
+export async function getServerSideProps({resolvedUrl}) {
+  const username = resolvedUrl.slice(1).trim();
+  const user = await prisma.Profile.findUnique({ where: { username }});
+  return {
+    props: {
+      user
+    },
+  };
+}
