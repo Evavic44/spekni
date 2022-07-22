@@ -1,18 +1,14 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { CubeIcon, MoonIcon, SunIcon } from "@heroicons/react/outline";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { CubeIcon, SunIcon } from "@heroicons/react/outline";
 
 export default function Menubar() {
   return (
     <Menu as="div" className="relative md:inline-block text-left hidden">
       <div>
         <Menu.Button className="inline-flex justify-center w-full rounded-md border py-3">
-          <CubeIcon className="-mr-1 ml-4 h-6 w-6" a ria-hidden="true" />
+          <CubeIcon className="-mr-1 ml-4 h-6 w-6" aria-hidden="true" />
         </Menu.Button>
       </div>
 
