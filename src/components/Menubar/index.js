@@ -2,8 +2,19 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { CubeIcon, SunIcon } from "@heroicons/react/outline";
+import { useTheme } from "next-themes";
 
 export default function Menubar() {
+  const { theme, setTheme } = useTheme();
+
+  const changeTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
   return (
     <Menu as="div" className="relative md:inline-block text-left hidden">
       <div>
@@ -59,7 +70,10 @@ export default function Menubar() {
             </form>
             {/* Theme Switcher */}
             <Menu.Item>
-              <button className="flex items-center justify-center px-4 py-3 text-sm">
+              <button
+                onClick={changeTheme}
+                className="flex items-center justify-center px-4 py-3 text-sm"
+              >
                 {/* <MoonIcon className="h-6 w-6" /> */}
                 <SunIcon className="h-6 w-6" />
               </button>
