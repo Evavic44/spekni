@@ -15,16 +15,19 @@ export default function index() {
       <Head lang="en">
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About: Spekni - Our Mission and Goals</title>
+        <title>Spekni - Recognizing impactful developers</title>
         <meta
           name="keywords"
           content="Developer, Endorsements, Hiring, Job, Planetscale, Hashnode, Hackathon"
         />
         {/* Primary met tags */}
-        <meta name="title" content="About: Spekni - Our Mission and Goals" />
+        <meta
+          name="title"
+          content="Spekni - Recognizing impactful developers"
+        />
         <meta
           name="description"
-          content="Building an open-source community that rewards developers for their contribution to the tech ecosystem"
+          content="Spekni is a platform built for recognizing developers making impact in the tech space through endorsements and recommendations."
         />
         <meta
           name="author"
@@ -34,11 +37,11 @@ export default function index() {
         <meta property="og:url" content="https://spekni.vercel.app/" />
         <meta
           property="og:title"
-          content="About: Spekni - Our Mission and Goals"
+          content="Spekni - Recognizing impactful developers"
         />
         <meta
           property="og:description"
-          content="Building an open-source community that rewards developers for their contribution to the tech ecosystem"
+          content="Spekni is a platform built for recognizing developers making impact in the tech space through endorsements and recommendations."
         />
         <meta
           property="og:image"
@@ -52,11 +55,11 @@ export default function index() {
         <meta property="twitter:url" content="https://spekni.vercel.app/" />
         <meta
           property="twitter:title"
-          content="About: Spekni - Our Mission and Goals"
+          content="Spekni - Recognizing impactful developers"
         />
         <meta
           property="twitter:description"
-          content="Building an open-source community that rewards developers for their contribution to the tech ecosystem"
+          content="Spekni is a platform built for recognizing developers making impact in the tech space through endorsements and recommendations."
         />
         <meta
           property="twitter:image"
