@@ -145,6 +145,24 @@ button:focus {
   color: var(--primaryColor);
 }
 
+.dropdown {
+  background: var(--bgPrimary);
+  color: var(--textColorPrimary);
+  border: var(--borderPrimary);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dropdownButton {
+  background: var(--bgPrimary);
+  color: var(--textColorPrimary);
+  border-right: var(--borderPrimary);
+  border-left: var(--borderPrimary);
+  border-bottom: var(--borderPrimary);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);

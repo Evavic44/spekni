@@ -11,7 +11,6 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Logo from "../../public/images/logo.svg";
-import HashnodeLogo from "../../public/images/hashnode.svg";
 import GithubDarkLogo from "../../public/images/github-dark.svg";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
@@ -63,7 +62,7 @@ export default function Example() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
           <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
             <div className="flex items-center  lg:flex-1">
-              <Image src={Logo} alt="Logo" width="30px" height="30px" />
+              <Image src={Logo} alt="Logo" width={30} height={30} />
               <Link href="/">
                 <a className="font-bold text-xl ml-1">Spekni</a>
               </Link>
@@ -107,14 +106,14 @@ export default function Example() {
                       leaveFrom="opacity-100 translate-y-0"
                       leaveTo="opacity-0 translate-y-1"
                     >
-                      <Popover.Panel className="absolute z-100 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
-                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                          <div className="relative grid gap-6 bg-white dark:bg-zinc-900 px-5 py-6 sm:gap-8 sm:p-8">
+                      <Popover.Panel className="absolute z-100 -ml-4 mt-4 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                        <div className="rounded-lg overflow-hidden">
+                          <div className="dropdown rounded-b-none relative grid gap-6 px-5 py-6 sm:gap-8 sm:p-8">
                             {explore.map((item) => (
                               <a
                                 key={item.name}
                                 href={item.href}
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50 dark:hover:bg-zinc-800"
+                                className="-m-3 p-3 flex items-start rounded-lg"
                               >
                                 <item.icon
                                   className="flex-shrink-0 h-6 w-6 highlight"
@@ -131,12 +130,12 @@ export default function Example() {
                               </a>
                             ))}
                           </div>
-                          <div className="px-5 py-5 bg-gray-50 dark:bg-blue-800 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                          <div className="px-5 py-5 dropdownButton space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                             {callsToAction.map((item) => (
                               <div key={item.name} className="flow-root w-full">
                                 <a
                                   href={item.href}
-                                  className="-m-3 p-3 flex items-center rounded-md text-base font-medium  hover:bg-gray-100 dark:hover:bg-blue-800"
+                                  className="-m-3 p-3 flex items-center rounded-md text-base font-medium"
                                 >
                                   <item.icon
                                     className="flex-shrink-0 h-6 w-6 "
