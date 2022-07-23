@@ -30,7 +30,7 @@
   --primaryColor: #3a52ee;
   --secondaryColor: #3246c9;
   --bgTertiary: #777777;
-  --miscColor: ##111111;
+  --miscColor: #111111;
   --borderPrimary: 1px solid #222222;
   --borderSecondary: 1px solid #333333;
   --filterPrimary: grayscale(10%) brightness(19%) saturate(0%) contrast(98%);
@@ -143,6 +143,34 @@ button:focus {
 /* Tab link style */
 .activeTabLink {
   color: var(--primaryColor);
+}
+
+/* Dropdown */
+.dropdown {
+  background: var(--bgPrimary);
+  color: var(--textColorPrimary);
+  border: var(--borderPrimary);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dropdownButton {
+  background: var(--bgPrimary);
+  color: var(--textColorPrimary);
+  border-right: var(--borderPrimary);
+  border-left: var(--borderPrimary);
+  border-bottom: var(--borderPrimary);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropdownHamburger {
+  background: var(--bgPrimary);
+}
+
+/* Fill */
+.fillPrimary {
+  fill: var(--miscColor);
 }
 
 @keyframes rotation {
