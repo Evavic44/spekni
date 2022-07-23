@@ -13,10 +13,12 @@ import {
   GlobeAltIcon,
   SparklesIcon,
 } from "@heroicons/react/outline";
-import prisma from "../../prisma";
+import { useSelector } from "react-redux";
 
 export default function Layout({ children, user }) {
   const router = useRouter();
+  const { user: userState } = useSelector(state => state.user);
+  console.log(userState);
   return (
     <>
       <Head lang="en">
@@ -27,7 +29,7 @@ export default function Layout({ children, user }) {
           content="Developer, Endorsements, Hiring, Job, Planetscale, Hashnode, Hackathon"
         />
         {/* Primary met tags */}
-        <title>User Name - Spekni</title>
+        <title>{userState?.name} - Spekni</title>
         <meta
           name="title"
           content="Spekni - Recognition platform built for developer endorsements"

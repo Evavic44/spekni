@@ -15,10 +15,15 @@
     "@prisma/client": "^4.1.0",
     "next": "12.2.0",
     "next-auth": "^4.9.0",
+    "next-redux-wrapper": "^7.0.5",
     "next-themes": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-lazy-load-image-component": "^1.5.4",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
