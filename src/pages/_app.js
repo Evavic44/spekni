@@ -10,13 +10,7 @@ function App({
   return (
     <ThemeProvider>
       <SessionProvider session={session}>
-        {Component.PageLayout ? (
-          <Component.PageLayout>
-            <Component {...pageProps} />
-          </Component.PageLayout>
-        ) : (
-          <Component {...pageProps} />
-        )}
+        <Component {...pageProps} />
       </SessionProvider>
     </ThemeProvider>
   );
