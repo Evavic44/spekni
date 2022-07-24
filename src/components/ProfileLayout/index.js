@@ -13,10 +13,15 @@ import {
   GlobeAltIcon,
   SparklesIcon,
 } from "@heroicons/react/outline";
-import prisma from "../../prisma";
 
-export default function Layout({ children, user }) {
+export default function Layout({ children, profile }) {
   const router = useRouter();
+  console.log("Prof: ", profile);
+
+  if(!profile) return <div>Sorry this resource doesn&apos;t seem to exist :(</div>; // @TODO: Please display an error page here (!important: as a component in a page)
+  
+  const pageTitle = `${profile?.fullName} - Spekni`
+
   return (
     <>
       <Head lang="en">
@@ -27,7 +32,7 @@ export default function Layout({ children, user }) {
           content="Developer, Endorsements, Hiring, Job, Planetscale, Hashnode, Hackathon"
         />
         {/* Primary met tags */}
-        <title>User Name - Spekni</title>
+        <title>{pageTitle}</title>
         <meta
           name="title"
           content="Spekni - Recognition platform built for developer endorsements"
@@ -81,41 +86,45 @@ export default function Layout({ children, user }) {
         <div className={styles.headStart}>
           <Image
             className="rounded-full"
-            src="https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png"
-            // src={"User Name"}
+            src={profile.user.image}
+            // src="https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png"
             alt="User Profile"
             width={190}
             height={190}
             // placeholderSrc="https://res.cloudinary.com/victoreke/image/upload/v1657357322/Spekni/placeholder_piuucr.svg"
           />
-          <div className="flex items-center gap-2 mt-4">
-            <Image
+          <div className="flex items-center gap-2 mt-4">{profile.endorsements ? (
+            <>
+              <Image
               src="https://res.cloudinary.com/victoreke/image/upload/v1657402772/Spekni/badge.svg"
               width={15}
               height={15}
               alt="badge"
             />
-            <span className="highlight">500 Endorsements</span>
+            <span className="highlight">{profile.endorsements} Endorsement(s)</span>
+            </>) : null }
           </div>
         </div>
 
         <div className={styles.headEnd}>
-          <h1 className="font-bold text-3xl">{"User Name"}</h1>
+          <h1 className="font-bold text-3xl">{profile.fullName}</h1>
           <h3 className="font-medium mt-2 mb-4 text-base">
-            Senior Software Engineer
+            {/* Senior Software Engineer */}
+            {profile.job_title}
           </h3>
           <span className="text-sm">
-            John is a senior software engineer with a passion for learning with
+            {/* John is a senior software engineer with a passion for learning with
             over 15+ years of experience leading teams to build enterprise-grade
-            distributed applications that solve real-world problems.{" "}
+            distributed applications that solve real-world problems.{" "} */}
+            {profile.bio}
           </span>
           <div className={styles.social}>
             {/* <a href="https://victoreke.com" target="_blank" rel="noreferrer">
               Resume
             </a> */}
-            <a
+            {profile.portfolioLink && (<a
               className={styles.socialIcon}
-              href="https://victoreke.com"
+              href={profile.portfolioLink}
               title="Portfolio"
             >
               Portfolio
@@ -126,10 +135,10 @@ export default function Layout({ children, user }) {
                 title="Mail"
                 alt="Mail Icon"
               />
-            </a>
-            <a
+            </a>)}
+            {profile.githubLink && (<a
               className={styles.socialIcon}
-              href="https://github.com/evavic44"
+              href={profile.githubLink}
               target="_blank"
               rel="noreferrer"
               title="GitHub"
@@ -142,8 +151,8 @@ export default function Layout({ children, user }) {
                 height={16}
                 alt="GitHub Icon"
               />
-            </a>
-            <a
+            </a>)}
+            {/* <a
               className={styles.socialIcon}
               href="https://linkedin.com/in/victorekeawa"
               target="_blank"
@@ -172,10 +181,10 @@ export default function Layout({ children, user }) {
                 height={20}
                 alt="Twitter Icon"
               />
-            </a>
+            </a> */}
             <a
               className={styles.socialIcon}
-              href="mailto:evavic44@gmail.com"
+              href={`mailto:${profile.user.email}`}
               title="Mail"
             >
               Email
@@ -186,7 +195,7 @@ export default function Layout({ children, user }) {
       </header>
 
       <section className={styles.line}>
-        <Link href="/profile/endorsement" scroll={false}>
+        <Link href={`/${profile.username}/endorsement`} scroll={false}>
           <a className={`pb-4 flex item-center text-sm ${router.pathname == "/[username]/endorsement" ? "activeTabLink" : ""}`}>
             <BadgeCheckIcon
               className="mr-2"
@@ -197,7 +206,7 @@ export default function Layout({ children, user }) {
             Endorsements
           </a>
         </Link>
-        <Link href="/profile/recommendation" scroll={false}>
+        <Link href={`/${profile.username}/recommendation`} scroll={false}>
           <a className={`pb-4 flex item-center text-sm ${router.pathname == "/[username]/recommendation" ? "activeTabLink" : ""}`}>
             <SparklesIcon
               className="mr-2"

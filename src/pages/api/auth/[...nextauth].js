@@ -35,5 +35,6 @@ export default NextAuth({
   adapter: PrismaAdapter(prisma),
   pages: {
     signIn: "/login",
+    newUser: "/account"
   },
 });
