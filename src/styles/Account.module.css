@@ -1,10 +1,18 @@
 .container {
-  max-width: 1000px;
-  margin: 3rem auto 0;
-  padding: 1.2rem;
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 1.4rem;
 }
 
-.container input {
-  padding: 1rem;
+.container input,
+.container textarea {
+  padding: 0.7rem 1rem;
   border: var(--borderPrimary);
+  background: var(--bgSecondary);
+  outline: none;
+}
+
+.container input:focus,
+.container textarea:focus {
+  border-color: var(--bgTertiary);
 }

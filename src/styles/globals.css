@@ -76,7 +76,7 @@ button:focus {
 }
 
 .borderLight {
-  border: var(--borderPrimary);
+  border-bottom: var(--borderPrimary);
 }
 
 .btn {
