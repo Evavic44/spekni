@@ -18,7 +18,7 @@ export default function Layout({ children, profile }) {
   const router = useRouter();
   console.log("Prof: ", profile);
 
-  if(!profile) return <div>Sorry this resource doesn't seem to exist :(</div>; // @TODO: Please display an error page here (!important: as a component in a page)
+  if(!profile) return <div>Sorry this resource doesn&apos;t seem to exist :(</div>; // @TODO: Please display an error page here (!important: as a component in a page)
   
   const pageTitle = `${profile?.fullName} - Spekni`
 
