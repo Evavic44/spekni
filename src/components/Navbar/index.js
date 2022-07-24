@@ -62,6 +62,8 @@ export default function Example() {
     return theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
+  console.log("Session: ", session);
+
   return (
     <div>
       <Popover className="test relative z-10">
@@ -180,7 +182,7 @@ export default function Example() {
                 </a>
               ) : null}
               {status === "authenticated" ? (
-                <Link href="/spiffgreen">
+                <Link href={`/profile?useremail=${session.user.email}`}>
                   <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
                     Profile
                   </a>

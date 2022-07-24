@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import ProfileLayout from "../../components/ProfileLayout";
 import styles from "../../styles/ProfileChild.module.css";
 import { CheckCircleIcon, PlusCircleIcon } from "@heroicons/react/outline";

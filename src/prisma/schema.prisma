@@ -22,8 +22,7 @@ model Account {
   scope             String?
   id_token          String? @db.Text
   session_state     String?
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
 }
@@ -38,14 +37,17 @@ model Session {
 
 model Profile {
   id            Int      @id @default(autoincrement())
-  bio           String?
+  bio           String?  @db.TinyText
   job_title     String?
   resumeLink    String?
   githubLink    String?
   username      String?  @unique
   portfolioLink String?
+  twitterLink   String?
+  linkedinLink  String?
   fullName      String?
   userId        String
+  email         String   @unique
   createdAt     DateTime @default(now())
   user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

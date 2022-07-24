@@ -16,10 +16,12 @@ import {
 
 export default function Layout({ children, profile }) {
   const router = useRouter();
-  console.log(profile);
+  console.log("Prof: ", profile);
 
   if(!profile) return <div>Sorry this resource doesn't seem to exist :(</div>; // @TODO: Please display an error page here (!important: as a component in a page)
   
+  const pageTitle = `${profile?.fullName} - Spekni`
+
   return (
     <>
       <Head lang="en">
@@ -30,7 +32,7 @@ export default function Layout({ children, profile }) {
           content="Developer, Endorsements, Hiring, Job, Planetscale, Hashnode, Hackathon"
         />
         {/* Primary met tags */}
-        <title>{profile?.fullName} - Spekni</title>
+        <title>{pageTitle}</title>
         <meta
           name="title"
           content="Spekni - Recognition platform built for developer endorsements"
@@ -193,7 +195,7 @@ export default function Layout({ children, profile }) {
       </header>
 
       <section className={styles.line}>
-        <Link href="/profile/endorsement" scroll={false}>
+        <Link href={`/${profile.username}/endorsement`} scroll={false}>
           <a className={`pb-4 flex item-center text-sm ${router.pathname == "/[username]/endorsement" ? "activeTabLink" : ""}`}>
             <BadgeCheckIcon
               className="mr-2"
@@ -204,7 +206,7 @@ export default function Layout({ children, profile }) {
             Endorsements
           </a>
         </Link>
-        <Link href="/profile/recommendation" scroll={false}>
+        <Link href={`/${profile.username}/recommendation`} scroll={false}>
           <a className={`pb-4 flex item-center text-sm ${router.pathname == "/[username]/recommendation" ? "activeTabLink" : ""}`}>
             <SparklesIcon
               className="mr-2"
