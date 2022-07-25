@@ -33,6 +33,16 @@
 <img src="https://user-images.githubusercontent.com/62628408/180232616-d2ab3cba-e5f8-4b2d-bfa0-8b2b12059f23.png" alt="Spekni">
 </a>
 
+# Tech Stack
+- ⚡ NextJS - UI Framework 
+- 🔒 Authentication - [NextAuth.js](https://nextauth.io) (GitHub and Google)
+- 📦 Database and API - [PlanetScale](https://planetscale.io)
+- 🖼️ Image Optmization - [Cloudinary](https://cloudinary.com)
+- 🎥 Video Embed - [Loom](https://loom.com)
+- ☀️ Color Theme: [Next Themes](https://github.com/pacocoursey/next-themes)
+- 🎨 TailwindCSS - CSS Library for fast styling
+- 🖌️ CSS - Reusable stying and variables 
+- 🎉 React Confetti - Feel good animations for endorsements
 
 <div align="left">
   <h1>How to run locally ✨</h1>
