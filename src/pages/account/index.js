@@ -1,11 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import styles from "../../styles/Account.module.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import GitHubIcon from "../../public/images/github-dark.svg";
+import { GlobeAltIcon } from "@heroicons/react/outline";
 
 export default function Account() {
   return (
@@ -15,7 +13,7 @@ export default function Account() {
       </Head>
 
       <Navbar />
-      <main className={styles.container}>
+      <main className="max-w-3xl mt-12 mx-auto mb-32 p-6">
         <h1 className="font-extrabold max-w-4xl text-4xl text-center sm:text-5xl lg:text-5xl tracking-tight mb-12">
           Edit Account
         </h1>
@@ -43,7 +41,7 @@ export default function Account() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="">
                       <label
-                        htmlFor="edit account"
+                        htmlFor="full name"
                         className="block text-sm font-medium"
                       >
                         Full Name
@@ -51,9 +49,9 @@ export default function Account() {
                       <div className="mt-1 flex rounded-md shadow-sm">
                         <input
                           type="text"
-                          name="edit account"
-                          id="edit account"
-                          className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md text-sm"
+                          name="full name"
+                          id="full name"
+                          className="flex-1 block w-full rounded-md text-sm py-4 px-6"
                           value="John Boyega"
                           required
                         />
@@ -62,7 +60,7 @@ export default function Account() {
 
                     <div className="">
                       <label
-                        htmlFor="edit account"
+                        htmlFor="job title"
                         className="block text-sm font-medium"
                       >
                         Job Title
@@ -70,9 +68,9 @@ export default function Account() {
                       <div className="mt-1 flex rounded-md shadow-sm">
                         <input
                           type="text"
-                          name="edit account"
-                          id="edit account"
-                          className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md text-sm"
+                          name="job title"
+                          id="job title"
+                          className="flex-1 block w-full rounded-md text-sm py-4 px-6"
                           placeholder="Senior Software Engineer"
                           required
                         />
@@ -81,24 +79,44 @@ export default function Account() {
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="about"
-                      className="block text-sm font-medium"
-                    >
+                    <label htmlFor="bio" className="block text-sm font-medium">
                       Bio
                     </label>
                     <div className="mt-1">
                       <textarea
-                        id="about"
-                        name="about"
+                        id="bio"
+                        name="bio"
                         rows={3}
-                        className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full text-sm rounded-md p-5"
+                        className="shadow-sm mt-1 block w-full text-sm rounded-md py-5 px-6"
                         defaultValue={""}
                         required
                       />
                     </div>
                     <p className="mt-4 text-sm">
                       Tell us a little about yourself in 160 words or less.
+                    </p>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="skills"
+                      className="block text-sm font-medium"
+                    >
+                      Skills
+                    </label>
+                    <div className="mt-1">
+                      <textarea
+                        id="skills"
+                        name="skills"
+                        rows={3}
+                        className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
+                        defaultValue={""}
+                        required
+                        placeholder="React, JavaScript, NodeJS"
+                      />
+                    </div>
+                    <p className="mt-4 text-sm">
+                      Add your preffered skills (Maximum 5, miminum 2).
                     </p>
                   </div>
                 </div>
@@ -115,71 +133,115 @@ export default function Account() {
                   </h3>
                 </div>
 
+                {/* Portfolio */}
                 <div className="grid grid-cols-6 gap-6">
-                  <div className="col-span-6 sm:col-span-3">
+                  <div className="col-span-6 sm:col-span-3 my-3">
                     <label
-                      htmlFor="first-name"
-                      className="block text-sm font-medium"
+                      htmlFor="portfolio-url"
+                      className="flex item-center gap-x-1 text-sm font-medium"
                     >
+                      <GlobeAltIcon width={17} height={17} alt="Globe Icon" />
                       Portfolio URL
                     </label>
                     <input
                       type="text"
-                      name="first-name"
-                      id="first-name"
+                      name="portfolio-url"
+                      id="portfolio-url"
                       autoComplete="given-name"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm text-sm rounded-md"
+                      className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
                       placeholder="johnboyega.com"
                     />
                   </div>
 
-                  <div className="col-span-6 sm:col-span-3">
+                  {/* GitHub */}
+                  <div className="col-span-6 sm:col-span-3 my-3">
                     <label
-                      htmlFor="last-name"
-                      className="block text-sm font-medium"
+                      htmlFor="github-url"
+                      className="flex item-center gap-x-2 text-sm font-medium"
                     >
-                      LinkedIn URL
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 23"
+                        xmlns="http://www.w3.org/2000/svg"
+                        alt="GitHub Icon"
+                        className="fillIcon mt-1"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M12 0C5.37 0 0 5.27642 0 11.7909C0 17.0083 3.435 21.4152 8.205 22.9775C8.805 23.0806 9.03 22.7269 9.03 22.4174C9.03 22.1374 9.015 21.2088 9.015 20.2214C6 20.7667 5.22 19.4992 4.98 18.8359C4.845 18.4969 4.26 17.4505 3.75 17.1705C3.33 16.9494 2.73 16.4041 3.735 16.3893C4.68 16.3746 5.355 17.2442 5.58 17.5979C6.66 19.3813 8.385 18.8801 9.075 18.5706C9.18 17.8042 9.495 17.2884 9.84 16.9936C7.17 16.6988 4.38 15.6819 4.38 11.1719C4.38 9.8896 4.845 8.82842 5.61 8.00306C5.49 7.70829 5.07 6.49972 5.73 4.87848C5.73 4.87848 6.735 4.56897 9.03 6.08704C9.99 5.82175 11.01 5.6891 12.03 5.6891C13.05 5.6891 14.07 5.82175 15.03 6.08704C17.325 4.55423 18.33 4.87848 18.33 4.87848C18.99 6.49972 18.57 7.70829 18.45 8.00306C19.215 8.82842 19.68 9.87486 19.68 11.1719C19.68 15.6966 16.875 16.6988 14.205 16.9936C14.64 17.3621 15.015 18.0695 15.015 19.1749C15.015 20.7519 15 22.0195 15 22.4174C15 22.7269 15.225 23.0954 15.825 22.9775C18.2072 22.1872 20.2772 20.6829 21.7437 18.6761C23.2101 16.6694 23.9993 14.2613 24 11.7909C24 5.27642 18.63 0 12 0Z"
+                        />
+                      </svg>
+                      GitHub
                     </label>
                     <input
                       type="text"
-                      name="last-name"
-                      id="last-name"
+                      name="github-url"
+                      id="github-url"
                       autoComplete="family-name"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm text-sm rounded-md"
+                      className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
                       placeholder="johnboyega"
                     />
                   </div>
 
+                  {/* Twitter */}
                   <div className="col-span-6 sm:col-span-3">
                     <label
-                      htmlFor="first-name"
-                      className="block text-sm font-medium"
+                      htmlFor="twitter-url"
+                      className="flex item-center gap-x-2 text-sm font-medium"
                     >
-                      GitHub URL
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 48 48"
+                        width="18px"
+                        height="18px"
+                        alt="Twitter Icon"
+                        className="fillIcon"
+                      >
+                        <path d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429" />
+                      </svg>
+                      Twitter
                     </label>
                     <input
                       type="text"
-                      name="first-name"
-                      id="first-name"
+                      name="twitter-url"
+                      id="twitter-url"
                       autoComplete="given-name"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm text-sm rounded-md"
+                      className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
                       placeholder="johnboyega"
                     />
                   </div>
 
+                  {/* LinkedIn */}
                   <div className="col-span-6 sm:col-span-3">
                     <label
-                      htmlFor="last-name"
-                      className="block text-sm font-medium"
+                      htmlFor="linkedin-url"
+                      className="flex item-center gap-x-2 text-sm font-medium"
                     >
-                      LinkedIn URL
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 19 19"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        alt="Linkedin Icon"
+                        className="fillIcon mt-1"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M2.34961e-07 1.58737C2.34961e-07 1.16637 0.16724 0.762619 0.464928 0.46493C0.762617 0.167242 1.16637 2.11618e-06 1.58736 2.11618e-06H17.4109C17.6195 -0.000338633 17.8262 0.0404746 18.019 0.120105C18.2119 0.199736 18.3871 0.31662 18.5347 0.464065C18.6823 0.611511 18.7994 0.786622 18.8792 0.979374C18.9591 1.17213 19.0001 1.37873 19 1.58737V17.4109C19.0002 17.6196 18.9593 17.8263 18.8796 18.0191C18.7999 18.2119 18.6829 18.3872 18.5354 18.5348C18.3879 18.6824 18.2127 18.7994 18.0199 18.8793C17.8271 18.9591 17.6204 19.0001 17.4118 19H1.58736C1.37884 19 1.17235 18.9589 0.979706 18.8791C0.787062 18.7993 0.612034 18.6823 0.464623 18.5348C0.317211 18.3873 0.200305 18.2122 0.120583 18.0195C0.0408615 17.8268 -0.000113219 17.6203 2.34961e-07 17.4118V1.58737ZM7.52055 7.24418H10.0933V8.53618C10.4647 7.79346 11.4147 7.125 12.8423 7.125C15.5791 7.125 16.2277 8.60441 16.2277 11.3188V16.3469H13.458V11.9372C13.458 10.3913 13.0867 9.519 12.1436 9.519C10.8352 9.519 10.2911 10.4595 10.2911 11.9372V16.3469H7.52055V7.24418ZM2.77055 16.2286H5.54109V7.125H2.77055V16.2286ZM5.9375 4.15582C5.94272 4.39304 5.90051 4.62891 5.81334 4.84959C5.72617 5.07027 5.5958 5.27132 5.42988 5.44094C5.26396 5.61055 5.06583 5.74532 4.84712 5.83733C4.62841 5.92933 4.39352 5.97673 4.15625 5.97673C3.91898 5.97673 3.68409 5.92933 3.46538 5.83733C3.24667 5.74532 3.04854 5.61055 2.88262 5.44094C2.7167 5.27132 2.58633 5.07027 2.49916 4.84959C2.41199 4.62891 2.36978 4.39304 2.375 4.15582C2.38525 3.69019 2.57742 3.24709 2.91036 2.92141C3.24329 2.59573 3.69051 2.41336 4.15625 2.41336C4.62199 2.41336 5.06921 2.59573 5.40214 2.92141C5.73508 3.24709 5.92725 3.69019 5.9375 4.15582Z"
+                        />
+                      </svg>
+                      LinkedIn
                     </label>
                     <input
                       type="text"
-                      name="last-name"
-                      id="last-name"
+                      name="linkedin-url"
+                      id="linkedin-url"
                       autoComplete="family-name"
-                      className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm text-sm rounded-md"
+                      className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
                       placeholder="johnboyega"
                     />
                   </div>
