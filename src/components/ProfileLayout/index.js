@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Head from "next/head";
 import Navbar from "../Navbar";
+import Error from "../Error/Error";
+
 import {
   BadgeCheckIcon,
   GlobeAltIcon,
@@ -15,8 +17,7 @@ export default function Layout({ children, profile }) {
   const router = useRouter();
   console.log("Prof: ", profile);
 
-  if (!profile)
-    return <div>Sorry this resource doesn&apos;t seem to exist :(</div>; // @TODO: Please display an error page here (!important: as a component in a page)
+  if (!profile) return <Error />;
 
   const pageTitle = `${profile?.fullName} - Spekni`;
 
