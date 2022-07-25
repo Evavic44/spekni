@@ -101,6 +101,29 @@ export default function Account() {
                       Tell us a little about yourself in 160 words or less.
                     </p>
                   </div>
+
+                  <div>
+                    <label
+                      htmlFor="about"
+                      className="block text-sm font-medium"
+                    >
+                      Skills
+                    </label>
+                    <div className="mt-1">
+                      <textarea
+                        id="about"
+                        name="about"
+                        rows={3}
+                        className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full text-sm rounded-md p-5"
+                        defaultValue={""}
+                        required
+                        placeholder="React, JavaScript, NodeJS"
+                      />
+                    </div>
+                    <p className="mt-4 text-sm">
+                      Add your preffered skills (Maximum 5, miminum 2).
+                    </p>
+                  </div>
                 </div>
 
                 <div className="hidden sm:block max-w-3xl" aria-hidden="true">
