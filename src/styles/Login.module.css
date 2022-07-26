@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: 40vw 60vw;
+  grid-template-columns: 50vw 50vw;
   min-height: 100vh;
   transition: 0.2s ease-in-out;
 }
@@ -50,6 +50,7 @@
   background-color: var(--primaryColor);
   background-image: url(https://res.cloudinary.com/victoreke/image/upload/v1657224899/Spekni/bg/bg2_xhrqch.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
 }
 
