@@ -123,6 +123,11 @@ textarea:focus {
   border: var(--borderPrimary);
 }
 
+/* Background */
+.bg-secondary {
+  background-color: var(--bgSecondary);
+}
+
 .highlight {
   color: var(--primaryColor);
 }
