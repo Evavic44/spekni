@@ -1,13 +1,12 @@
 import React from "react";
-import styles from "./Card.module.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Image from "next/image";
 
 export default function Card({ image, name, job, endorsements }) {
   return (
-    <article className={styles.card}>
+    <article className="card flex flex-col items-center bg-primary py-8 px-4 w-72 rounded-md border-primary h-auto cursor-cell">
       <LazyLoadImage
-        className={styles.image}
+        className="rounded-full transition-transform bg-secondary"
         src={image.url}
         alt={image.alt}
         width={150}
