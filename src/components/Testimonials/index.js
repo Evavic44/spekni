@@ -1,6 +1,6 @@
 import TestimonialCard from "./TestimonialCard";
 import testimonialData from "../../feedback";
-import styles from "./Testimonials.module.css";
+// import styles from "./Testimonials.module.css";
 
 export default function Testimonials() {
   return (
@@ -8,7 +8,8 @@ export default function Testimonials() {
       <h2 className="text-center text-3xl font-bold mb-6">
         What People are saying
       </h2>
-      <div className={styles.testimonialContainer}>
+      {/* <div className={styles.testimonialContainer}> */}
+      <div>
         {testimonialData.map((feedback) => (
           <TestimonialCard
             name={feedback.name}
