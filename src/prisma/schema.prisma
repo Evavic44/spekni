@@ -39,7 +39,6 @@ model Profile {
   id            Int      @id @default(autoincrement())
   bio           String?  @db.TinyText
   job_title     String?
-  resumeLink    String?
   githubLink    String?
   username      String?  @unique
   portfolioLink String?
@@ -55,16 +54,18 @@ model Profile {
 model Endorsement {
   id         Int    @id @default(autoincrement())
   userId     String
-  skillId    String
+  skillId    Int
   fromUserId String
-  user       User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  endorsers  User   @relation(fields: [fromUserId], references: [id], onDelete: Cascade)
+  skill      Skill  @relation(fields: [skillId], references: [id], onDelete: Cascade)
 }
 
 model Skill {
-  id        Int    @id @default(autoincrement())
-  skillName String
-  userId    String
-  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id           Int           @id @default(autoincrement())
+  skillName    String
+  userId       String
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  endorsements Endorsement[]
 }
 
 model User {

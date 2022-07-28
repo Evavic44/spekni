@@ -1,15 +1,12 @@
 import prisma from "../prisma";
 
-export default function Profile() {
-  return <div></div>;
+export default function Profile(props) {
+  return <div>Sorry an error occured</div>;
 }
 
 export async function getServerSideProps({ query }) {
-  console.log("Params: ", query);
-  const user = await prisma.profile.findUnique({ where: { email: query.useremail }, select: { username: true }});
-  console.log("User: ", user);
-  
   try {
+  const user = await prisma.profile.findUnique({ where: { email: query.useremail }, select: { username: true }});
     return {
       redirect: {
         permanent: false,
@@ -18,5 +15,10 @@ export async function getServerSideProps({ query }) {
     };
   } catch (e) {
     console.error('uh oh');
+    return {
+      props: {
+        error: e.message
+      }
+    }
   }
 }
