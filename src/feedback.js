@@ -23,4 +23,26 @@ export default [
     review:
       "Quite amazed by the creativity the team's creativity. It's a big suprise nobody has thought about building something like this before.",
   },
+  {
+    name: "John Boyega",
+    image: {
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png",
+    },
+    review:
+      "I usually don't leave reviews for services or products, but Spekni is a great idea and I love the UI. Kudos to the team.",
+  },
+  {
+    name: "Bisola Tolu",
+    image: {
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-2_oied7n.png",
+    },
+    review: "Great product! Kudos to the Spekni team.",
+  },
+  {
+    name: "Your Name",
+    image: {
+      url: "",
+    },
+    review: "Your review will appear here",
+  },
 ];

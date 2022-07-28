@@ -62,17 +62,23 @@
 .testimonialSection {
   display: flex;
   flex-direction: column;
-  max-width: 1100px;
+  max-width: 1150px;
   margin: 2rem auto 2.5rem;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
 }
 
 .testimonialContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-auto-rows: contain;
   gap: 1.5rem;
-  padding: 1.5rem;
-  align-self: center;
+  padding: 1rem;
+}
+
+.testimonialContainer > *:last-child {
+  background: var(--bgSecondary);
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media (max-width: 900px) {
