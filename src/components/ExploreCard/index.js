@@ -50,10 +50,16 @@ export default function ExploreCard({
       <p className="text-sm mt-6 mb-4 px-6 py-0">{bio}</p>
 
       <div className="flex flex-col flex-wrap gap-3 px-8 pb-6 pt-4">
-        <h3 className="font-bold text-sm">Skills:</h3>
-        <small className="flex flex-wrap gap-1 rounded-xl border-primary w-22 p-2 bg-secondary text-xs">
-          {skills}
-        </small>
+        <div className="flex flex-wrap gap-1">
+          {skills.map((skill, idx) => (
+            <small
+              key={idx}
+              className="rounded-xl border-primary p-2 py-1 bg-secondary text-xs"
+            >
+              {skill}
+            </small>
+          ))}
+        </div>
       </div>
     </article>
   );
