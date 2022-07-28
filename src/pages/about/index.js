@@ -6,7 +6,7 @@ import Footer from "../../components/Footer";
 import Jumbotron from "../../components/Jumbotron";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import Testimonials from "../../components/Testimonials";
+import Testimonials from "../../components/Testimonials/index";
 
 export default function index() {
   return (

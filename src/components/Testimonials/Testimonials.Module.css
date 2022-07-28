@@ -14,9 +14,3 @@
   border: var(--borderPrimary);
   opacity: 0.9;
 }
-
-.testimonialContainer > *:last-child {
-  background: var(--bgSecondary);
-  background: var(--bgPrimary);
-  /* opacity: 0.5; */
-}

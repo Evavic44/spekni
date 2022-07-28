@@ -7,7 +7,7 @@ import userData from "../data";
 import Section from "../components/Section";
 import Jumbotron from "../components/Jumbotron";
 import Footer from "../components/Footer";
-import Testimonials from "../components/Testimonials";
+import Testimonials from "../components/Testimonials/index.js";
 
 export default function Home() {
   return (
