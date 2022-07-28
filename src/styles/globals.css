@@ -5,7 +5,7 @@
 /* Variables */
 :root {
   --bgPrimary: #ffffff;
-  --bgSecondary: #fafafa;
+  --bgSecondary: #f4f4f4;
   --bgAlternate: #000000;
   --textColorPrimary: #111111;
   --textColorSecondary: #333333;
@@ -204,6 +204,11 @@ textarea:focus {
 /* Fill */
 .fillPrimary {
   fill: var(--miscColor);
+}
+
+.fillSecondary {
+  fill: var(--bgTertiary);
+  opacity: 0.1;
 }
 
 .fillIcon {

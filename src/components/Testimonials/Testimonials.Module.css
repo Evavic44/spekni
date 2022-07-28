@@ -1,0 +1,21 @@
+.testimonialContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-auto-rows: max-content;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.testimonialContainer > * {
+  border: 1px solid var(--bgSecondary);
+}
+
+.testimonialContainer > *:hover {
+  border: var(--borderPrimary);
+  opacity: 0.9;
+}
+
+.testimonialContainer > *:last-child {
+  background: var(--bgSecondary);
+  opacity: 0.5;
+}

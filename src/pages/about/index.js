@@ -4,10 +4,9 @@ import styles from "../../styles/About.module.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Jumbotron from "../../components/Jumbotron";
-import Testimonials from "../../components/Testimonials";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import testimonialData from "../../feedback";
+import Testimonials from "../../components/Testimonials";
 
 export default function index() {
   return (
@@ -223,30 +222,7 @@ export default function index() {
         </section>
       </main>
 
-      <section className={styles.testimonialSection}>
-        <h2 className="text-center text-3xl font-bold mb-5">
-          What People are saying
-        </h2>
-        <div className={styles.testimonialContainer}>
-          {testimonialData.map((feedback) => (
-            <Testimonials
-              name={feedback.name}
-              image={feedback.image}
-              review={feedback.review}
-              key={feedback.name}
-            />
-          ))}
-        </div>
-        <span className="text-center text-sm">
-          Add your reviews{" "}
-          <a
-            className="underline text-blue-700"
-            href="https://forms.gle/MisTGbxSyw3Ji8hf7"
-          >
-            here
-          </a>
-        </span>
-      </section>
+      <Testimonials />
       <Jumbotron />
       <Footer />
     </div>
