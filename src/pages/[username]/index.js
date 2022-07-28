@@ -11,12 +11,20 @@ import { useSession } from "next-auth/react";
 
 const ZERO = 0; // for the sake of good code :)
 
-async function endorseUser(u_id, current_user_email) {
-  console.log(u_id, current_user_email);
+async function endorseUser(u_id, current_user_email, skill_id) {
+  console.log(u_id, current_user_email, skill_id);
+  try {
+    const res = await axios.post("/api/users/endorsement", {
+      data: JSON.stringify({ u_id, skill_id, f_uid: current_user_email })
+    });
+    console.log(res);
+  } catch (err) {
+    console.log(err.message);
+  }
 }
 
 const Skill = (props) => {
-  const endorsed = props.detail.endorsements.map(endoser => endoser.endorsers.email === props.userSession?.user.email).includes(true);
+  const endorsed = props.detail.endorsements.map(endoser => endoser?.endorsers?.email === props.userSession?.user.email).includes(true);
   return (
     <article className={styles.endorsementCard}>
       <div className={styles.skill}>
@@ -25,7 +33,7 @@ const Skill = (props) => {
           width={27}
           height={27}
           alt="check circle"
-          onClick={() => endorseUser(props.userId, props.userSession?.user.email)}
+          onClick={() => endorseUser(props.userId, props.userSession?.user.email, props.detail.id)}
         /> : <CheckCircleIcon
           className="text-green-600"
           width={27}
@@ -38,7 +46,7 @@ const Skill = (props) => {
         <div className={styles.endorseImage}>
           {props.detail.endorsements.map(endorser => (
             <a href="spekin.vercel.app" key={endorser.endorsers.id}>
-              <Image
+              <img
                 src={endorser.endorsers.image}
                 width="40px"
                 height="40px"
