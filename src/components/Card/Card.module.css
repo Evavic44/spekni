@@ -14,6 +14,7 @@
 .image {
   border-radius: 50%;
   transition: 0.15s ease-in-out;
+  background: var(--bgSecondary);
 }
 
 .card:hover .image {
