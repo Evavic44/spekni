@@ -17,5 +17,6 @@
 
 .testimonialContainer > *:last-child {
   background: var(--bgSecondary);
-  opacity: 0.5;
+  background: var(--bgPrimary);
+  /* opacity: 0.5; */
 }

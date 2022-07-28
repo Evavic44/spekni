@@ -46,7 +46,7 @@ export default [
   {
     name: "Your Name",
     image: {
-      url: "",
+      url: "https://avatars.dicebear.com/api/identicon/.svg",
     },
     review: "Add your reviews here",
     src: "https://forms.gle/MisTGbxSyw3Ji8hf7",
