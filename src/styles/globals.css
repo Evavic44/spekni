@@ -89,6 +89,11 @@ textarea:focus {
   border-color: var(--bgTertiary);
 }
 
+/* Border */
+.border-primary {
+  border: var(--borderPrimary);
+}
+
 .borderLight {
   border-bottom: var(--borderPrimary);
 }
@@ -123,6 +128,15 @@ textarea:focus {
   border: var(--borderPrimary);
 }
 
+/* Background */
+.bg-primary {
+  background-color: var(--bgPrimary);
+}
+
+.bg-secondary {
+  background-color: var(--bgSecondary);
+}
+
 .highlight {
   color: var(--primaryColor);
 }
@@ -130,6 +144,11 @@ textarea:focus {
 .highlight-bg {
   background: var(--bgPrimary);
   border: var(--borderPrimary);
+}
+
+/* Card */
+.card:hover img:first-child {
+  transform: scale(1.05);
 }
 
 /* Loader */
