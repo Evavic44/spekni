@@ -95,7 +95,7 @@ export default function Login({ providers }) {
               </div>
 
               <div>
-                <h2>Let&apos;s help recruiters understand your skills.</h2>
+                <h2>Start receiving endorsements in less than a minute..</h2>
                 <div className={styles.buttonContainer}>
                   <button
                     className="bg-black text-white"

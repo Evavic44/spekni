@@ -75,8 +75,22 @@ button:focus {
   box-shadow: var(--shadow);
 }
 
-.borderLight {
+/* Border */
+input,
+textarea {
   border: var(--borderPrimary);
+  background: var(--bgSecondary);
+  outline: none !important;
+  transition: 0.15s ease-in;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--bgTertiary);
+}
+
+.borderLight {
+  border-bottom: var(--borderPrimary);
 }
 
 .btn {
@@ -171,6 +185,10 @@ button:focus {
 /* Fill */
 .fillPrimary {
   fill: var(--miscColor);
+}
+
+.fillIcon {
+  fill: var(--textColorSecondary);
 }
 
 @keyframes rotation {
