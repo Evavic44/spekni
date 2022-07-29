@@ -79,14 +79,14 @@ export default [
   },
   {
     id: 7,
-    name: "Emeka Paul",
+    name: "Naman Gupta",
     job: "Android Developer",
     endorsements: 68,
     image: {
-      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-7_uajrym.png",
-      alt: "Emeka Paul",
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1659087221/Spekni/ppp_zpjxce.png",
+      alt: "Naman Gupta",
     },
-    bio: "Emeka Paul is an Android developer and educator who loves creating quality software using languages like Flutter, DartJS, Kotlin, Swift, etc.",
+    bio: "Naman Gupta is an Android developer and educator who loves creating quality software using languages like Flutter, DartJS, Kotlin, Swift, etc.",
     skills: ["Flutter", "Dart", "Golang", "React native"],
     color: "blue",
   },

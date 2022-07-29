@@ -31,17 +31,17 @@ export default [
   },
   {
     id: 3,
-    name: "Karim Benzema",
-    job: "Senior Software Developer",
-    endorsements: 400,
+    name: "Naman Gupta",
+    job: "Android Developer",
+    endorsements: 68,
     favoured: false,
     image: {
-      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-3_sqsxou.png",
-      alt: "Karim Benzema",
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1659087221/Spekni/ppp_zpjxce.png",
+      alt: "Naman Gupta",
     },
     description:
-      "Karim Benzema is an Senior Software Developer and educator who loves creating quality software using languages like C++, Python, Java, and ObjectC",
-    color: "cyan",
+      "Naman Gupta is an Android developer and educator who loves creating quality software using languages like Flutter, DartJS, Kotlin, Swift, etc.",
+    color: "blue",
     gender: "male",
   },
   {
@@ -61,17 +61,17 @@ export default [
   },
   {
     id: 5,
-    name: "Emeka Paul",
-    job: "Android Developer",
-    endorsements: 68,
+    name: "Karim Benzema",
+    job: "Senior Software Developer",
+    endorsements: 400,
     favoured: false,
     image: {
-      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-5_prpty1.png",
-      alt: "Emeka Paul",
+      url: "https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-3_sqsxou.png",
+      alt: "Karim Benzema",
     },
     description:
-      "Emeka Paul is an Android developer and educator who loves creating quality software using languages like Flutter, DartJS, Kotlin, Swift, etc.",
-    color: "blue",
+      "Karim Benzema is an Senior Software Developer and educator who loves creating quality software using languages like C++, Python, Java, and ObjectC",
+    color: "cyan",
     gender: "male",
   },
   {
