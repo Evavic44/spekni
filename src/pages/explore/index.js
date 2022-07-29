@@ -1,6 +1,6 @@
 import Head from "next/head";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import Data from "../../developers";
+// import Data from "../../developers";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Jumbotron from "../../components/Jumbotron";
