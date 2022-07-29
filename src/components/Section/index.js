@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./Section.module.css";
-// import Image from "next/image";
-// import ProfileImage from "../../public/images/profile.png";
 
 export default function index() {
   return (

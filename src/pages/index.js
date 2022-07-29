@@ -7,6 +7,7 @@ import userData from "../data";
 import Section from "../components/Section";
 import Jumbotron from "../components/Jumbotron";
 import Footer from "../components/Footer";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
   return (
@@ -104,6 +105,7 @@ export default function Home() {
       </main>
 
       <Section />
+      <Testimonials />
       <Jumbotron />
       <Footer />
     </div>

@@ -59,22 +59,6 @@
   color: var(--primaryColor);
 }
 
-.testimonialSection {
-  display: flex;
-  flex-direction: column;
-  max-width: 1100px;
-  margin: 2rem auto 2.5rem;
-  padding: 1.5rem;
-}
-
-.testimonialContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
-  gap: 1.5rem;
-  padding: 1.5rem;
-  align-self: center;
-}
-
 @media (max-width: 900px) {
   .about .hero .heroImage {
     column-gap: 2rem;
