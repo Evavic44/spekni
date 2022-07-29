@@ -7,12 +7,20 @@ export default function Profile(props) {
 export async function getServerSideProps({ query }) {
   try {
   const user = await prisma.profile.findUnique({ where: { email: query.useremail }, select: { username: true }});
+  if(!user) {
     return {
       redirect: {
         permanent: false,
-        destination: `/${user.username}`
+        destination: `/account`
       },
     };
+  }
+  return {
+    redirect: {
+      permanent: false,
+      destination: `/${user.username}`
+    },
+  };
   } catch (e) {
     console.error('uh oh');
     return {
