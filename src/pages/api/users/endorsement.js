@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     const { u_id, f_uid: f_email, skill_id } = body;
     try {
       const endorsingUser = await prisma.profile.findUnique({ where: { email: f_email }, select: { userId: true }});
-      if(endorsingUser) res.status(400).json({ success: false, message: "Please setup profile first", noAccount: true })
+      if(!endorsingUser) return res.json({ success: false, message: "Please setup profile first", noAccount: true })
       if(u_id === endorsingUser.userId) return res.status(400).json({ success: false, message: "You can not endorse yourself" });
       const endorsement = await prisma.endorsement.create({
         data: {
@@ -23,7 +23,7 @@ export default async function handler(req, res) {
       return res.json({ success: true, message: `Successfully endorsed user ${u_id} on skill with id ${skill_id}` });
     } catch (error) {
       console.log(error);
-      return res.send("Server Error");
+      return res.status(500).send("Server Error");
     }
   }
 }

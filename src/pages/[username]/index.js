@@ -27,9 +27,13 @@ async function endorseUser(u_id, current_user_email, skill_id, fire) {
     const res = await axios.post("/api/users/endorsement", {
       data: JSON.stringify({ u_id, skill_id, f_uid: current_user_email })
     });
-    fire();
-    console.log(res);
-    return true;
+    if(res.data.success) {
+      fire();
+      return true;
+    } else if(res.data.noAccount) {
+      alert("Please setup your account visit /account"); // @TODO: Replace this with a good ui
+    }
+    return false;
   } catch (err) {
     console.log(err.message);
     return false;
@@ -44,7 +48,7 @@ const Skill = (props) => {
   const [endorseChange, setEndorseChange] = useState(false);
   const endorseHandler = async () => {
     const endorseResult = await endorseUser(props.userId, props.userSession?.user.email, props.detail.id, fire);
-    // console.log("Endorse Result: ", endorseResult);
+    console.log("Endorse Result: ", endorseResult);
     setEndorseChange(endorseResult);
   };
   const makeShot = useCallback((particleRatio, opts) => {
