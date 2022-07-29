@@ -124,7 +124,7 @@ export default function Explore() {
               job={userData.job_title}
               user={userData.user}
               bio={userData.bio}
-              endorsements={userData.user._count.endorsements}
+              endorsements={userData.user.endorsements}
               skills={userData.user.Skill}
             />
           )

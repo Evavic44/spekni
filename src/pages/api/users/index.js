@@ -1,5 +1,13 @@
 import prisma from "../../../prisma";
 
+// Get computed value of users endorsements
+const getEndorsements = usersObject => {
+  usersObject.forEach(({user}) => {
+    user.endorsements = 0;
+    user.Skill.forEach(skill => user.endorsements += skill._count.endorsements)
+  });
+}
+
 export default async function handler(req, res) {
   // req.query: u_email -> email
 
@@ -36,7 +44,6 @@ export default async function handler(req, res) {
     }
   } else {
     // GET - list profiles with pagination
-    // console.log(req.query);
     const limit = parseInt(req.query.limit) || 10;
     const offset = parseInt(req.query.offset) || 0;
     try {
@@ -51,15 +58,27 @@ export default async function handler(req, res) {
         user: {
           select: {
             image: true,
-            Skill: true,
+            Skill: {
+              select: {
+                skillName: true,
+                id: true,
+                _count: {
+                  select: {
+                    endorsements: true
+                  }
+                }
+              }
+            },
             _count: {
               select: {
-                endorsements: true
+                Skill: true
               }
             }
           }
         }
       } });
+      // make endorsements a computed value
+      if(users) getEndorsements(users);
       return res.json({ success: true, data: users });
     } catch (err) {
       console.log(err);
