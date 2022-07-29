@@ -1,4 +1,3 @@
-import { PrismaClientKnownRequestError } from "@prisma/client/runtime";
 import prisma from "../../../prisma";
 
 export default async function handler(req, res) {
@@ -8,20 +7,19 @@ export default async function handler(req, res) {
    * @description Setup account profile
    */
   if (req.method === "POST") {
-    console.log(req.body);
-    const { bio, job_title, githubLink, username, portfolioLink, twitterLink, linkedinLink, fullName, email } = req.body;
+    const { email } = req.body;
     try {
       const profile = await prisma.profile.findUnique({ where: { email } });
       let username, oldUser;
       if (profile) {
         username = req.body.username;
         delete req.body.username;
-        delete req.body.email
+        delete req.body.email;
       } else {
-        oldUser = await prisma.user.findUnique({ where: { email }});
+        oldUser = await prisma.user.findUnique({ where: { email } });
         console.log(oldUser);
       }
-      const upsertProfile = await prisma.profile.upsert({
+      await prisma.profile.upsert({
         where: { email },
         update: { ...req.body },
         create: {
@@ -32,6 +30,37 @@ export default async function handler(req, res) {
         }
       });
       return res.redirect("/");
+    } catch (err) {
+      console.log(err);
+      return res.json({ success: false, message: err.message });
+    }
+  } else {
+    // GET - list profiles with pagination
+    // console.log(req.query);
+    const limit = parseInt(req.query.limit) || 10;
+    const offset = parseInt(req.query.offset) || 0;
+    try {
+      const users = await prisma.profile.findMany({
+        skip: offset,
+        take: limit,
+        select: {
+        userId: true, 
+        bio: true,
+        job_title: true,
+        fullName: true,
+        user: {
+          select: {
+            image: true,
+            Skill: true,
+            _count: {
+              select: {
+                endorsements: true
+              }
+            }
+          }
+        }
+      } });
+      return res.json({ success: true, data: users });
     } catch (err) {
       console.log(err);
       return res.json({ success: false, message: err.message });
