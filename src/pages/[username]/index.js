@@ -22,15 +22,17 @@ const canvasStyles = {
 
 async function endorseUser(u_id, current_user_email, skill_id, fire) {
   console.log(u_id, current_user_email, skill_id);
-  if(!current_user_email) return window.location = "/login";
+  if (!current_user_email) return window.location = "/login";
   try {
     const res = await axios.post("/api/users/endorsement", {
       data: JSON.stringify({ u_id, skill_id, f_uid: current_user_email })
     });
     fire();
     console.log(res);
+    return true;
   } catch (err) {
     console.log(err.message);
+    return false;
   }
 }
 
@@ -39,6 +41,12 @@ const Skill = (props) => {
   const getInstance = useCallback((instance) => {
     refAnimationInstance.current = instance;
   }, []);
+  const [endorseChange, setEndorseChange] = useState(false);
+  const endorseHandler = async () => {
+    const endorseResult = await endorseUser(props.userId, props.userSession?.user.email, props.detail.id, fire);
+    // console.log("Endorse Result: ", endorseResult);
+    setEndorseChange(endorseResult);
+  };
   const makeShot = useCallback((particleRatio, opts) => {
     refAnimationInstance.current &&
       refAnimationInstance.current({
@@ -81,13 +89,18 @@ const Skill = (props) => {
       <div className={styles.skill}>
         {!endorsed ? <>
           <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
-          <PlusCircleIcon
-          className="cursor-pointer"
-          width={27}
-          height={27}
-          alt="check circle"
-          onClick={() => endorseUser(props.userId, props.userSession?.user.email, props.detail.id, fire )}
-        /></> : <CheckCircleIcon
+          {!endorseChange ? <PlusCircleIcon
+            className="cursor-pointer"
+            width={27}
+            height={27}
+            alt="check circle"
+            onClick={endorseHandler}
+          /> : <CheckCircleIcon
+            className="text-green-600"
+            width={27}
+            height={27}
+            alt="check circle"
+          />}</> : <CheckCircleIcon
           className="text-green-600"
           width={27}
           height={27}
