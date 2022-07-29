@@ -2,7 +2,7 @@ import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function ExploreCard({
-  image,
+  user,
   name,
   job,
   endorsements,
@@ -15,8 +15,8 @@ export default function ExploreCard({
         <div className="flex gap-x-2">
           <LazyLoadImage
             className="rounded-full"
-            src={image.url}
-            alt={image.alt}
+            src={user.image}
+            alt={user.name}
             width={45}
             height={45}
             placeholderSrc="https://res.cloudinary.com/victoreke/image/upload/v1657357322/Spekni/placeholder_piuucr.svg"
@@ -51,12 +51,12 @@ export default function ExploreCard({
 
       <div className="flex flex-col flex-wrap gap-3 px-8 pb-6 pt-4">
         <div className="flex flex-wrap gap-1">
-          {skills.map((skill, idx) => (
+          {skills.map((skill) => (
             <small
-              key={idx}
+              key={skill.id}
               className="rounded-xl border-primary p-2 py-1 bg-secondary text-xs"
             >
-              {skill}
+              {skill.skillName}
             </small>
           ))}
         </div>

@@ -7,8 +7,25 @@ import Jumbotron from "../../components/Jumbotron";
 import ExploreCard from "../../components/ExploreCard";
 import styles from "../../styles/Explore.module.css";
 import { SearchIcon } from "@heroicons/react/outline";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Explore() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
+  async function fetchUsers() {
+    try {
+      const fetchedUsers = (await axios(`/api/users`)).data;
+      const data = fetchedUsers.data;
+      setUsers(prev => [...prev, ...data]);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   return (
     <div>
       <Head lang="en">
@@ -98,17 +115,20 @@ export default function Explore() {
       </header>
 
       <section className={styles.profileContainer}>
-        {Data.map((userData) => (
-          <ExploreCard
-            key={userData.id}
-            name={userData.name}
-            job={userData.job}
-            image={userData.image}
-            bio={userData.bio}
-            endorsements={userData.endorsements}
-            skills={userData.skills}
-          />
-        ))}
+        {/* {Data.map((userData) => ( */}
+        {users.map((userData) => {
+          return (
+            <ExploreCard
+              key={userData.userId}
+              name={userData.fullName}
+              job={userData.job_title}
+              user={userData.user}
+              bio={userData.bio}
+              endorsements={userData.user.endorsements}
+              skills={userData.user.Skill}
+            />
+          )
+        })}
 
         <p className="font-medium text-lg mt-4">Loading...</p>
       </section>

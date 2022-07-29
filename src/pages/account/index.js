@@ -1,11 +1,26 @@
+import  { useState, useEffect } from "react";
 import Head from "next/head";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { GlobeAltIcon } from "@heroicons/react/outline";
+import { useSession, getSession } from "next-auth/react"
 
 export default function Account() {
+  const { data: session, status } = useSession();
+  const [profileData, setProfileData] = useState({});
+
+  if (status === "loading") {
+    return <p>Loading...</p>
+  }
+
+  if (status === "unauthenticated") {
+    return <p>Access Denied</p>
+  }
+
+
+
   return (
     <>
       <Head>
@@ -21,11 +36,12 @@ export default function Account() {
         <div className="flex justify-center">
           <LazyLoadImage
             className="rounded-full"
-            src="https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png"
-            alt="John Boyega"
+            // src="https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png"
+            src={session.user.image}
+            alt={session.user.name}
             width={120}
             height={120}
-            placeholderSrc="https://res.cloudinary.com/victoreke/image/upload/v1657357322/Spekni/placeholder_piuucr.svg"
+            // placeholderSrc="https://res.cloudinary.com/victoreke/image/upload/v1657357322/Spekni/placeholder_piuucr.svg"
           />
         </div>
 
@@ -36,12 +52,34 @@ export default function Account() {
 
           <div className="md:grid md:grid-cols-2 md:gap-6">
             <div className="mt-5 md:mt-0 md:col-span-2">
-              <form action="#" method="POST">
+              <form action="/api/users" method="POST">
+                {/* Keep hidden inputs here */}
+                <input name="email" type="hidden" value={session.user.email} />
+                {/* End of hidden inputs */}
                 <div className="py-5 space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="">
+                      <label
+                        htmlFor="username"
+                        className="block text-sm font-medium"
+                      >
+                        Username
+                      </label>
+                      <div className="mt-1 flex rounded-md shadow-sm">
+                        <input
+                          type="text"
+                          name="username"
+                          id="username"
+                          className="flex-1 block w-full rounded-md text-sm py-4 px-6"
+                          defaultValue={profileData.username}
+                          placeholder="Enter a unique username"
+                          required
+                        />
+                      </div>
+                    </div>
                     <div className="">
                       <label
-                        htmlFor="full name"
+                        htmlFor="fullName"
                         className="block text-sm font-medium"
                       >
                         Full Name
@@ -49,10 +87,11 @@ export default function Account() {
                       <div className="mt-1 flex rounded-md shadow-sm">
                         <input
                           type="text"
-                          name="full name"
-                          id="full name"
+                          name="fullName"
+                          id="full_name"
                           className="flex-1 block w-full rounded-md text-sm py-4 px-6"
-                          value="John Boyega"
+                          defaultValue={profileData.fullName}
+                          placeholder="John Doe"
                           required
                         />
                       </div>
@@ -60,7 +99,7 @@ export default function Account() {
 
                     <div className="">
                       <label
-                        htmlFor="job title"
+                        htmlFor="job_title"
                         className="block text-sm font-medium"
                       >
                         Job Title
@@ -68,10 +107,11 @@ export default function Account() {
                       <div className="mt-1 flex rounded-md shadow-sm">
                         <input
                           type="text"
-                          name="job title"
-                          id="job title"
+                          name="job_title"
+                          id="job_title"
                           className="flex-1 block w-full rounded-md text-sm py-4 px-6"
                           placeholder="Senior Software Engineer"
+                          defaultValue={profileData.job_title}
                           required
                         />
                       </div>
@@ -88,7 +128,7 @@ export default function Account() {
                         name="bio"
                         rows={3}
                         className="shadow-sm mt-1 block w-full text-sm rounded-md py-5 px-6"
-                        defaultValue={""}
+                        defaultValue={profileData.bio}
                         required
                       />
                     </div>
@@ -97,7 +137,7 @@ export default function Account() {
                     </p>
                   </div>
 
-                  <div>
+                  {/* <div>
                     <label
                       htmlFor="skills"
                       className="block text-sm font-medium"
@@ -118,7 +158,7 @@ export default function Account() {
                     <p className="mt-4 text-sm">
                       Add your preffered skills (Maximum 5, miminum 2).
                     </p>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="hidden sm:block max-w-3xl" aria-hidden="true">
@@ -137,7 +177,7 @@ export default function Account() {
                 <div className="grid grid-cols-6 gap-6">
                   <div className="col-span-6 sm:col-span-3 my-3">
                     <label
-                      htmlFor="portfolio-url"
+                      htmlFor="portfolioLink"
                       className="flex item-center gap-x-1 text-sm font-medium"
                     >
                       <GlobeAltIcon width={17} height={17} alt="Globe Icon" />
@@ -145,18 +185,19 @@ export default function Account() {
                     </label>
                     <input
                       type="text"
-                      name="portfolio-url"
+                      name="portfolioLink"
                       id="portfolio-url"
                       autoComplete="given-name"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="johnboyega.com"
+                      placeholder="example.com"
+                      defaultValue={profileData.portfolioLink}
                     />
                   </div>
 
                   {/* GitHub */}
                   <div className="col-span-6 sm:col-span-3 my-3">
                     <label
-                      htmlFor="github-url"
+                      htmlFor="githubLink"
                       className="flex item-center gap-x-2 text-sm font-medium"
                     >
                       <svg
@@ -177,18 +218,19 @@ export default function Account() {
                     </label>
                     <input
                       type="text"
-                      name="github-url"
+                      name="githubLink"
                       id="github-url"
                       autoComplete="family-name"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="johnboyega"
+                      placeholder="johndoe"
+                      defaultValue={profileData.githubLink}
                     />
                   </div>
 
                   {/* Twitter */}
                   <div className="col-span-6 sm:col-span-3">
                     <label
-                      htmlFor="twitter-url"
+                      htmlFor="twitterLink"
                       className="flex item-center gap-x-2 text-sm font-medium"
                     >
                       <svg
@@ -205,18 +247,19 @@ export default function Account() {
                     </label>
                     <input
                       type="text"
-                      name="twitter-url"
+                      name="twitterLink"
                       id="twitter-url"
                       autoComplete="given-name"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="johnboyega"
+                      placeholder="johndoe"
+                      defaultValue={profileData.twitterLink}
                     />
                   </div>
 
                   {/* LinkedIn */}
                   <div className="col-span-6 sm:col-span-3">
                     <label
-                      htmlFor="linkedin-url"
+                      htmlFor="linkedinLink"
                       className="flex item-center gap-x-2 text-sm font-medium"
                     >
                       <svg
@@ -238,11 +281,12 @@ export default function Account() {
                     </label>
                     <input
                       type="text"
-                      name="linkedin-url"
+                      name="linkedinLink"
                       id="linkedin-url"
                       autoComplete="family-name"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="johnboyega"
+                      placeholder="johndoe"
+                      defaultValue={profileData.linkedinLink}
                     />
                   </div>
                 </div>

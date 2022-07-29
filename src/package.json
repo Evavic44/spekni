@@ -21,6 +21,7 @@
     "react": "18.2.0",
     "react-canvas-confetti": "^1.3.0",
     "react-dom": "18.2.0",
+    "react-infinitely": "^0.0.0",
     "react-lazy-load-image-component": "^1.5.4",
     "react-redux": "^8.0.2",
     "redux": "^4.2.0",

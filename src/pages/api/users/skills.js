@@ -1,6 +1,8 @@
-import { PrismaClient } from "@prisma/client";
+// import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
+
+import prisma from "../../../prisma";
 
 export default async function handler(req, res) {
   const { u_id } = req.query; // u_id -> userId
