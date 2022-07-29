@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import { useDispatch } from "react-redux";
 import ProfileLayout from "../../components/ProfileLayout";
 import styles from "../../styles/ProfileChild.module.css";
@@ -8,15 +8,26 @@ import prisma from "../../prisma";
 import { setUser } from "../../store/users/action";
 import axios from "axios";
 import { useSession } from "next-auth/react";
+import ReactCanvasConfetti from "react-canvas-confetti";
 
 const ZERO = 0; // for the sake of good code :)
+const canvasStyles = {
+  position: "fixed",
+  pointerEvents: "none",
+  width: "100%",
+  height: "100%",
+  top: 0,
+  left: 0
+};
 
-async function endorseUser(u_id, current_user_email, skill_id) {
+async function endorseUser(u_id, current_user_email, skill_id, fire) {
   console.log(u_id, current_user_email, skill_id);
+  if(!current_user_email) return window.location = "/login";
   try {
     const res = await axios.post("/api/users/endorsement", {
       data: JSON.stringify({ u_id, skill_id, f_uid: current_user_email })
     });
+    fire();
     console.log(res);
   } catch (err) {
     console.log(err.message);
@@ -24,17 +35,59 @@ async function endorseUser(u_id, current_user_email, skill_id) {
 }
 
 const Skill = (props) => {
+  const refAnimationInstance = useRef(null);
+  const getInstance = useCallback((instance) => {
+    refAnimationInstance.current = instance;
+  }, []);
+  const makeShot = useCallback((particleRatio, opts) => {
+    refAnimationInstance.current &&
+      refAnimationInstance.current({
+        ...opts,
+        origin: { y: 0.7 },
+        particleCount: Math.floor(200 * particleRatio)
+      });
+  }, []);
+  const fire = useCallback(() => {
+    makeShot(0.25, {
+      spread: 26,
+      startVelocity: 55
+    });
+
+    makeShot(0.2, {
+      spread: 60
+    });
+
+    makeShot(0.35, {
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8
+    });
+
+    makeShot(0.1, {
+      spread: 120,
+      startVelocity: 25,
+      decay: 0.92,
+      scalar: 1.2
+    });
+
+    makeShot(0.1, {
+      spread: 120,
+      startVelocity: 45
+    });
+  }, [makeShot]);
   const endorsed = props.detail.endorsements.map(endoser => endoser?.endorsers?.email === props.userSession?.user.email).includes(true);
   return (
     <article className={styles.endorsementCard}>
       <div className={styles.skill}>
-        {!endorsed ? <PlusCircleIcon
+        {!endorsed ? <>
+          <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
+          <PlusCircleIcon
           className="cursor-pointer"
           width={27}
           height={27}
           alt="check circle"
-          onClick={() => endorseUser(props.userId, props.userSession?.user.email, props.detail.id)}
-        /> : <CheckCircleIcon
+          onClick={() => endorseUser(props.userId, props.userSession?.user.email, props.detail.id, fire )}
+        /></> : <CheckCircleIcon
           className="text-green-600"
           width={27}
           height={27}

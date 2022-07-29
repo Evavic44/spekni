@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export default async function handler(req, res) {
-  // const { u_id, f_uid } = req.query; // u_id -> userId, f_ui -> from_userId
+  // req.query: u_id -> userId, f_ui -> from_userId
   if (req.method === "POST") {
     // Make an endorsement
     const body = JSON.parse(req.body.data);
