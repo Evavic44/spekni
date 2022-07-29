@@ -7,7 +7,7 @@ export default function TestimonialCard({ image, name, review, src }) {
   return (
     <>
       <Link href={src}>
-        <a className="flex flex-col bg-secondary p-8 rounded-xl relative overflow-hidden">
+        <a className="flex flex-col bg-secondary p-8 rounded-xl relative overflow-hidden last-of-type:opacity-40">
           <svg
             className="absolute right-2 -top-6 -rotate-12"
             width="70"
