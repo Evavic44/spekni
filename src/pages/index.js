@@ -25,7 +25,7 @@ export default function Home() {
         {/* Primary met tags */}
         <meta
           name="title"
-          content="About: Spekni - Recognition platform built for developer endorsements"
+          content="Spekni - Recognition platform built for developer endorsements"
         />
         <meta
           name="description"
@@ -39,7 +39,7 @@ export default function Home() {
         <meta property="og:url" content="https://spekni.vercel.app/" />
         <meta
           property="og:title"
-          content="About: Spekni - Recognition platform built for developer endorsements"
+          content="Spekni - Recognition platform built for developer endorsements"
         />
         <meta
           property="og:description"
@@ -57,7 +57,7 @@ export default function Home() {
         <meta property="twitter:url" content="https://spekni.vercel.app/" />
         <meta
           property="twitter:title"
-          content="About: Spekni - Recognition platform built for developer endorsements"
+          content="Spekni - Recognition platform built for developer endorsements"
         />
         <meta
           property="twitter:description"
