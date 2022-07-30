@@ -42,11 +42,11 @@ export default function Menubar() {
                 License
               </a>
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               <Link href="/changelog">
                 <a className="block px-4 py-3 text-sm">Changelog</a>
               </Link>
-            </Menu.Item>
+            </Menu.Item> */}
             <form method="POST" action="#">
               <Menu.Item>
                 <button
