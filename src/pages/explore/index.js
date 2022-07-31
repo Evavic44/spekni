@@ -20,7 +20,7 @@ export default function Explore() {
     try {
       const fetchedUsers = (await axios(`/api/users`)).data;
       const data = fetchedUsers.data;
-      setUsers(prev => [...prev, ...data]);
+      setUsers((prev) => [...prev, ...data]);
     } catch (err) {
       console.log(err);
     }
@@ -53,7 +53,7 @@ export default function Explore() {
           content="Victor Eke, Spiff Jekey-Green, Nicholas Ovunda"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://spekni.vercel.app/" />
+        <meta property="og:url" content="https://spekni.com" />
         <meta
           property="og:title"
           content="Explore: Spekni - Find over 500+ developers creating impact in the tech ecosystem"
@@ -71,7 +71,7 @@ export default function Explore() {
           property="twitter:card"
           content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-home.png"
         />
-        <meta property="twitter:url" content="https://spekni.vercel.app/" />
+        <meta property="twitter:url" content="https://spekni.com" />
         <meta
           property="twitter:title"
           content="Explore: Spekni - Find over 500+ developers creating impact in the tech ecosystem"
@@ -127,7 +127,7 @@ export default function Explore() {
               endorsements={userData.user.endorsements}
               skills={userData.user.Skill}
             />
-          )
+          );
         })}
 
         <p className="font-medium text-lg mt-4">Loading...</p>

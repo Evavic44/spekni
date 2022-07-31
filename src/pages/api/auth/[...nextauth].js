@@ -33,13 +33,8 @@ export default NextAuth({
   secret: process.env.JWT_SIGNING_PRIVATE_KEY,
   database: process.env.DATABASE_URL,
   adapter: PrismaAdapter(prisma),
-  callbacks: {
-    redirect: async (url, baseUrl) => {
-      return Promise.resolve(url)
-    }
-  },
   pages: {
     signIn: "/login",
-    newUser: "/account"
+    newUser: "/account",
   },
 });
