@@ -184,7 +184,7 @@ export default function Nav() {
               ) : null}
               {status === "authenticated" ? (
                 <Link href={`/profile?useremail=${session.user.email}`}>
-                  <Image
+                  <img
                     src={`${session.user.image}`}
                     width={35}
                     height={35}

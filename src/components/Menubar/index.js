@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { signOut } from "next-auth/react"
 
-export default function Menubar({authenticated}) {
+export default function Menubar({ authenticated }) {
   const { theme, setTheme } = useTheme();
   const changeTheme = () => {
     return theme === "light" ? setTheme("dark") : setTheme("light");
@@ -32,9 +32,11 @@ export default function Menubar({authenticated}) {
           <div className="py-1">
           {authenticated ? 
             <Menu.Item>
-              <Link href="/profile">
-                <a className="block px-4 py-3 text-sm">Account settings</a>
-              </Link>
+              <div>
+                <Link href="/account">
+                  <a className="block px-4 py-3 text-sm">Account settings</a>
+                </Link>
+              </div>
             </Menu.Item> : null }
             <Menu.Item>
               <a
@@ -45,9 +47,11 @@ export default function Menubar({authenticated}) {
               </a>
             </Menu.Item>
             <Menu.Item>
+              <div>
               <Link href="/changelog">
                 <a className="block px-4 py-3 text-sm">Changelog</a>
               </Link>
+              </div>
             </Menu.Item>
             {authenticated ? <Menu.Item>
               <button

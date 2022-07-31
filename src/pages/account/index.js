@@ -5,11 +5,32 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { GlobeAltIcon } from "@heroicons/react/outline";
-import { useSession, getSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import Router from 'next/router'
+import axios from "axios";
 
 export default function Account() {
-  const { data: session, status } = useSession();
+  const { data: session, status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      // The user is not authenticated, handle it here.
+      Router.push('/login');
+    },
+  });
   const [profileData, setProfileData] = useState({});
+
+  async function getUserDetails(email) {
+    try {
+      const res = await axios(`/api/users/details?u_email=${email}`);
+      setProfileData(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    if(Object.keys(session).length) getUserDetails(session.user.email);
+  }, [session])
 
   if (status === "loading") {
     return (
@@ -17,10 +38,6 @@ export default function Account() {
         <span className="loader loaderLight"></span>
       </div>
     );
-  }
-
-  if (status === "unauthenticated") {
-    return <p>Access Denied</p>;
   }
 
   return (
@@ -379,7 +396,7 @@ export default function Account() {
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
                       placeholder="https://twitter.com/johndoe"
                       defaultValue={profileData.twitterLink}
-                      required
+                      // required
                     />
                   </div>
 
@@ -414,7 +431,7 @@ export default function Account() {
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
                       placeholder="https://linkedin.com/in/johndoe"
                       defaultValue={profileData.linkedinLink}
-                      required
+                      // required
                     />
                   </div>
                 </div>
