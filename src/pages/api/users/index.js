@@ -16,6 +16,9 @@ export default async function handler(req, res) {
    */
   if (req.method === "POST") {
     const { email } = req.body;
+    const skills = Array.from(req.body.skills);
+    console.log("Skills: ", skills);
+    delete req.body.skills;
     try {
       const profile = await prisma.profile.findUnique({ where: { email } });
       let username, oldUser;
@@ -25,7 +28,6 @@ export default async function handler(req, res) {
         delete req.body.email;
       } else {
         oldUser = await prisma.user.findUnique({ where: { email } });
-        console.log(oldUser);
       }
       await prisma.profile.upsert({
         where: { email },
