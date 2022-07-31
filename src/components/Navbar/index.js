@@ -190,6 +190,7 @@ export default function Example() {
                     height={25}
                     className="cursor-pointer"
                     title="visit your profile"
+                    alt={`${session.user.name}`}
                   />
                   {/* <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
                     Profile

@@ -12,7 +12,11 @@ export default function Account() {
   const [profileData, setProfileData] = useState({});
 
   if (status === "loading") {
-    return <span className="loader loaderLight"></span>;
+    return (
+      <div className="flex items-center justify-center text-center h-screen">
+        <span className="loader loaderLight"></span>
+      </div>
+    );
   }
 
   if (status === "unauthenticated") {
@@ -33,8 +37,7 @@ export default function Account() {
 
         <div className="flex justify-center">
           <LazyLoadImage
-            className="rounded-full"
-            // src="https://res.cloudinary.com/victoreke/image/upload/v1657144819/Spekni/user-1_kknjns.png"
+            className="rounded-full bg-secondary"
             src={session.user.image}
             alt={session.user.name}
             width={120}
@@ -70,10 +73,14 @@ export default function Account() {
                           id="username"
                           className="flex-1 block w-full rounded-md text-sm py-4 px-6"
                           defaultValue={profileData.username}
-                          placeholder="Enter a unique username"
+                          placeholder="E.g: johndoe"
                           required
+                          maxLength="10"
                         />
                       </div>
+                      <small className="opacity-40 text-xs">
+                        Username should be one word, lower case
+                      </small>
                     </div>
                     <div className="">
                       <label
@@ -93,6 +100,9 @@ export default function Account() {
                           required
                         />
                       </div>
+                      <small className="opacity-40 text-xs">
+                        Add your full name
+                      </small>
                     </div>
 
                     <div className="">
@@ -111,8 +121,12 @@ export default function Account() {
                           placeholder="Senior Software Engineer"
                           defaultValue={profileData.job_title}
                           required
+                          maxLength="30"
                         />
                       </div>
+                      <small className="opacity-40 text-xs">
+                        Add a job title under 30 words or less
+                      </small>
                     </div>
                   </div>
 
@@ -128,35 +142,146 @@ export default function Account() {
                         className="shadow-sm mt-1 block w-full text-sm rounded-md py-5 px-6"
                         defaultValue={profileData.bio}
                         required
+                        maxLength="160"
                       />
                     </div>
-                    <p className="mt-4 text-sm">
+                    <small className="opacity-40 text-xs">
                       Tell us a little about yourself in 160 words or less.
-                    </p>
+                    </small>
                   </div>
 
-                  {/* <div>
-                    <label
-                      htmlFor="skills"
-                      className="block text-sm font-medium"
-                    >
-                      Skills
-                    </label>
-                    <div className="mt-1">
-                      <textarea
-                        id="skills"
-                        name="skills"
-                        rows={3}
-                        className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
-                        defaultValue={""}
-                        required
-                        placeholder="React, JavaScript, NodeJS"
-                      />
+                  <div className="hidden sm:block max-w-3xl" aria-hidden="true">
+                    <div className="py-5">
+                      <div className="borderLight" />
                     </div>
-                    <p className="mt-4 text-sm">
-                      Add your preffered skills (Maximum 5, miminum 2).
-                    </p>
-                  </div> */}
+                  </div>
+
+                  {/* Skills */}
+                  <h3 className="text-lg font-bold leading-6 mt-6">
+                    Tech Stack/Skills
+                  </h3>
+                  <small className="opacity-40 text-xs">
+                    Add at least three skills you want people to endorse
+                  </small>
+
+                  <div className="grid grid-cols-6 gap-6">
+                    {/* Skill one */}
+                    <div className="col-span-6 sm:col-span-3 my-3">
+                      <label
+                        htmlFor="skills"
+                        className="block text-sm font-medium"
+                      >
+                        Skill One
+                      </label>
+                      <div className="mt-1">
+                        <input
+                          id="skills"
+                          name="skills"
+                          className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
+                          required
+                          placeholder="E.g React"
+                          maxLength="25"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Skill Two */}
+                    <div className="col-span-6 sm:col-span-3 my-3">
+                      <label
+                        htmlFor="skills"
+                        className="block text-sm font-medium"
+                      >
+                        Skill Two
+                      </label>
+                      <div className="mt-1">
+                        <input
+                          id="skills"
+                          name="skills"
+                          className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
+                          required
+                          placeholder="E.g: NodeJS"
+                          maxLength="25"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Skill Three */}
+                    <div className="col-span-6 sm:col-span-3 my-3">
+                      <label
+                        htmlFor="skills"
+                        className="block text-sm font-medium"
+                      >
+                        Skill Three
+                      </label>
+                      <div className="mt-1">
+                        <input
+                          id="skills"
+                          name="skills"
+                          className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
+                          placeholder="E.g: Project Management"
+                          required
+                          maxLength="25"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Skill Four */}
+                    <div className="col-span-6 sm:col-span-3 my-3">
+                      <label
+                        htmlFor="skills"
+                        className="block text-sm font-medium"
+                      >
+                        Skill Four
+                      </label>
+                      <div className="mt-1">
+                        <input
+                          id="skills"
+                          name="skills"
+                          className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
+                          placeholder="E.g: C++"
+                          maxLength="25"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Skill Five */}
+                    <div className="col-span-6 sm:col-span-3 my-3">
+                      <label
+                        htmlFor="skills"
+                        className="block text-sm font-medium"
+                      >
+                        Skill Five
+                      </label>
+                      <div className="mt-1">
+                        <input
+                          id="skills"
+                          name="skills"
+                          className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
+                          placeholder="E.g: Open Source"
+                          maxLength="25"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Skill Six */}
+                    <div className="col-span-6 sm:col-span-3 my-3">
+                      <label
+                        htmlFor="skills"
+                        className="block text-sm font-medium"
+                      >
+                        Skill Six
+                      </label>
+                      <div className="mt-1">
+                        <input
+                          id="skills"
+                          name="skills"
+                          className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
+                          placeholder="E.g: NextJS"
+                          maxLength="25"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="hidden sm:block max-w-3xl" aria-hidden="true">
@@ -165,10 +290,13 @@ export default function Account() {
                   </div>
                 </div>
 
-                <div className="mt-10 sm:mt-0">
-                  <h3 className="text-lg font-bold leading-6 my-6">
+                <div className="mt-10 sm:mt-0 mb-6">
+                  <h3 className="text-lg font-bold leading-6 mt-6">
                     Social Account
                   </h3>
+                  <small className="text-xs opacity-40">
+                    Add the full URL including the https://
+                  </small>
                 </div>
 
                 {/* Portfolio */}
@@ -185,9 +313,9 @@ export default function Account() {
                       type="text"
                       name="portfolioLink"
                       id="portfolio-url"
-                      autoComplete="given-name"
+                      autoComplete="portfolio-link"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="example.com"
+                      placeholder="https://johndoe.com"
                       defaultValue={profileData.portfolioLink}
                     />
                   </div>
@@ -218,9 +346,9 @@ export default function Account() {
                       type="text"
                       name="githubLink"
                       id="github-url"
-                      autoComplete="family-name"
+                      autoComplete="github-link"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="johndoe"
+                      placeholder="https://github.com/johndoe"
                       defaultValue={profileData.githubLink}
                     />
                   </div>
@@ -247,10 +375,11 @@ export default function Account() {
                       type="text"
                       name="twitterLink"
                       id="twitter-url"
-                      autoComplete="given-name"
+                      autoComplete="twitter-link"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="johndoe"
+                      placeholder="https://twitter.com/johndoe"
                       defaultValue={profileData.twitterLink}
+                      required
                     />
                   </div>
 
@@ -281,10 +410,11 @@ export default function Account() {
                       type="text"
                       name="linkedinLink"
                       id="linkedin-url"
-                      autoComplete="family-name"
+                      autoComplete="linkedin-link"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="johndoe"
+                      placeholder="https://linkedin.com/in/johndoe"
                       defaultValue={profileData.linkedinLink}
+                      required
                     />
                   </div>
                 </div>
