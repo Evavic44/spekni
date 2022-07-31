@@ -56,14 +56,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Nav() {
   const { data: session, status } = useSession();
   const { theme, setTheme } = useTheme();
   const changeTheme = () => {
     return theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
-  console.log("Session: ", session);
+  // console.log("Session: ", session);
 
   return (
     <div>
@@ -186,9 +186,9 @@ export default function Example() {
                 <Link href={`/profile?useremail=${session.user.email}`}>
                   <Image
                     src={`${session.user.image}`}
-                    width={25}
-                    height={25}
-                    className="cursor-pointer"
+                    width={35}
+                    height={35}
+                    className="cursor-pointer rounded-[50%]"
                     title="visit your profile"
                     alt={`${session.user.name}`}
                   />
