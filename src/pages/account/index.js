@@ -75,7 +75,7 @@ export default function Account() {
                           defaultValue={profileData.username}
                           placeholder="E.g: johndoe"
                           required
-                          maxlength="10"
+                          maxLength="10"
                         />
                       </div>
                       <small className="opacity-40 text-xs">
@@ -121,7 +121,7 @@ export default function Account() {
                           placeholder="Senior Software Engineer"
                           defaultValue={profileData.job_title}
                           required
-                          maxlength="30"
+                          maxLength="30"
                         />
                       </div>
                       <small className="opacity-40 text-xs">
@@ -142,7 +142,7 @@ export default function Account() {
                         className="shadow-sm mt-1 block w-full text-sm rounded-md py-5 px-6"
                         defaultValue={profileData.bio}
                         required
-                        maxlength="160"
+                        maxLength="160"
                       />
                     </div>
                     <small className="opacity-40 text-xs">
@@ -180,7 +180,7 @@ export default function Account() {
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           required
                           placeholder="E.g React"
-                          maxlength="25"
+                          maxLength="25"
                         />
                       </div>
                     </div>
@@ -200,7 +200,7 @@ export default function Account() {
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           required
                           placeholder="E.g: NodeJS"
-                          maxlength="25"
+                          maxLength="25"
                         />
                       </div>
                     </div>
@@ -220,7 +220,7 @@ export default function Account() {
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           placeholder="E.g: Project Management"
                           required
-                          maxlength="25"
+                          maxLength="25"
                         />
                       </div>
                     </div>
@@ -239,7 +239,7 @@ export default function Account() {
                           name="skills"
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           placeholder="E.g: C++"
-                          maxlength="25"
+                          maxLength="25"
                         />
                       </div>
                     </div>
@@ -258,7 +258,7 @@ export default function Account() {
                           name="skills"
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           placeholder="E.g: Open Source"
-                          maxlength="25"
+                          maxLength="25"
                         />
                       </div>
                     </div>
@@ -277,7 +277,7 @@ export default function Account() {
                           name="skills"
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           placeholder="E.g: NextJS"
-                          maxlength="25"
+                          maxLength="25"
                         />
                       </div>
                     </div>
