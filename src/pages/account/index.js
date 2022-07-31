@@ -290,10 +290,13 @@ export default function Account() {
                   </div>
                 </div>
 
-                <div className="mt-10 sm:mt-0">
-                  <h3 className="text-lg font-bold leading-6 my-6">
+                <div className="mt-10 sm:mt-0 mb-6">
+                  <h3 className="text-lg font-bold leading-6 mt-6">
                     Social Account
                   </h3>
+                  <small className="text-xs opacity-40">
+                    Add the full URL including the https://
+                  </small>
                 </div>
 
                 {/* Portfolio */}
@@ -310,9 +313,9 @@ export default function Account() {
                       type="text"
                       name="portfolioLink"
                       id="portfolio-url"
-                      autoComplete="given-name"
+                      autoComplete="portfolio-link"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="example.com"
+                      placeholder="https://johndoe.com"
                       defaultValue={profileData.portfolioLink}
                     />
                   </div>
@@ -343,9 +346,9 @@ export default function Account() {
                       type="text"
                       name="githubLink"
                       id="github-url"
-                      autoComplete="family-name"
+                      autoComplete="github-link"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="johndoe"
+                      placeholder="https://github.com/johndoe"
                       defaultValue={profileData.githubLink}
                     />
                   </div>
@@ -372,10 +375,11 @@ export default function Account() {
                       type="text"
                       name="twitterLink"
                       id="twitter-url"
-                      autoComplete="given-name"
+                      autoComplete="twitter-link"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="johndoe"
+                      placeholder="https://twitter.com/johndoe"
                       defaultValue={profileData.twitterLink}
+                      required
                     />
                   </div>
 
@@ -406,10 +410,11 @@ export default function Account() {
                       type="text"
                       name="linkedinLink"
                       id="linkedin-url"
-                      autoComplete="family-name"
+                      autoComplete="linkedin-link"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
-                      placeholder="johndoe"
+                      placeholder="https://linkedin.com/in/johndoe"
                       defaultValue={profileData.linkedinLink}
+                      required
                     />
                   </div>
                 </div>
