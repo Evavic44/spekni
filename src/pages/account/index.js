@@ -1,25 +1,23 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { GlobeAltIcon } from "@heroicons/react/outline";
-import { useSession, getSession } from "next-auth/react"
+import { useSession, getSession } from "next-auth/react";
 
 export default function Account() {
   const { data: session, status } = useSession();
   const [profileData, setProfileData] = useState({});
 
   if (status === "loading") {
-    return <p>Loading...</p>
+    return <span className="loader loaderLight"></span>;
   }
 
   if (status === "unauthenticated") {
-    return <p>Access Denied</p>
+    return <p>Access Denied</p>;
   }
-
-
 
   return (
     <>
@@ -58,7 +56,7 @@ export default function Account() {
                 {/* End of hidden inputs */}
                 <div className="py-5 space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="">
+                    <div className="">
                       <label
                         htmlFor="username"
                         className="block text-sm font-medium"
