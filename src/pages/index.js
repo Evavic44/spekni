@@ -36,7 +36,7 @@ export default function Home() {
           content="Victor Eke, Spiff Jekey-Green, Nicholas Ovunda"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://spekni.vercel.app/" />
+        <meta property="og:url" content="https://spekni.com" />
         <meta
           property="og:title"
           content="Spekni - Recognition platform built for developer endorsements"
@@ -54,7 +54,7 @@ export default function Home() {
           property="twitter:card"
           content="https://res.cloudinary.com/victoreke/image/upload/v1658407791/Spekni/bg/spekni-home.png"
         />
-        <meta property="twitter:url" content="https://spekni.vercel.app/" />
+        <meta property="twitter:url" content="https://spekni.com" />
         <meta
           property="twitter:title"
           content="Spekni - Recognition platform built for developer endorsements"
