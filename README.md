@@ -22,27 +22,29 @@
     
 <a href="https://hashnode.com">
 <img alt="code style: prettier" src="https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white">
-</a> 
+</a>
 
 <a href="https://vercel.com/evavic44/spekni/4g6cAgSJ2JQcGxpwQew77Ny9jDdC">
     <img src="https://user-images.githubusercontent.com/62628408/178316423-5dc0c0bb-2ebb-4c7f-9635-164a324d4897.svg" width="150px">
 </a>      
 </p>
 
-<a href="https://spekni.vercel.app">
+<a href="https://spekni.com">
 <img src="https://user-images.githubusercontent.com/62628408/180232616-d2ab3cba-e5f8-4b2d-bfa0-8b2b12059f23.png" alt="Spekni">
 </a>
 
 # Tech Stack
-- ⚡ NextJS - UI Framework 
-- 🔒 Authentication - [NextAuth.js](https://nextauth.io) (GitHub and Google)
-- 📦 Database and API - [PlanetScale](https://planetscale.io)
-- 🖼️ Image Optmization - [Cloudinary](https://cloudinary.com)
-- 🎥 Video Embed - [Loom](https://loom.com)
-- ☀️ Color Theme: [Next Themes](https://github.com/pacocoursey/next-themes)
-- 🎨 TailwindCSS - CSS Library for fast styling
-- 🖌️ CSS - Reusable stying and variables 
-- 🎉 React Confetti - Feel good animations for endorsements
+
+- 🎯 [NextJS](https://nextjs.org) - UI framework
+- ☑️ [Vercel](https://vercel.com) - Hosting and deployment
+- 🔒 [NextAuth.js](https://nextauth.io): GitHub and Google Authentication
+- 📦 [PlanetScale](https://planetscale.io): Database Storage & API
+- 💅🏽 [TailwindCSS](https://tailwindcss.com) /CSS - Styling and UI
+- 🗃️ [Prisma](https://prism.io): database schema design
+- 🎥 [Remotion](https://www.remotion.dev/): Video Embed
+- ☀️ [Next Themes](https://github.com/pacocoursey/next-themes): Color Theme
+- 🎭 [Cloudinary](https://cloudinary.com) - Cloud media storage
+- 🖼️ [Lazyload NPM package](https://lazyload.com): Image optimization
 
 <div align="left">
   <h1>How to run locally ✨</h1>
@@ -50,6 +52,7 @@
 </div>
 
 ## Prerequisites
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -79,5 +82,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Are you contributing to this project, please ensure all pull requests and contributions comply with our <a href="https://github.com/Evavic44/spekni/blob/main/CONTRIBUTING.md">guidelines</a>. Before making any changes, ensure you have raised an issue here, unless it is a minimal change.
 
 ## License
+
 This project is protected under <a href="https://github.com/Evavic44/spekni/blob/main/LICENSE">MIT License</a>.
 If you like this project, kindly star ⭐ and share this project. It means the world to us.
