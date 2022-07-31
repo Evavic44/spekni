@@ -184,9 +184,16 @@ export default function Example() {
               ) : null}
               {status === "authenticated" ? (
                 <Link href={`/profile?useremail=${session.user.email}`}>
-                  <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
+                  <Image
+                    src={`${session.user.image}`}
+                    width={25}
+                    height={25}
+                    className="cursor-pointer"
+                    title="visit your profile"
+                  />
+                  {/* <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
                     Profile
-                  </a>
+                  </a> */}
                 </Link>
               ) : null}
               {status === "unauthenticated" ? (
