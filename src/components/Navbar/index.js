@@ -204,7 +204,7 @@ export default function Nav() {
                   </a>
                 </Link>
               ) : null}
-              <Menubar />
+              <Menubar authenticated={status === "authenticated"} />
             </div>
           </div>
         </div>
