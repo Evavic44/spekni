@@ -29,7 +29,7 @@ export default function Account() {
   }
 
   useEffect(() => {
-    if(Object.keys(session).length) getUserDetails(session.user.email);
+    if(Object.keys((session || {})).length) getUserDetails(session.user.email);
   }, [session])
 
   if (status === "loading") {
@@ -93,6 +93,7 @@ export default function Account() {
                           placeholder="E.g: johndoe"
                           required
                           maxLength="10"
+                          disabled={profileData.username ? true : false}
                         />
                       </div>
                       <small className="opacity-40 text-xs">
