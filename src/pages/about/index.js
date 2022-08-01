@@ -210,14 +210,13 @@ export default function index() {
           </div>
           <blockquote className={styles.aboutText}>
             <span className={styles.highlight}>M</span>ost developers do not
-            seek credits or any form of validation for their work, tirelessly
-            putting in a lot of effort to deliver great projects for users,
-            clients and other devs. We know not all heroes wear capes, but every
-            now and then, a show of appreciation for the tireless contribution
-            they make can greatly increase their opportunities This is our
-            mission with Spekni. —Providing a platform where developers can be
-            endorsed and given recommendations by clients, teachers,
-            maintaniers, and even students to preach about their good works
+            seek credit for their work, tirelessly putting in a lot of effort to
+            deliver great projects for users, clients, and other devs. Sometimes
+            developers who constantly give back to the community are the least
+            appreciated, and as such, they sometimes find it hard to get
+            recognition for their work. This is our mission with Spekni.
+            —Providing a platform where developers can be endorsed and given
+            recommendations for their contribution to the tech community.
           </blockquote>
         </section>
       </main>
