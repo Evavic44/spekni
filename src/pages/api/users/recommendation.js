@@ -6,6 +6,7 @@ export default async function handler(req, res) {
     // Add new recommendation
     try {
       const recommender = await prisma.user.findUnique({ where: { email: req.body.recommenderEmail }});
+      if(recommender.id == req.body.recommendeeID) return res.status(400).json({ success: false, message: "You can't recommend yourself" });
       await prisma.recommendation.create({
         data: {
           userId: req.body.recommendeeID,
