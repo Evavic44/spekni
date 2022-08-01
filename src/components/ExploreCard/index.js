@@ -8,9 +8,10 @@ export default function ExploreCard({
   endorsements,
   skills,
   bio,
+  username
 }) {
   return (
-    <Link href={`/${user.username}`}>
+    <Link href={`/${username}`}>
       <a className="flex flex-col justify-evenly border-primary rounded-md">
         <div className="flex items-center justify-between px-8 py-6 gap-x-5">
           <div className="flex gap-x-2">

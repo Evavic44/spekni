@@ -123,6 +123,7 @@ export default function Explore() {
               name={userData.fullName}
               job={userData.job_title}
               user={userData.user}
+              username={userData.username}
               bio={userData.bio}
               endorsements={userData.user.endorsements}
               skills={userData.user.Skill}

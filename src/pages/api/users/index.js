@@ -79,6 +79,7 @@ export default async function handler(req, res) {
         take: limit,
         select: {
           userId: true,
+          username: true,
           bio: true,
           job_title: true,
           fullName: true,
