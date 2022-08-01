@@ -188,7 +188,7 @@ export default function Nav() {
                     src={`${session.user.image}`}
                     width={35}
                     height={35}
-                    className="cursor-pointer rounded-[50%]"
+                    className="cursor-pointer rounded-full bg-secondary"
                     title="visit your profile"
                     alt={`${session.user.name}`}
                   />
