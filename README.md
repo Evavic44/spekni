@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://spekni.netlify.app"><img src="https://user-images.githubusercontent.com/62628408/180232284-6f172c0b-6b34-4189-819d-4d270424003f.svg" width="60px"></a>
+<a href="https://spekni.vercel.app"><img src="https://user-images.githubusercontent.com/62628408/180232284-6f172c0b-6b34-4189-819d-4d270424003f.svg" width="60px"></a>
 </div>
 
 <div align="center">
@@ -29,7 +29,7 @@
 </a>      
 </p>
 
-<a href="https://spekni.com">
+<a href="https://spekni.vercel.app">
 <img src="https://user-images.githubusercontent.com/62628408/180232616-d2ab3cba-e5f8-4b2d-bfa0-8b2b12059f23.png" alt="Spekni">
 </a>
 
