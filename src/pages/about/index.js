@@ -76,7 +76,7 @@ export default function index() {
             skillsets they are proved to be proficient in.
           </h1> */}
           <h1 className="font-extrabold max-w-4xl text-4xl sm:text-5xl lg:text-6xl tracking-tight text-left">
-            Recieving <span className="highlight">positive feedback</span> from
+            Receiving <span className="highlight">positive feedback</span> from
             someone is always a good feeling. It&apos;s even better when
             it&apos;s in writing
           </h1>
