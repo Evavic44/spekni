@@ -17,8 +17,10 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     const { email } = req.body;
     const skills = Array.from(req.body.skills);
-    // console.log("Skills: ", skills);
+    const skillIds = Array.from(req.body.skillIds);
+    console.log("Skills: ", skillIds);
     delete req.body.skills;
+    delete req.body.skillIds;
     try {
       const profile = await prisma.profile.findUnique({ where: { email } });
       let username;
@@ -33,15 +35,27 @@ export default async function handler(req, res) {
           data: req.body
         });
         // Update skills
-        await prisma.skill.createMany({
-          data: skills.map(skill => {
-            return {
-              skillName: skill.trim(),
-              userId: profile.userId,
+        // await prisma.skill.createMany({
+        //   data: skills.map(skill => {
+        //     return {
+        //       skillName: skill.trim(),
+        //       userId: profile.userId,
+        //     }
+        //   }),
+        //   skipDuplicates: true,
+        // })
+
+        skills.forEach(async (skill, idx) => {
+          await prisma.skill.update({
+            where: {
+              id: Number(skillIds[idx])
+            },
+            data: {
+              skillName: skill
             }
-          }),
-          skipDuplicates: true,
-        })
+          });
+        });
+        
         return res.redirect("/account");
       } else {
         const oldUser = await prisma.user.findUnique({ where: { email } });

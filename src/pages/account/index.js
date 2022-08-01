@@ -182,6 +182,8 @@ export default function Account() {
                     Add at least three skills you want people to endorse
                   </small>
 
+                  {profileData.skills && profileData.skills.map(skill => <input type="hidden" name="skillIds" value={skill.id} />)}
+
                   <div className="grid grid-cols-6 gap-6">
                     {/* Skill one */}
                     <div className="col-span-6 sm:col-span-3 my-3">
