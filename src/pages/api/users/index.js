@@ -2,11 +2,11 @@ import prisma from "../../../prisma";
 
 // Get computed value of users endorsements
 const getEndorsements = usersObject => {
-  usersObject.forEach(({user}) => {
+  usersObject.forEach(({ user }) => {
     user.endorsements = 0;
-    user.Skill.forEach(skill => user.endorsements += skill._count.endorsements)
+    user.Skill.forEach(skill => user.endorsements += skill._count.endorsements);
   });
-}
+};
 
 export default async function handler(req, res) {
   // req.query: u_email -> email
@@ -17,32 +17,54 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     const { email } = req.body;
     const skills = Array.from(req.body.skills);
-    console.log("Skills: ", skills);
+    // console.log("Skills: ", skills);
     delete req.body.skills;
     try {
       const profile = await prisma.profile.findUnique({ where: { email } });
-      let username, oldUser;
+      let username;
       if (profile) {
         username = req.body.username;
         delete req.body.username;
         delete req.body.email;
+        await prisma.profile.update({
+          where: {
+            email
+          },
+          data: req.body
+        });
+        // Update skills
+        await prisma.skill.createMany({
+          data: skills.map(skill => {
+            return {
+              skillName: skill.trim(),
+              userId: profile.userId,
+            }
+          }),
+          skipDuplicates: true,
+        })
+        return res.redirect("/account");
       } else {
-        oldUser = await prisma.user.findUnique({ where: { email } });
+        const oldUser = await prisma.user.findUnique({ where: { email } });
+        if(!oldUser) return res.status(400).json({ success: false, message: "Please contact the webmaster." });
+        req.body.userId = oldUser.id;
+        await prisma.profile.create({
+          data: req.body,
+        });
+        // Add skills
+        await prisma.skill.createMany({
+          data: skills.map(skill => {
+            return {
+              skillName: skill.trim(),
+              userId: oldUser.id,
+            }
+          }),
+          skipDuplicates: true,
+        });
+        return res.redirect("/account");
       }
-      await prisma.profile.upsert({
-        where: { email },
-        update: { ...req.body },
-        create: {
-          username,
-          email,
-          userId: oldUser.id,
-          ...req.body
-        }
-      });
-      return res.redirect("/");
     } catch (err) {
       console.log(err);
-      return res.json({ success: false, message: err.message });
+      return res.status(500).json({ success: false, message: err.message });
     }
   } else {
     // GET - list profiles with pagination
@@ -53,34 +75,35 @@ export default async function handler(req, res) {
         skip: offset,
         take: limit,
         select: {
-        userId: true, 
-        bio: true,
-        job_title: true,
-        fullName: true,
-        user: {
-          select: {
-            image: true,
-            Skill: {
-              select: {
-                skillName: true,
-                id: true,
-                _count: {
-                  select: {
-                    endorsements: true
+          userId: true,
+          bio: true,
+          job_title: true,
+          fullName: true,
+          user: {
+            select: {
+              image: true,
+              Skill: {
+                select: {
+                  skillName: true,
+                  id: true,
+                  _count: {
+                    select: {
+                      endorsements: true
+                    }
                   }
                 }
-              }
-            },
-            _count: {
-              select: {
-                Skill: true
+              },
+              _count: {
+                select: {
+                  Skill: true
+                }
               }
             }
           }
         }
-      } });
+      });
       // make endorsements a computed value
-      if(users) getEndorsements(users);
+      if (users) getEndorsements(users);
       return res.json({ success: true, data: users });
     } catch (err) {
       console.log(err);

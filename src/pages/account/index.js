@@ -18,7 +18,7 @@ export default function Account() {
     },
   });
   const [profileData, setProfileData] = useState({});
-
+  
   async function getUserDetails(email) {
     try {
       const res = await axios(`/api/users/details?u_email=${email}`);
@@ -199,6 +199,7 @@ export default function Account() {
                           required
                           placeholder="E.g React"
                           maxLength="25"
+                          defaultValue={profileData.skills && profileData.skills[0]?.skillName}
                         />
                       </div>
                     </div>
@@ -219,6 +220,7 @@ export default function Account() {
                           required
                           placeholder="E.g: NodeJS"
                           maxLength="25"
+                          defaultValue={profileData.skills && profileData.skills[1]?.skillName}
                         />
                       </div>
                     </div>
@@ -239,6 +241,7 @@ export default function Account() {
                           placeholder="E.g: Project Management"
                           required
                           maxLength="25"
+                          defaultValue={profileData.skills && profileData.skills[2]?.skillName}
                         />
                       </div>
                     </div>
@@ -258,6 +261,7 @@ export default function Account() {
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           placeholder="E.g: C++"
                           maxLength="25"
+                          defaultValue={profileData.skills && profileData.skills[3]?.skillName}
                         />
                       </div>
                     </div>
@@ -277,6 +281,7 @@ export default function Account() {
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           placeholder="E.g: Open Source"
                           maxLength="25"
+                          defaultValue={profileData.skills && profileData.skills[4]?.skillName}
                         />
                       </div>
                     </div>
@@ -296,6 +301,7 @@ export default function Account() {
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           placeholder="E.g: NextJS"
                           maxLength="25"
+                          defaultValue={profileData.skills && profileData.skills[5]?.skillName}
                         />
                       </div>
                     </div>
@@ -334,7 +340,7 @@ export default function Account() {
                       autoComplete="portfolio-link"
                       className="mt-3 block w-full shadow-sm text-sm rounded-md py-4 px-6"
                       placeholder="https://johndoe.com"
-                      defaultValue={profileData.portfolioLink}
+                      defaultValue={profileData.skills && profileData.portfolioLink}
                     />
                   </div>
 

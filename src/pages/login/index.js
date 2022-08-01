@@ -37,7 +37,7 @@ export default function Login({ providers }) {
             content="Developer, Endorsements, Hiring, Job, Planetscale, Hashnode, Hackathon"
           />
           {/* Primary met tags */}
-          <title>Sigup/login - Spekni</title>
+          <title>Signup/login - Spekni</title>
           <meta
             name="title"
             content="Create an account on Spekni using your Github or Google account to start receiving endorsements and recommendations"
