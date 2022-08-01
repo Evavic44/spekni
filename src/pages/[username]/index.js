@@ -197,7 +197,6 @@ function Endorsement(props) {
 export default Endorsement;
 
 export async function getServerSideProps({ resolvedUrl }) {
-  // const username = resolvedUrl.slice(1).trim();
   const username = resolvedUrl.split("/")[1].trim();
   const user = await prisma.profile.findUnique({
     where: { username },

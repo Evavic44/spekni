@@ -15,8 +15,6 @@ import {
 
 export default function Layout({ children, profile }) {
   const router = useRouter();
-  console.log("Prof: ", profile);
-
   if (!profile) return <Error />;
 
   const pageTitle = `${profile?.fullName} - Spekni`;
