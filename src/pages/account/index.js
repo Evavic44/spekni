@@ -262,6 +262,7 @@ export default function Account() {
                           name="skills"
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           placeholder="E.g: C++"
+                          required
                           maxLength="25"
                           defaultValue={profileData.skills && profileData.skills[3]?.skillName}
                         />
@@ -282,6 +283,7 @@ export default function Account() {
                           name="skills"
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           placeholder="E.g: Open Source"
+                          required
                           maxLength="25"
                           defaultValue={profileData.skills && profileData.skills[4]?.skillName}
                         />
@@ -302,6 +304,7 @@ export default function Account() {
                           name="skills"
                           className="shadow-sm mt-1 block w-full text-sm rounded-md py-4 px-6"
                           placeholder="E.g: NextJS"
+                          required
                           maxLength="25"
                           defaultValue={profileData.skills && profileData.skills[5]?.skillName}
                         />

@@ -177,7 +177,7 @@ export default function Layout({ children, profile }) {
             )}
             <a
               className={styles.socialIcon}
-              href="https://linkedin.com/in/victorekeawa"
+              href={profile.linkedinLink}
               target="_blank"
               rel="noreferrer"
               title="LinkedIn"
@@ -201,7 +201,7 @@ export default function Layout({ children, profile }) {
             </a>
             <a
               className={styles.socialIcon}
-              href="https://twitter.com/evavic44"
+              href={profile.twitterLink}
               target="_blank"
               rel="noreferrer"
               title="Twitter"
