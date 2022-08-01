@@ -6,7 +6,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { GlobeAltIcon } from "@heroicons/react/outline";
 import { useSession } from "next-auth/react";
-import Router from 'next/router'
+import Router from "next/router";
 import axios from "axios";
 
 export default function Account() {
@@ -14,7 +14,7 @@ export default function Account() {
     required: true,
     onUnauthenticated() {
       // The user is not authenticated, handle it here.
-      Router.push('/login');
+      Router.push("/login");
     },
   });
   const [profileData, setProfileData] = useState({});
@@ -29,8 +29,8 @@ export default function Account() {
   }
 
   useEffect(() => {
-    if(Object.keys((session || {})).length) getUserDetails(session.user.email);
-  }, [session])
+    if (Object.keys(session || {}).length) getUserDetails(session.user.email);
+  }, [session]);
 
   if (status === "loading") {
     return (
