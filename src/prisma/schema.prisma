@@ -60,6 +60,15 @@ model Endorsement {
   skill      Skill  @relation(fields: [skillId], references: [id], onDelete: Cascade)
 }
 
+model Recommendation {
+  id         Int    @id @default(autoincrement())
+  userId     String
+  fromUserId String
+  summary    String @db.Text
+  createdAt  DateTime @default(now())
+  user       User   @relation(fields: [fromUserId], references: [id], onDelete: Cascade)
+}
+
 model Skill {
   id           Int           @id @default(autoincrement())
   skillName    String
@@ -69,16 +78,17 @@ model Skill {
 }
 
 model User {
-  id            String        @id @default(cuid())
-  name          String?
-  email         String?       @unique
-  emailVerified DateTime?
-  image         String?
-  accounts      Account[]
-  sessions      Session[]
-  endorsements  Endorsement[]
-  Profile       Profile[]
-  Skill         Skill[]
+  id              String           @id @default(cuid())
+  name            String?
+  email           String?          @unique
+  emailVerified   DateTime?
+  image           String?
+  accounts        Account[]
+  sessions        Session[]
+  endorsements    Endorsement[]
+  Profile         Profile[]
+  Skill           Skill[]
+  recommendations Recommendation[]
 }
 
 model VerificationToken {
