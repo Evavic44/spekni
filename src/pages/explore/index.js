@@ -22,7 +22,17 @@ export default function Explore() {
       const data = fetchedUsers.data;
       setUsers((prev) => [...prev, ...data]);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
+    }
+  }
+
+  async function searchForUsers(e) {
+    e.preventDefault();
+    try {
+      const users = (await axios(`/api/search?name=${e.target.search.value}`)).data;
+      setUsers((prev) => [...prev, ...users]);;
+    } catch (err) {
+      // console.log(err);
     }
   }
 
@@ -92,17 +102,17 @@ export default function Explore() {
           Find over <span className="highlight">50,000+</span> Developers
         </h1>
 
-        <form className={styles.searchContainer}>
+        {/* <form className={styles.searchContainer} onSubmit={searchForUsers}>
           <div>
             <input
               className={styles.searchBar}
               type="search"
-              name="Email"
+              name="search"
               id="Email"
               placeholder="E.g: Victor Eke"
               required
             />
-            <button value="Subscribe" ariaLabel="Search Button">
+            <button ariaLabel="Search Button">
               <SearchIcon
                 className={styles.searchIcon}
                 width={20}
@@ -111,7 +121,7 @@ export default function Explore() {
               />
             </button>
           </div>
-        </form>
+        </form> */}
       </header>
 
       <section className={styles.profileContainer}>
