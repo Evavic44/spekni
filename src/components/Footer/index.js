@@ -29,7 +29,7 @@ export default function index() {
 
           {/* Twitter URL */}
           <div className={styles.footerIcons}>
-            <a href="https://twitter.com">
+            <a href="https://twitter.com" aria-label="Twitter">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
@@ -43,7 +43,7 @@ export default function index() {
             </a>
 
             {/* GitHub URL */}
-            <a href="https://github.com/evavic44/spekni">
+            <a href="https://github.com/evavic44/spekni" aria-label="GitHub">
               <svg
                 width="17"
                 height="17"

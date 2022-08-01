@@ -14,7 +14,7 @@ export default function index() {
           </p>
         </div>
 
-        <div className={styles.sectionBody}>
+        {/* <div className={styles.sectionBody}>
           <iframe
             width="900"
             height="415"
@@ -23,8 +23,9 @@ export default function index() {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            loading="lazy"
           ></iframe>
-        </div>
+        </div> */}
       </section>
     </div>
   );
