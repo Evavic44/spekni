@@ -105,7 +105,17 @@ export default function Layout({ children, profile }) {
                   {profile.endorsements} Endorsement(s)
                 </span>
               </>
-            ) : null}
+            ) : (
+              <>
+                <Image
+                  src="https://res.cloudinary.com/victoreke/image/upload/v1657402772/Spekni/badge.svg"
+                  width={15}
+                  height={15}
+                  alt="badge"
+                />
+                <span className="highlight">No Endorsement(s)</span>
+              </>
+            )}
           </div>
         </div>
 
