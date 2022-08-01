@@ -17,10 +17,9 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     const { email } = req.body;
     const skills = Array.from(req.body.skills);
-    const skillIds = Array.from(req.body.skillIds);
-    console.log("Skills: ", skillIds);
-    delete req.body.skills;
+    const skillIds = Array.from(req.body.skillIds || []);
     delete req.body.skillIds;
+    delete req.body.skills;
     try {
       const profile = await prisma.profile.findUnique({ where: { email } });
       let username;
@@ -34,16 +33,6 @@ export default async function handler(req, res) {
           },
           data: req.body
         });
-        // Update skills
-        // await prisma.skill.createMany({
-        //   data: skills.map(skill => {
-        //     return {
-        //       skillName: skill.trim(),
-        //       userId: profile.userId,
-        //     }
-        //   }),
-        //   skipDuplicates: true,
-        // })
 
         skills.forEach(async (skill, idx) => {
           await prisma.skill.update({
@@ -78,7 +67,7 @@ export default async function handler(req, res) {
       }
     } catch (err) {
       console.log(err);
-      return res.status(500).json({ success: false, message: err.message });
+      return res.status(500).redirect("/error");
     }
   } else {
     // GET - list profiles with pagination
