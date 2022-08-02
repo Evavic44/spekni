@@ -75,8 +75,8 @@ export default async function handler(req, res) {
     const offset = parseInt(req.query.offset) || 0;
     try {
       const users = await prisma.profile.findMany({
-        skip: offset,
-        take: limit,
+        // skip: offset,
+        // take: limit,
         select: {
           userId: true,
           username: true,
