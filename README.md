@@ -81,5 +81,6 @@ Are you contributing to this project, please ensure all pull requests and contri
 
 This project is protected by <a href="https://github.com/Evavic44/spekni/blob/main/LICENSE">MIT License</a>.
 
-If you like this project, kindly star ⭐ and share this project. It means the world to us.
+If you like this project, kindly star ⭐ and share this project. It means the world to us. <br><br>
 
+<p align="center">This project was built for the <a href="https://planetscale.com">Planetscale</a> and <a href="https://hashnode.com">Hashnode</a> hackathon</a>
