@@ -43,7 +43,7 @@ function Recommendation(props) {
       const res = await axios.get(`/api/users/recommendation?u_id=${props.profile.userId}`);
       setRecommendations(res.data);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }    
   }
 

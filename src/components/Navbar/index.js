@@ -63,8 +63,6 @@ export default function Nav() {
     return theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
-  // console.log("Session: ", session);
-
   return (
     <div>
       <Popover className="test relative z-10">

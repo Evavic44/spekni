@@ -66,7 +66,7 @@ export default async function handler(req, res) {
         return res.redirect("/account");
       }
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       return res.status(500).redirect("/error");
     }
   } else {
@@ -110,7 +110,7 @@ export default async function handler(req, res) {
       if (users) getEndorsements(users);
       return res.json({ success: true, data: users });
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       return res.json({ success: false, message: err.message });
     }
   }

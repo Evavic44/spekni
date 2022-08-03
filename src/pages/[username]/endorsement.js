@@ -21,7 +21,6 @@ const canvasStyles = {
 };
 
 async function endorseUser(u_id, current_user_email, skill_id, fire) {
-  console.log(u_id, current_user_email, skill_id);
   if (!current_user_email) return window.location = "/login";
   try {
     const res = await axios.post("/api/users/endorsement", {
@@ -35,7 +34,6 @@ async function endorseUser(u_id, current_user_email, skill_id, fire) {
     }
     return false;
   } catch (err) {
-    console.log(err.message);
     return false;
   }
 }
@@ -48,7 +46,6 @@ const Skill = (props) => {
   const [endorseChange, setEndorseChange] = useState(false);
   const endorseHandler = async () => {
     const endorseResult = await endorseUser(props.userId, props.userSession?.user.email, props.detail.id, fire);
-    console.log("Endorse Result: ", endorseResult);
     setEndorseChange(endorseResult);
   };
   const makeShot = useCallback((particleRatio, opts) => {

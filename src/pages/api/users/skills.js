@@ -12,7 +12,7 @@ export default async function handler(req, res) {
       const skills = await prisma.skill.findMany({ where: { userId: u_id }, select: { userId: false, id: true, skillName: true, endorsements: { include: { endorsers: true }} } });
       return res.json({ success: true, skills });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       return res.send("Server Error");
     }
   }

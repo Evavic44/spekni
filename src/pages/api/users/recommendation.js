@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       });
       return res.json({ success: true, message: "Recommendation successful" });
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       return res.status(400).json({ success: false, message: "Recommendation unsuccessful" });
     }
   } else if(req.method === "GET") {
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
       const recommendations = await prisma.recommendation.findMany({ where: { userId: req.query.u_id }, include: { user: true } });
       return res.json(recommendations || []);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       return res.status(500).json([])
     }
   }

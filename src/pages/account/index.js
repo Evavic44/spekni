@@ -24,7 +24,7 @@ export default function Account() {
       const res = await axios(`/api/users/details?u_email=${email}`);
       setProfileData(res.data);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   }
 
