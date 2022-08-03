@@ -22,7 +22,6 @@ export async function getServerSideProps({ query }) {
     },
   };
   } catch (e) {
-    console.error('uh oh');
     return {
       props: {
         error: e.message

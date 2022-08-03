@@ -7,7 +7,7 @@ import Jumbotron from "../../components/Jumbotron";
 import ExploreCard from "../../components/ExploreCard";
 import styles from "../../styles/Explore.module.css";
 import { SearchIcon } from "@heroicons/react/outline";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { InView } from 'react-intersection-observer';
 

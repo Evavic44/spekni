@@ -172,16 +172,13 @@ export default function Nav() {
               </Link>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              {/* <Link href="/Sign Up">
-                <a className="whitespace-nowrap text-base">Sign Up</a>
-              </Link> */}
               {status === "loading" ? (
                 <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
                   <span className="loader loaderLight"></span>
                 </a>
               ) : null}
               {status === "authenticated" ? (
-                <Link href={`/profile?useremail=${session.user.email}`}>
+                <a href={`/profile?useremail=${session.user.email}`}>
                   <img
                     src={`${session.user.image}`}
                     width={35}
@@ -190,10 +187,7 @@ export default function Nav() {
                     title="visit your profile"
                     alt={`${session.user.name}`}
                   />
-                  {/* <a className="btn btn-primary ml-6 inline-flex items-center justify-center">
-                    Profile
-                  </a> */}
-                </Link>
+                </a>
               ) : null}
               {status === "unauthenticated" ? (
                 <Link href="/login">
