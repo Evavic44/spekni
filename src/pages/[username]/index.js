@@ -113,7 +113,7 @@ const Skill = (props) => {
         <>
           <div className={styles.endorseImage}>
             {props.detail.endorsements.map((endorser) => (
-              <a href="spekin.vercel.app" key={endorser.endorsers.id}>
+              <a href={endorser.endorsers.Profile[0].username} key={endorser.endorsers.id}>
                 <Image
                   src={endorser.endorsers.image}
                   width="40px"
@@ -176,14 +176,16 @@ function Endorsement(props) {
             </p>
           </div>
           <div className={styles.endorsements}>
-            {skills.map((skill) => (
+            {skills.map((skill) => {
+              return (
               <Skill
                 key={skill.id}
                 detail={skill}
                 userId={props.profile.userId}
                 userSession={session}
               />
-            ))}
+            )
+              })}
           </div>
         </section>
       </div>
