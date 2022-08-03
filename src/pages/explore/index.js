@@ -13,33 +13,23 @@ import { InView } from 'react-intersection-observer';
 
 export default function Explore({ profileCount }) {
   const [users, setUsers] = useState([]);
-  const hasMore = useRef();
   const [count, setCount] = useState(0);
-  console.log(profileCount);
-
-  async function fetchUsers(count) {
-    try {
-      const fetchedUsers = (await axios(`/api/users?offset=${count}`)).data;
-      const data = fetchedUsers.data;
-      setUsers((prev) => [...prev, ...data]);
-      setHasMore(fetchUsers.count > users.length);
-      
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  const [loading, setLoading] = useState(true);
 
   const ViewComp = () => {
     return (
       <InView as="div" onChange={async (inView, entry) => {
         if(inView && (profileCount >= (users.length + 1))) {
+          setLoading(true);
           const fetchedUsers = (await axios(`/api/users?offset=${count}`)).data;
           const data = fetchedUsers.data;
           setUsers((prev) => [...prev, ...data]);
           setCount(prev => prev + 10);
+        } else {
+          setLoading(false);
         }
       }}>
-        <p className="font-medium text-lg mt-4">...Loading...</p>
+        {loading ? <p className="flex justify-center my-8"><span className="loader loaderLight"></span></p> : null}
       </InView>
     );
   };
@@ -158,8 +148,8 @@ export default function Explore({ profileCount }) {
             />
           );
         })}
-        <ViewComp />
       </section>
+      <ViewComp />
 
       <Jumbotron />
       <Footer />
