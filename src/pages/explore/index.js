@@ -7,34 +7,53 @@ import Jumbotron from "../../components/Jumbotron";
 import ExploreCard from "../../components/ExploreCard";
 import styles from "../../styles/Explore.module.css";
 import { SearchIcon } from "@heroicons/react/outline";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import { InView } from 'react-intersection-observer';
 
-export default function Explore() {
+export default function Explore({ profileCount }) {
   const [users, setUsers] = useState([]);
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+  const hasMore = useRef();
+  const [count, setCount] = useState(0);
+  console.log(profileCount);
 
-  async function fetchUsers() {
+  async function fetchUsers(count) {
     try {
-      const fetchedUsers = (await axios(`/api/users`)).data;
+      const fetchedUsers = (await axios(`/api/users?offset=${count}`)).data;
       const data = fetchedUsers.data;
       setUsers((prev) => [...prev, ...data]);
+      setHasMore(fetchUsers.count > users.length);
+      
     } catch (err) {
-      // console.log(err);
+      console.log(err);
     }
   }
 
-  async function searchForUsers(e) {
-    e.preventDefault();
-    try {
-      const users = (await axios(`/api/search?name=${e.target.search.value}`)).data;
-      setUsers((prev) => [...prev, ...users]);;
-    } catch (err) {
-      // console.log(err);
-    }
-  }
+  const ViewComp = () => {
+    return (
+      <InView as="div" onChange={async (inView, entry) => {
+        if(inView && (profileCount >= (users.length + 1))) {
+          const fetchedUsers = (await axios(`/api/users?offset=${count}`)).data;
+          const data = fetchedUsers.data;
+          setUsers((prev) => [...prev, ...data]);
+          setCount(prev => prev + 10);
+        }
+      }}>
+        <p className="font-medium text-lg mt-4">...Loading...</p>
+      </InView>
+    );
+  };
+
+
+  // async function searchForUsers(e) {
+  //   e.preventDefault();
+  //   try {
+  //     const users = (await axios(`/api/search?name=${e.target.search.value}`)).data;
+  //     setUsers((prev) => [...prev, ...users]);;
+  //   } catch (err) {
+  //     // console.log(err);
+  //   }
+  // }
 
   return (
     <div>
@@ -125,7 +144,6 @@ export default function Explore() {
       </header>
 
       <section className={styles.profileContainer}>
-        {/* {Data.map((userData) => ( */}
         {users.map((userData) => {
           return (
             <ExploreCard
@@ -140,8 +158,7 @@ export default function Explore() {
             />
           );
         })}
-
-        <p className="font-medium text-lg mt-4">Loading...</p>
+        <ViewComp />
       </section>
 
       <Jumbotron />
@@ -149,3 +166,11 @@ export default function Explore() {
     </div>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      profileCount: 26
+    }
+  }
+};

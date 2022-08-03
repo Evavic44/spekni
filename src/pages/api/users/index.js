@@ -74,9 +74,10 @@ export default async function handler(req, res) {
     const limit = parseInt(req.query.limit) || 10;
     const offset = parseInt(req.query.offset) || 0;
     try {
+      const count = await prisma.profile.count();
       const users = await prisma.profile.findMany({
-        // skip: offset,
-        // take: limit,
+        skip: offset,
+        take: limit,
         select: {
           userId: true,
           username: true,
@@ -108,7 +109,7 @@ export default async function handler(req, res) {
       });
       // make endorsements a computed value
       if (users) getEndorsements(users);
-      return res.json({ success: true, data: users });
+      return res.json({ success: true, data: users, count });
     } catch (err) {
       // console.log(err);
       return res.json({ success: false, message: err.message });
