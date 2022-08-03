@@ -77,7 +77,7 @@ function Recommendation(props) {
           <div className={styles.recommendations}>
             <form className={styles.formContainer} onSubmit={sendRecommendation}>
               <label className="text-zinc-500 dark:text-zinc-600 text-sm">
-                What would you like to say about John?
+                What would you like to say about {props.profile.name}?
               </label>
               <input
                 name="summary"
