@@ -1,0 +1,32 @@
+.snippet {
+  min-height: 240px;
+  min-width: 60%;
+  padding: 1.7rem;
+  background: #111;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #5c5c5c;
+  top: 6px;
+  left: 20px;
+  border-radius: 100%;
+}
+.dot:nth-child(2) {
+  left: 30px;
+}
+.dot:nth-child(3) {
+  left: 40px;
+}
+
+.logContainer {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  max-width: 1280px;
+  margin: 3rem auto 1.5rem;
+  padding: 1.5rem;
+}

@@ -17,7 +17,11 @@
   --borderPrimary: 1px solid #dddddd;
   --borderSecondary: 1px solid #777777;
   --filterPrimary: none;
-  --shadow: 0px 0px 30px 0 rgb(82, 255, 168);
+  --shadow: 00px 10px 1000px 10px rgb(176, 64, 228, 0.8);
+
+  /* Issue colors */
+  --enhancement: #a2eeef;
+  --bug: #eb4354;
 }
 
 [data-theme="dark"] {
@@ -34,6 +38,7 @@
   --borderPrimary: 1px solid #222222;
   --borderSecondary: 1px solid #333333;
   --filterPrimary: grayscale(10%) brightness(19%) saturate(0%) contrast(98%);
+  --shadow: 00px 10px 1000px 10px rgba(201, 86, 255, 0.5);
 }
 
 * {
@@ -213,6 +218,25 @@ textarea:focus {
 
 .fillIcon {
   fill: var(--textColorSecondary);
+}
+
+/* Issue Labels */
+.label {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 30px;
+}
+
+.enhancement {
+  border: 1px solid var(--enhancement);
+  background: var(--enhancement);
+  color: #000000;
+}
+
+.bug {
+  border: 1px solid var(--bug);
+  background: var(--bug);
+  color: #ffffff;
 }
 
 @keyframes rotation {
