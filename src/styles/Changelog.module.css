@@ -35,6 +35,10 @@
   border-bottom: none;
 }
 
+.logContainer h1 {
+  background: red;
+}
+
 .logContent {
   display: flex;
   flex-direction: column;

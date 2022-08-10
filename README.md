@@ -47,6 +47,7 @@
 - 🖼️ [Lazyload NPM package](https://lazyload.com): Image optimization
 
 # How to run locally
+
 Follow these steps below to run Spekni locally in your machine.
 
 ```bash
@@ -66,11 +67,21 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 npm run build
 ```
 
+## Additional Commands
+
+For changelog, run the command below
+
+```bash
+npm run deploy
+```
+
 ## Style Guide
+
 ![ui guide](https://user-images.githubusercontent.com/62628408/182064851-e98f5a69-f4d6-4884-acd2-312897446f02.png)
 
 # Database
-Database provided by Planetscale 
+
+Database provided by Planetscale
 ![database_diagram](https://user-images.githubusercontent.com/62628408/182067005-07140cce-bc30-4b84-9ef3-8bd5c28be8a8.png)
 
 ## Contributing
