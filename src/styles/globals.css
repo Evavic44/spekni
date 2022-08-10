@@ -17,7 +17,12 @@
   --borderPrimary: 1px solid #dddddd;
   --borderSecondary: 1px solid #777777;
   --filterPrimary: none;
-  --shadow: 0px 0px 30px 0 rgb(82, 255, 168);
+  --shadow: 00px 10px 1000px 10px rgba(132, 180, 252, 0.521);
+
+  /* Issue colors */
+  --enhancement: #a2eeef;
+  --bug: #eb4354;
+  --documentation: #0075ca;
 }
 
 [data-theme="dark"] {
@@ -34,6 +39,7 @@
   --borderPrimary: 1px solid #222222;
   --borderSecondary: 1px solid #333333;
   --filterPrimary: grayscale(10%) brightness(19%) saturate(0%) contrast(98%);
+  --shadow: 00px 10px 1000px 10px rgba(38, 76, 124, 0.493);
 }
 
 * {
@@ -96,6 +102,10 @@ textarea:focus {
 
 .borderLight {
   border-bottom: var(--borderPrimary);
+}
+
+.borderRight {
+  border-right: var(--borderPrimary);
 }
 
 .btn {
@@ -213,6 +223,31 @@ textarea:focus {
 
 .fillIcon {
   fill: var(--textColorSecondary);
+}
+
+/* Issue Labels */
+.label {
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 30px;
+}
+
+.enhancement {
+  border: 1px solid var(--enhancement);
+  background: var(--enhancement);
+  color: #000000;
+}
+
+.bug {
+  border: 1px solid var(--bug);
+  background: var(--bug);
+  color: #ffffff;
+}
+
+.documentation {
+  border: 1px solid var(--documentation);
+  background: var(--documentation);
+  color: #ffffff;
 }
 
 @keyframes rotation {
