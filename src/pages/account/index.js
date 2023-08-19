@@ -1,4 +1,3 @@
-// build test
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import { LazyLoadImage } from "react-lazy-load-image-component";
