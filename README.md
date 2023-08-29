@@ -15,10 +15,6 @@
 <a href="https://prisma.io/">
     <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white">
 </a>
-
-<a href="https://prettier.io/">
-    <img src="https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E">
-</a>
     
 <a href="https://hashnode.com">
 <img alt="code style: prettier" src="https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white">
